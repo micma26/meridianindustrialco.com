@@ -61,6 +61,24 @@
             text-decoration: none;
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--cream-dim);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--cream); }
+
         .nav-btn {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.7rem;
@@ -86,7 +104,6 @@
             overflow: hidden;
         }
 
-        /* Dot grid texture */
         .hero::before {
             content: '';
             position: absolute; inset: 0;
@@ -95,7 +112,6 @@
             pointer-events: none;
         }
 
-        /* Ambient light pools */
         .hero::after {
             content: '';
             position: absolute; inset: 0;
@@ -195,7 +211,6 @@
         }
         .hero-cta:hover { background: var(--gold); }
 
-        /* Scroll indicator */
         .scroll-hint {
             position: absolute;
             bottom: 2.5rem; left: 50%;
@@ -268,7 +283,6 @@
         }
         .about-body p + p { margin-top: 1.4rem; }
 
-        /* Stats row */
         .stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -314,21 +328,13 @@
             position: relative;
             transition: border-color 0.3s ease, background 0.3s ease;
             cursor: default;
+            display: flex;
+            flex-direction: column;
         }
         .product-card:hover {
             border-color: var(--border-gold);
             background: var(--navy-mid);
         }
-        .product-card::after {
-            content: '';
-            display: block;
-            width: 28px; height: 1px;
-            background: var(--gold);
-            margin-top: 1.8rem;
-            opacity: 0;
-            transition: opacity 0.3s ease, width 0.3s ease;
-        }
-        .product-card:hover::after { opacity: 1; width: 40px; }
 
         .product-num {
             font-family: 'Cormorant Garamond', serif;
@@ -351,7 +357,21 @@
             font-weight: 300;
             color: var(--cream-dim);
             line-height: 1.65;
+            flex: 1;
         }
+        .card-link {
+            display: inline-block;
+            margin-top: 1.8rem;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .product-card:hover .card-link { opacity: 1; }
 
         /* ─── EDGE ───────────────────────────────────────────────────── */
         .edge-grid {
@@ -582,7 +602,6 @@
             100% { opacity: 0.3; transform: scaleY(1.1); }
         }
 
-        /* Scroll-triggered reveal */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -610,6 +629,7 @@
             .stats-row { grid-template-columns: 1fr; }
             .modal { padding: 2rem 1.5rem; }
             footer { flex-direction: column; align-items: flex-start; }
+            .nav-link { display: none; }
         }
     </style>
 </head>
@@ -617,8 +637,11 @@
 
 <!-- NAV -->
 <nav>
-    <a class="nav-logo" href="#">Meridian Industrial Co.</a>
-    <button class="nav-btn" onclick="openModal()">Make an Enquiry</button>
+    <a class="nav-logo" href="/">Meridian Industrial Co.</a>
+    <div class="nav-links">
+        <a class="nav-link" href="/products.html">Product Range</a>
+        <button class="nav-btn" onclick="openModal()">Make an Enquiry</button>
+    </div>
 </nav>
 
 <!-- HERO -->
@@ -680,21 +703,25 @@
                 <div class="product-num">01</div>
                 <div class="product-name">Armoured Power Cable</div>
                 <div class="product-desc">LV and MV steel-wire armoured cable for power distribution across mining, industrial, and infrastructure environments. Available in single and multicore configurations.</div>
+                <a href="/products.html" class="card-link">View range →</a>
             </div>
             <div class="product-card reveal reveal-d2">
                 <div class="product-num">02</div>
                 <div class="product-name">Instrumentation &amp; Control Cable</div>
                 <div class="product-desc">Screened and unscreened instrumentation cable for process control, measurement, and sensor applications. Armoured variants available for outdoor and buried installations.</div>
+                <a href="/products.html#ic-swa" class="card-link">View range →</a>
             </div>
             <div class="product-card reveal reveal-d3">
                 <div class="product-num">03</div>
                 <div class="product-name">LSZH Cable</div>
                 <div class="product-desc">Low smoke zero halogen cable for enclosed environments, process plant buildings, and tunnels where fire safety specification is mandatory.</div>
+                <a href="/products.html" class="card-link">View range →</a>
             </div>
             <div class="product-card reveal reveal-d4">
                 <div class="product-num">04</div>
                 <div class="product-name">Data &amp; Comms Cable</div>
                 <div class="product-desc">Industrial-grade data and communications cable for telecoms infrastructure, site networks, and fibre roll-out projects across Morocco and the region.</div>
+                <a href="/products.html#data-multicore" class="card-link">View range →</a>
             </div>
         </div>
     </div>
@@ -746,14 +773,6 @@
         <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
         <div class="modal-heading" id="modal-title">Make an Enquiry</div>
         <div class="modal-sub">We will respond within 24 hours.</div>
-
-        <!--
-            FORMSPREE SETUP:
-            1. Go to formspree.io and create a free account
-            2. Create a new form — it will give you a form ID (e.g. xpwqdkab)
-            3. Replace YOUR_FORM_ID below with that ID
-            Until then, the form falls back to mailto
-        -->
         <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <div class="form-row">
                 <label for="f-name">Name</label>
@@ -787,7 +806,6 @@
             <input type="text" name="_gotcha" style="display:none">
             <button type="submit" class="form-submit">Send Enquiry →</button>
         </form>
-
         <div class="form-success" id="form-success">
             <div class="check">✓</div>
             <p>Thank you — we have received your enquiry and will respond within 24 hours.<br><br>
@@ -797,7 +815,6 @@
 </div>
 
 <script>
-    /* ── Modal ── */
     const overlay = document.getElementById('overlay');
 
     function openModal() {
@@ -815,14 +832,11 @@
         if (e.key === 'Escape') closeModal();
     });
 
-    /* ── Form submit ── */
     const form = document.getElementById('enquiry-form');
     const success = document.getElementById('form-success');
 
     form.addEventListener('submit', async function(e) {
         const action = form.action;
-
-        // Fallback: if Formspree ID not set, use mailto
         if (action.includes('YOUR_FORM_ID')) {
             e.preventDefault();
             const name    = document.getElementById('f-name').value;
@@ -834,8 +848,6 @@
             window.location.href = `mailto:sales@meridianindustrialco.com?subject=Enquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(body)}`;
             return;
         }
-
-        // Formspree AJAX submit
         e.preventDefault();
         const data = new FormData(form);
         try {
@@ -848,7 +860,6 @@
                 form.style.display = 'none';
                 success.style.display = 'block';
             } else {
-                // Fallback to standard submit
                 form.submit();
             }
         } catch {
@@ -856,7 +867,6 @@
         }
     });
 
-    /* ── Scroll reveal ── */
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
