@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Range — Meridian Industrial Co.</title>
+  <meta name="description" content="IEC-certified industrial cable for mining, telecoms, renewables, and infrastructure. Instrumentation, data, armoured power, and LSZH cable supplied across Morocco and Africa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Tokens ─────────────────────────────────────────────── */
+    :root {
+      --navy:        #09111F;
+      --navy-card:   #0F1A2E;
+      --navy-mid:    #152036;
+      --cream:       #EDE8DF;
+      --cream-dim:   #A8A09A;
+      --gold:        #C4A35A;
+      --gold-dim:    rgba(196,163,90,0.18);
+      --radius:      2px;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+    }
+
+    /* ── Reset ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 64px;
+      background: rgba(9,17,31,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(196,163,90,0.12);
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border: 1px solid rgba(196,163,90,0.4);
+      padding: 0.45rem 1.1rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .nav-cta:hover {
+      border-color: var(--gold);
+      background: var(--gold-dim);
+    }
+
+    /* ── Page header ─────────────────────────────────────────── */
+    .page-header {
+      padding: 120px 3rem 56px;
+      max-width: 860px;
+    }
+
+    .page-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .page-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 1.4rem;
+    }
+    .page-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .page-intro {
+      font-size: 0.95rem;
+      color: var(--cream-dim);
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    /* ── Filter bar ──────────────────────────────────────────── */
+    .filter-bar {
+      padding: 0 3rem 2.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      background: transparent;
+      border: 1px solid rgba(237,232,223,0.15);
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      transition: all 0.18s;
+      border-radius: var(--radius);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: var(--cream);
+      border-color: var(--gold);
+      background: var(--gold-dim);
+    }
+
+    /* ── Main layout ─────────────────────────────────────────── */
+    .products-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 3rem 6rem;
+    }
+
+    /* ── Sidebar nav ─────────────────────────────────────────── */
+    .sidebar {
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+      padding-right: 2.5rem;
+      border-right: 1px solid rgba(237,232,223,0.08);
+    }
+
+    .sidebar-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-link {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--cream-dim);
+      text-decoration: none;
+      padding: 0.45rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.75rem;
+      margin-left: -0.75rem;
+      transition: color 0.18s, border-color 0.18s;
+      line-height: 1.4;
+    }
+    .sidebar-link:hover {
+      color: var(--cream);
+      border-left-color: var(--gold);
+    }
+    .sidebar-link.active {
+      color: var(--gold);
+      border-left-color: var(--gold);
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: rgba(237,232,223,0.08);
+      margin: 1rem 0;
+    }
+
+    .sidebar-enquiry {
+      font-size: 0.75rem;
+      color: var(--cream-dim);
+      line-height: 1.6;
+      margin-top: 1.5rem;
+    }
+    .sidebar-enquiry a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .sidebar-enquiry a:hover { text-decoration: underline; }
+
+    /* ── Product families ────────────────────────────────────── */
+    .families {
+      padding-left: 3rem;
+    }
+
+    .family-block {
+      margin-bottom: 4rem;
+      scroll-margin-top: 80px;
+    }
+
+    .family-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(196,163,90,0.2);
+    }
+
+    .family-name {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .family-sectors {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    .sector-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-dim);
+      border: 1px solid rgba(196,163,90,0.25);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius);
+    }
+
+    .family-desc {
+      font-size: 0.85rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    /* ── Product table ───────────────────────────────────────── */
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .product-table thead tr {
+      border-bottom: 1px solid rgba(237,232,223,0.1);
+    }
+
+    .product-table th {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      text-align: left;
+      padding: 0.5rem 0.75rem 0.5rem 0;
+    }
+    .product-table th:last-child { text-align: right; }
+
+    .product-table tbody tr {
+      border-bottom: 1px solid rgba(237,232,223,0.05);
+      transition: background 0.15s;
+    }
+    .product-table tbody tr:hover {
+      background: rgba(255,255,255,0.025);
+    }
+
+    .product-table td {
+      padding: 0.75rem 0.75rem 0.75rem 0;
+      vertical-align: middle;
+    }
+
+    .td-part {
+      font-family: 'DM Mono', 'Courier New', monospace;
+      font-size: 0.78rem;
+      color: var(--gold);
+      white-space: nowrap;
+      width: 180px;
+    }
+
+    .td-name {
+      font-size: 0.85rem;
+      color: var(--cream);
+    }
+
+    .td-action {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .enquire-link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      text-decoration: none;
+      border: 1px solid rgba(237,232,223,0.15);
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--radius);
+      transition: all 0.18s;
+      display: inline-block;
+    }
+    .enquire-link:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+      background: var(--gold-dim);
+    }
+
+    /* ── CTA band ────────────────────────────────────────────── */
+    .cta-band {
+      background: var(--navy-card);
+      border-top: 1px solid rgba(196,163,90,0.15);
+      padding: 4rem 3rem;
+      text-align: center;
+    }
+
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.8rem;
+    }
+    .cta-band h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .cta-band p {
+      font-size: 0.9rem;
+      color: var(--cream-dim);
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--gold);
+      padding: 0.85rem 2.2rem;
+      text-decoration: none;
+      border-radius: var(--radius);
+      transition: opacity 0.18s;
+    }
+    .cta-button:hover { opacity: 0.88; }
+
+    /* ── Footer ──────────────────────────────────────────────── */
+    footer {
+      padding: 2rem 3rem;
+      border-top: 1px solid rgba(237,232,223,0.07);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--cream-dim);
+    }
+
+    footer a {
+      color: var(--cream-dim);
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--cream); }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 860px) {
+      nav { padding: 0 1.5rem; }
+      .page-header { padding: 100px 1.5rem 40px; }
+      .filter-bar { padding: 0 1.5rem 2rem; }
+      .products-layout {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem 4rem;
+      }
+      .sidebar {
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid rgba(237,232,223,0.08);
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        display: none;
+      }
+      .families { padding-left: 0; }
+      .product-table th:first-child,
+      .product-table td:first-child { display: none; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .cta-band { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="/" class="nav-logo">Meridian Industrial Co.</a>
+    <a href="mailto:sales@meridianindustrialco.com" class="nav-cta">Make an Enquiry</a>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <p class="page-eyebrow">Product Range</p>
+    <h1 class="page-title">Cable specified for<br><em>demanding environments.</em></h1>
+    <p class="page-intro">IEC-certified industrial cable sourced direct from Tier-1 manufacturers. Every product below is available for supply into Morocco and across the African continent. For specifications, datasheets, or pricing — use the enquiry link on any line item.</p>
+  </header>
+
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All products</button>
+    <button class="filter-btn" data-filter="Mining">Mining</button>
+    <button class="filter-btn" data-filter="Telecoms">Telecoms</button>
+    <button class="filter-btn" data-filter="Renewables">Renewables</button>
+    <button class="filter-btn" data-filter="Digital Infrastructure">Digital Infrastructure</button>
+    <button class="filter-btn" data-filter="Infrastructure / EPC">Infrastructure / EPC</button>
+  </div>
+
+  <!-- Main layout -->
+  <div class="products-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <p class="sidebar-label">Product families</p>
+
+      <a href="#ic-swa" class="sidebar-link">I&amp;C — Armoured SWA</a>
+      <a href="#ic-screened" class="sidebar-link">I&amp;C — Screened IND+OAS</a>
+      <a href="#ic-triad" class="sidebar-link">I&amp;C — Multi-Triad</a>
+      <a href="#ic-aw" class="sidebar-link">I&amp;C — Heavy Industrial</a>
+      <div class="sidebar-divider"></div>
+      <a href="#data-multicore" class="sidebar-link">Data — Multicore Screened</a>
+      <a href="#data-multipair" class="sidebar-link">Data — Multipair Screened</a>
+      <div class="sidebar-divider"></div>
+      <a href="#shotfire" class="sidebar-link">Specialty — Shotfire</a>
+
+      <div class="sidebar-enquiry">
+        <p style="margin-top:1.5rem;">Don't see what you need?<br>
+        <a href="mailto:sales@meridianindustrialco.com">Contact us</a> — we can source to specification.</p>
+      </div>
+    </aside>
+
+    <!-- Product families -->
+    <div class="families">
+
+      <!-- I&C — Armoured SWA -->
+      <div class="family-block" id="ic-swa" data-sectors="Mining,Renewables,Infrastructure / EPC">
+        <div class="family-header">
+          <div class="family-sectors">
+            <span class="sector-tag">Mining</span>
+            <span class="sector-tag">Renewables</span>
+            <span class="sector-tag">Infrastructure / EPC</span>
+          </div>
+          <h2 class="family-name">Instrumentation &amp; Control — Armoured (SWA)</h2>
+          <p class="family-desc">Steel-wire armoured multipair cable for outdoor runs, buried installations, and exposed mining environments. Combines individual and overall aluminium screen with SWA mechanical protection.</p>
+        </div>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Part No.</th>
+              <th>Description</th>
+              <th>Enquire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="td-part">MCP7052SSWA1000</td><td class="td-name">Multi-Pair, 7/0.50mm, 2 Pair, Screened, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7052SSWA1000" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP7054SSWA1000</td><td class="td-name">Multi-Pair, 7/0.50mm, 4 Pair, Screened, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7054SSWA1000" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP7056SSWA1000</td><td class="td-name">Multi-Pair, 7/0.50mm, 6 Pair, Screened, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7056SSWA1000" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP70512SSWA500</td><td class="td-name">Multi-Pair, 7/0.50mm, 12 Pair, Screened, PVC/SWA/PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP70512SSWA500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP7036SSWA500</td><td class="td-name">Multi-Pair, 7/0.30mm, 6 Pair, Screened, PVC/SWA/PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7036SSWA500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP7034SSWA1000</td><td class="td-name">Multi-Pair, 7/0.30mm, 4 Pair, Screened, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7034SSWA1000" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- I&C — Screened -->
+      <div class="family-block" id="ic-screened" data-sectors="Mining,Renewables,Infrastructure / EPC">
+        <div class="family-header">
+          <div class="family-sectors">
+            <span class="sector-tag">Mining</span>
+            <span class="sector-tag">Renewables</span>
+            <span class="sector-tag">Infrastructure / EPC</span>
+          </div>
+          <h2 class="family-name">Instrumentation &amp; Control — Screened (IND+OAS)</h2>
+          <p class="family-desc">Individually and overall screened multipair cable for process control and measurement inside plant buildings and control rooms. High signal integrity in EMI-dense environments.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCP7052ISCS1000</td><td class="td-name">Multi-Pair, 7/0.50mm, 2 Pair, Individual + Collective Screen, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7052ISCS1000" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP70512ISCS1000</td><td class="td-name">Multi-Pair, 7/0.50mm, 12 Pair, Individual + Collective Screen, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP70512ISCS1000" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP7034ISCS1000</td><td class="td-name">Multi-Pair, 7/0.30mm, 4 Pair, Individual + Collective Screen, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7034ISCS1000" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP70312ISCS1000</td><td class="td-name">Multi-Pair, 7/0.30mm, 12 Pair, Individual + Collective Screen, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP70312ISCS1000" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- I&C — Multi-Triad -->
+      <div class="family-block" id="ic-triad" data-sectors="Mining,Renewables">
+        <div class="family-header">
+          <div class="family-sectors">
+            <span class="sector-tag">Mining</span>
+            <span class="sector-tag">Renewables</span>
+          </div>
+          <h2 class="family-name">Instrumentation &amp; Control — Multi-Triad</h2>
+          <p class="family-desc">Twisted triad construction for thermocouple, RTD, and 4–20mA signal loops. Individual and collective screening eliminates inter-circuit interference across long instrumentation runs in chemical and process plant environments.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCT7031S500</td><td class="td-name">Multi-Triad, 7/0.3mm, 1 Triad, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCT7031S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCT7036ISCS1000</td><td class="td-name">Multi-Triad, 7/0.3mm, 6 Triad, Individual + Collective Screen, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCT7036ISCS1000" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCT70312ISCS1000</td><td class="td-name">Multi-Triad, 7/0.3mm, 12 Triad, Individual + Collective Screen, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCT70312ISCS1000" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- I&C — AW Series -->
+      <div class="family-block" id="ic-aw" data-sectors="Mining">
+        <div class="family-header">
+          <div class="family-sectors">
+            <span class="sector-tag">Mining</span>
+          </div>
+          <h2 class="family-name">Instrumentation &amp; Control — Heavy Industrial (AW Series)</h2>
+          <p class="family-desc">High-specification armoured instrumentation cable combining individual screen, overall aluminium screen, and SWA mechanical protection. Designed for the most demanding underground mining and chemical plant environments.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCT7052S1000-AW</td><td class="td-name">Cable 2P 0.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCT7052S1000-AW" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCT7056S1000-AW</td><td class="td-name">Cable 12P 0.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCT7056S1000-AW" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCT7053S1000-AW</td><td class="td-name">Cable 20P 0.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCT7053S1000-AW" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP7031S1000-AW</td><td class="td-name">Cable 4T 1.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7031S1000-AW" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP7033S1000-AW</td><td class="td-name">Cable 20T 1.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7033S1000-AW" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Data — Multicore Screened -->
+      <div class="family-block" id="data-multicore" data-sectors="Telecoms,Digital Infrastructure,Mining">
+        <div class="family-header">
+          <div class="family-sectors">
+            <span class="sector-tag">Telecoms</span>
+            <span class="sector-tag">Digital Infrastructure</span>
+            <span class="sector-tag">Mining</span>
+          </div>
+          <h2 class="family-name">Data &amp; Communications — Multicore Screened</h2>
+          <p class="family-desc">Screened multicore cable for SCADA systems, site communications, and control system backbone wiring. Available from 4 to 36 cores for trunk and distribution runs across telecoms and digital infrastructure projects.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MC74S500</td><td class="td-name">Multi-Conductor, 7/0.20mm, 4 Core, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MC74S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MC76S500</td><td class="td-name">Multi-Conductor, 7/0.20mm, 6 Core, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MC76S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MC78S500</td><td class="td-name">Multi-Conductor, 7/0.20mm, 8 Core, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MC78S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MC725S500</td><td class="td-name">Multi-Conductor, 7/0.20mm, 25 Core, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MC725S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MC736S500</td><td class="td-name">Multi-Conductor, 7/0.20mm, 36 Core, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MC736S500" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Data — Multipair Screened -->
+      <div class="family-block" id="data-multipair" data-sectors="Telecoms,Digital Infrastructure">
+        <div class="family-header">
+          <div class="family-sectors">
+            <span class="sector-tag">Telecoms</span>
+            <span class="sector-tag">Digital Infrastructure</span>
+          </div>
+          <h2 class="family-name">Data &amp; Communications — Multipair Screened</h2>
+          <p class="family-desc">Multipair screened cable for telecommunications infrastructure, data centre structured cabling, and site network distribution. Individual and collective screening variants for high-interference environments.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCP2S500</td><td class="td-name">Multi-Pair, 7/0.20mm, 2 Pair, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP2S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP4S500</td><td class="td-name">Multi-Pair, 7/0.20mm, 4 Pair, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP4S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP6S500</td><td class="td-name">Multi-Pair, 7/0.20mm, 6 Pair, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP6S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP8S500</td><td class="td-name">Multi-Pair, 7/0.20mm, 8 Pair, Screened, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP8S500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MCP4ISCS500</td><td class="td-name">Multi-Pair, 7/0.20mm, 4 Pair, Individual + Collective Screen, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP4ISCS500" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Shotfire -->
+      <div class="family-block" id="shotfire" data-sectors="Mining">
+        <div class="family-header">
+          <div class="family-sectors">
+            <span class="sector-tag">Mining</span>
+          </div>
+          <h2 class="family-name">Specialty — Shotfire Cable</h2>
+          <p class="family-desc">Purpose-built blasting cable for open-cut and underground mining operations. Resistant to abrasion, moisture, and chemical exposure. Not manufactured locally in Morocco — available on order direct from the Meridian range.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">SF16RW100</td><td class="td-name">Shot Fire Cable, 0.6mm, 1 Pair, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF16RW100" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">SF16RW500</td><td class="td-name">Shot Fire Cable, 0.6mm, 1 Pair, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF16RW500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">SF17WHRD100</td><td class="td-name">Shot Fire Cable, 0.7mm, 1 Pair, Figure-8, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF17WHRD100" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div><!-- /families -->
+  </div><!-- /products-layout -->
+
+  <!-- CTA band -->
+  <div class="cta-band">
+    <h2>Need a specification outside this range?<br><em>We can source it.</em></h2>
+    <p>Tell us your project requirements and we will respond within 24 hours.</p>
+    <a href="mailto:sales@meridianindustrialco.com" class="cta-button">Make an Enquiry</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span><a href="/">Meridian Industrial Co.</a></span>
+    <span>© 2026 Meridian Industrial Co. All rights reserved.</span>
+  </footer>
+
+  <script>
+    // Sector filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const familyBlocks = document.querySelectorAll('.family-block');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        familyBlocks.forEach(block => {
+          if (filter === 'all') {
+            block.style.display = '';
+          } else {
+            const sectors = block.dataset.sectors || '';
+            block.style.display = sectors.includes(filter) ? '' : 'none';
+          }
+        });
+      });
+    });
+
+    // Sidebar active state on scroll
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.sidebar-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    document.querySelectorAll('.family-block').forEach(b => observer.observe(b));
+  </script>
+
+</body>
+</html>
