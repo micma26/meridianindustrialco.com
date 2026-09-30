@@ -3,499 +3,291 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Range — Meridian Industrial Co.</title>
-  <meta name="description" content="IEC-certified industrial cable for mining, telecoms, renewables, and infrastructure. Instrumentation, data, armoured power, and LSZH cable supplied across Morocco and Africa." />
+  <title>Product Range | Meridian Industrial Co.</title>
+  <meta name="description" content="Garland industrial cable for mining: blast wire, armoured power, instrumentation and control, data, fibre and control room hardware. Supplied outside Australia and New Zealand." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ── Tokens ─────────────────────────────────────────────── */
     :root {
-      --navy:        #09111F;
-      --navy-card:   #0F1A2E;
-      --navy-mid:    #152036;
-      --cream:       #EDE8DF;
-      --cream-dim:   #A8A09A;
-      --gold:        #C4A35A;
-      --gold-dim:    rgba(196,163,90,0.18);
-      --radius:      2px;
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-body:    'DM Sans', system-ui, sans-serif;
+      --ink:     #0B1D33;
+      --navy:    #1F497D;
+      --indigo:  #2C318E;
+      --steel:   #5B7FA8;
+      --sky:     #9DB9DC;
+      --ice:     #DCE6F2;
+      --mist:    #F1F5FA;
+      --slate:   #5A6573;
+      --white:   #FFFFFF;
+      --display: 'Cormorant Garamond', Georgia, serif;
+      --body:    'DM Sans', system-ui, sans-serif;
     }
-
-    /* ── Reset ──────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      background: var(--navy);
-      color: var(--cream);
-      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--body);
       font-size: 15px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* ── Nav ────────────────────────────────────────────────── */
+    /* Nav */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 3rem;
-      height: 64px;
-      background: rgba(9,17,31,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(196,163,90,0.12);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 64px;
+      background: rgba(11,29,51,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(157,185,220,0.18);
     }
-
     .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--cream);
-      text-decoration: none;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--white); text-decoration: none;
     }
-
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-link {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--sky); text-decoration: none;
+    }
+    .nav-link:hover { color: var(--white); }
     .nav-cta {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-decoration: none;
-      border: 1px solid rgba(196,163,90,0.4);
-      padding: 0.45rem 1.1rem;
-      transition: border-color 0.2s, background 0.2s;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--white); background: var(--indigo); text-decoration: none;
+      padding: 0.6rem 1.4rem; transition: background 0.2s;
     }
-    .nav-cta:hover {
-      border-color: var(--gold);
-      background: var(--gold-dim);
-    }
+    .nav-cta:hover { background: var(--navy); }
 
-    /* ── Page header ─────────────────────────────────────────── */
-    .page-header {
-      padding: 120px 3rem 56px;
-      max-width: 860px;
-    }
-
+    /* Header */
+    .page-header { background: var(--ink); color: var(--white); padding: 128px 5vw 64px; }
+    .page-header-inner { max-width: 1200px; margin: 0 auto; }
     .page-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 1rem;
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--sky); margin-bottom: 1.4rem;
     }
-
+    .page-eyebrow::before { content: ''; width: 36px; height: 1px; background: var(--sky); }
     .page-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--cream);
-      margin-bottom: 1.4rem;
+      font-family: var(--display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 500; line-height: 1.08;
+      margin-bottom: 1.4rem; max-width: 820px;
     }
-    .page-title em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .page-title em { font-style: italic; color: var(--sky); }
+    .page-intro { font-size: 1rem; font-weight: 300; color: var(--ice); max-width: 620px; line-height: 1.75; }
 
-    .page-intro {
-      font-size: 0.95rem;
-      color: var(--cream-dim);
-      max-width: 580px;
-      line-height: 1.75;
-    }
-
-    /* ── Filter bar ──────────────────────────────────────────── */
+    /* Filters */
     .filter-bar {
-      padding: 0 3rem 2.5rem;
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      background: var(--mist); border-bottom: 1px solid var(--ice);
+      padding: 1.4rem 5vw; display: flex; gap: 0.5rem; flex-wrap: wrap;
     }
-
     .filter-btn {
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      background: transparent;
-      border: 1px solid rgba(237,232,223,0.15);
-      padding: 0.4rem 0.9rem;
-      cursor: pointer;
-      transition: all 0.18s;
-      border-radius: var(--radius);
+      font-family: var(--body); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
+      color: var(--navy); background: var(--white); border: 1px solid var(--ice);
+      padding: 0.45rem 0.95rem; cursor: pointer; transition: all 0.18s;
     }
-    .filter-btn:hover,
-    .filter-btn.active {
-      color: var(--cream);
-      border-color: var(--gold);
-      background: var(--gold-dim);
-    }
+    .filter-btn:hover { border-color: var(--indigo); color: var(--indigo); }
+    .filter-btn.active { background: var(--indigo); border-color: var(--indigo); color: var(--white); }
 
-    /* ── Main layout ─────────────────────────────────────────── */
+    /* Layout */
     .products-layout {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 0;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 3rem 6rem;
+      display: grid; grid-template-columns: 230px 1fr;
+      max-width: 1200px; margin: 0 auto; padding: 3.5rem 5vw 6rem;
     }
-
-    /* ── Sidebar nav ─────────────────────────────────────────── */
     .sidebar {
-      position: sticky;
-      top: 80px;
-      height: fit-content;
-      padding-right: 2.5rem;
-      border-right: 1px solid rgba(237,232,223,0.08);
+      position: sticky; top: 88px; height: fit-content;
+      padding-right: 2rem; border-right: 1px solid var(--ice);
     }
-
-    .sidebar-label {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      margin-bottom: 1rem;
+    .sidebar-group {
+      display: flex; align-items: center; gap: 0.55rem;
+      font-size: 0.66rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink); margin: 1.2rem 0 0.35rem;
     }
-
+    .sidebar-group:first-child { margin-top: 0; }
+    .sidebar-group b, .app-tag b {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 1.35rem; height: 1.35rem; border-radius: 50%;
+      background: var(--indigo); color: var(--white); font-size: 0.66rem; letter-spacing: 0;
+    }
     .sidebar-link {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--cream-dim);
-      text-decoration: none;
-      padding: 0.45rem 0;
-      border-left: 2px solid transparent;
-      padding-left: 0.75rem;
-      margin-left: -0.75rem;
-      transition: color 0.18s, border-color 0.18s;
-      line-height: 1.4;
+      display: block; font-size: 0.82rem; color: var(--slate); text-decoration: none;
+      padding: 0.28rem 0 0.28rem 0.75rem; margin-left: 0.6rem;
+      border-left: 2px solid var(--ice); transition: color 0.18s, border-color 0.18s;
     }
-    .sidebar-link:hover {
-      color: var(--cream);
-      border-left-color: var(--gold);
-    }
-    .sidebar-link.active {
-      color: var(--gold);
-      border-left-color: var(--gold);
-    }
+    .sidebar-link:hover { color: var(--ink); border-left-color: var(--steel); }
+    .sidebar-link.active { color: var(--indigo); border-left-color: var(--indigo); font-weight: 500; }
+    .sidebar-enquiry { font-size: 0.8rem; color: var(--slate); line-height: 1.6; margin-top: 2rem; }
+    .sidebar-enquiry a { color: var(--indigo); font-weight: 500; text-decoration: none; }
 
-    .sidebar-divider {
-      height: 1px;
-      background: rgba(237,232,223,0.08);
-      margin: 1rem 0;
+    /* Families */
+    .families { padding-left: 3rem; min-width: 0; }
+    .family-block { margin-bottom: 3.8rem; scroll-margin-top: 88px; }
+    .family-header { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--ink); }
+    .family-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem; align-items: center; }
+    .app-tag {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--indigo); margin-right: 0.4rem;
     }
+    .prop-tag {
+      font-size: 0.7rem; color: var(--navy); background: var(--mist);
+      border: 1px solid var(--ice); padding: 0.15rem 0.6rem;
+    }
+    .family-name { font-family: var(--display); font-size: 1.75rem; font-weight: 600; line-height: 1.15; margin-bottom: 0.5rem; }
+    .family-desc { font-size: 0.9rem; color: var(--slate); line-height: 1.7; max-width: 680px; }
 
-    .sidebar-enquiry {
-      font-size: 0.75rem;
-      color: var(--cream-dim);
-      line-height: 1.6;
-      margin-top: 1.5rem;
-    }
-    .sidebar-enquiry a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-    .sidebar-enquiry a:hover { text-decoration: underline; }
-
-    /* ── Product families ────────────────────────────────────── */
-    .families {
-      padding-left: 3rem;
-    }
-
-    .family-block {
-      margin-bottom: 4rem;
-      scroll-margin-top: 80px;
-    }
-
-    .family-header {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(196,163,90,0.2);
-    }
-
-    .family-name {
-      font-family: var(--font-display);
-      font-size: 1.55rem;
-      font-weight: 500;
-      color: var(--cream);
-      line-height: 1.2;
-      margin-bottom: 0.6rem;
-    }
-
-    .family-sectors {
-      display: flex;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.75rem;
-    }
-
-    .sector-tag {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      background: var(--gold-dim);
-      border: 1px solid rgba(196,163,90,0.25);
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius);
-    }
-
-    .family-desc {
-      font-size: 0.85rem;
-      color: var(--cream-dim);
-      line-height: 1.7;
-      max-width: 620px;
-    }
-
-    /* ── Product table ───────────────────────────────────────── */
-    .product-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .product-table thead tr {
-      border-bottom: 1px solid rgba(237,232,223,0.1);
-    }
-
+    /* Tables */
+    .product-table { width: 100%; border-collapse: collapse; }
     .product-table th {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      text-align: left;
-      padding: 0.5rem 0.75rem 0.5rem 0;
+      font-size: 0.64rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--steel); text-align: left; padding: 0.5rem 0.75rem 0.5rem 0;
+      border-bottom: 1px solid var(--ice);
     }
     .product-table th:last-child { text-align: right; }
-
-    .product-table tbody tr {
-      border-bottom: 1px solid rgba(237,232,223,0.05);
-      transition: background 0.15s;
-    }
-    .product-table tbody tr:hover {
-      background: rgba(255,255,255,0.025);
-    }
-
-    .product-table td {
-      padding: 0.75rem 0.75rem 0.75rem 0;
-      vertical-align: middle;
-    }
-
+    .product-table tbody tr { border-bottom: 1px solid var(--ice); transition: background 0.15s; }
+    .product-table tbody tr:hover { background: var(--mist); }
+    .product-table td { padding: 0.7rem 0.75rem 0.7rem 0; vertical-align: middle; }
     .td-part {
-      font-family: 'DM Mono', 'Courier New', monospace;
-      font-size: 0.78rem;
-      color: var(--gold);
-      white-space: nowrap;
-      width: 180px;
+      font-family: 'DM Mono', 'Courier New', monospace; font-size: 0.8rem;
+      color: var(--indigo); white-space: nowrap; width: 190px;
     }
-
-    .td-name {
-      font-size: 0.85rem;
-      color: var(--cream);
-    }
-
-    .td-action {
-      text-align: right;
-      white-space: nowrap;
-    }
-
+    .td-req { font-family: var(--body); font-style: italic; color: var(--steel); }
+    .td-name { font-size: 0.88rem; color: var(--ink); }
+    .td-action { text-align: right; white-space: nowrap; }
     .enquire-link {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      text-decoration: none;
-      border: 1px solid rgba(237,232,223,0.15);
-      padding: 0.3rem 0.7rem;
-      border-radius: var(--radius);
-      transition: all 0.18s;
-      display: inline-block;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--indigo); text-decoration: none; border: 1px solid var(--ice);
+      padding: 0.3rem 0.7rem; display: inline-block; transition: all 0.18s;
     }
-    .enquire-link:hover {
-      color: var(--gold);
-      border-color: var(--gold);
-      background: var(--gold-dim);
-    }
+    .enquire-link:hover { background: var(--indigo); border-color: var(--indigo); color: var(--white); }
 
-    /* ── CTA band ────────────────────────────────────────────── */
-    .cta-band {
-      background: var(--navy-card);
-      border-top: 1px solid rgba(196,163,90,0.15);
-      padding: 4rem 3rem;
-      text-align: center;
-    }
-
-    .cta-band h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-      font-weight: 400;
-      color: var(--cream);
-      margin-bottom: 0.8rem;
-    }
-    .cta-band h2 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    .cta-band p {
-      font-size: 0.9rem;
-      color: var(--cream-dim);
-      margin-bottom: 2rem;
-    }
-
+    /* CTA */
+    .cta-band { background: var(--ink); color: var(--white); padding: 5rem 5vw; text-align: center; }
+    .cta-band h2 { font-family: var(--display); font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 500; line-height: 1.15; margin-bottom: 0.9rem; }
+    .cta-band h2 em { font-style: italic; color: var(--sky); }
+    .cta-band p { font-size: 1rem; font-weight: 300; color: var(--ice); margin-bottom: 2.2rem; }
     .cta-button {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--navy);
-      background: var(--gold);
-      padding: 0.85rem 2.2rem;
-      text-decoration: none;
-      border-radius: var(--radius);
-      transition: opacity 0.18s;
+      display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink); background: var(--white); padding: 1rem 2.4rem; text-decoration: none; transition: background 0.2s;
     }
-    .cta-button:hover { opacity: 0.88; }
+    .cta-button:hover { background: var(--ice); }
 
-    /* ── Footer ──────────────────────────────────────────────── */
     footer {
-      padding: 2rem 3rem;
-      border-top: 1px solid rgba(237,232,223,0.07);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      color: var(--cream-dim);
+      background: var(--ink); padding: 2rem 5vw; border-top: 1px solid rgba(157,185,220,0.18);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+      font-size: 0.72rem; color: var(--steel);
     }
+    footer a { color: var(--ice); text-decoration: none; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.68rem; }
 
-    footer a {
-      color: var(--cream-dim);
-      text-decoration: none;
-    }
-    footer a:hover { color: var(--cream); }
-
-    /* ── Responsive ──────────────────────────────────────────── */
     @media (max-width: 860px) {
-      nav { padding: 0 1.5rem; }
-      .page-header { padding: 100px 1.5rem 40px; }
-      .filter-bar { padding: 0 1.5rem 2rem; }
-      .products-layout {
-        grid-template-columns: 1fr;
-        padding: 0 1.5rem 4rem;
-      }
-      .sidebar {
-        position: static;
-        border-right: none;
-        border-bottom: 1px solid rgba(237,232,223,0.08);
-        padding-right: 0;
-        padding-bottom: 1.5rem;
-        margin-bottom: 2rem;
-        display: none;
-      }
+      .products-layout { grid-template-columns: 1fr; padding: 2.5rem 16px 4rem; }
+      .sidebar { display: none; }
       .families { padding-left: 0; }
-      .product-table th:first-child,
-      .product-table td:first-child { display: none; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-      .cta-band { padding: 3rem 1.5rem; }
+      .product-table th:first-child, .product-table td:first-child { display: none; }
+      .page-header { padding: 104px 16px 48px; }
+      .filter-bar { padding: 1.2rem 16px; }
+      nav { padding: 0 16px; }
+      .nav-link { display: none; }
+      .nav-logo { font-size: 0.66rem; letter-spacing: 0.14em; white-space: nowrap; }
+      .nav-cta { padding: 0.55rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.1em; white-space: nowrap; }
+      .cta-band { padding: 4rem 16px; }
+      footer { flex-direction: column; align-items: flex-start; padding: 1.8rem 16px; }
     }
-
-    .nav-right { display:flex; align-items:center; gap:1.5rem; }
-
-        /* ─── LANG SWITCH ─────────────────────────────────────────────── */
-        .lang-switch { display:flex; align-items:center; gap:.5rem; font-size:.65rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; }
-        .lang-switch .lang-opt { color:var(--cream-dim); text-decoration:none; transition:color .2s; }
-        .lang-switch .lang-opt:hover { color:var(--cream); }
-        .lang-switch .lang-opt.active { color:var(--gold); }
-        .lang-switch .lang-sep { color:rgba(237,232,223,0.25); }
-    </style>
+  </style>
 </head>
 <body>
 
-  <!-- Nav -->
   <nav>
     <a href="/" class="nav-logo">Meridian Industrial Co.</a>
     <div class="nav-right">
-      <div class="lang-switch"><a href="/products.html" class="lang-opt active">EN</a><span class="lang-sep">|</span><a href="/fr/products.html" class="lang-opt">FR</a></div>
+      <a href="/" class="nav-link">Home</a>
+      <!-- FR switch hidden until the French pages are updated -->
       <a href="mailto:sales@meridianindustrialco.com" class="nav-cta">Make an Enquiry</a>
     </div>
   </nav>
 
-  <!-- Page header -->
   <header class="page-header">
-    <p class="page-eyebrow">Product Range</p>
-    <h1 class="page-title">Cable specified for<br><em>demanding environments.</em></h1>
-    <p class="page-intro">IEC-certified industrial cable sourced direct from Tier-1 manufacturers. Every product below is available for supply into Morocco and across the African continent. For specifications, datasheets, or pricing — use the enquiry link on any line item.</p>
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Product Range</p>
+      <h1 class="page-title">Every cable the mine depends on, <em>from one supplier.</em></h1>
+      <p class="page-intro">Garland industrial cable, grouped by where it runs on the mine. Every product below is available outside Australia and New Zealand. For datasheets or pricing, use the enquiry link on any line.</p>
+    </div>
   </header>
 
-  <!-- Filter bar -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All products</button>
-    <button class="filter-btn" data-filter="Mining">Mining</button>
-    <button class="filter-btn" data-filter="Telecoms">Telecoms</button>
-    <button class="filter-btn" data-filter="Renewables">Renewables</button>
-    <button class="filter-btn" data-filter="Digital Infrastructure">Digital Infrastructure</button>
-    <button class="filter-btn" data-filter="Infrastructure / EPC">Infrastructure / EPC</button>
+    <button class="filter-btn" data-filter="blasting">1. Blasting</button>
+    <button class="filter-btn" data-filter="power">2. Power</button>
+    <button class="filter-btn" data-filter="ic">3. Instrumentation and control</button>
+    <button class="filter-btn" data-filter="data">4. Data and networks</button>
+    <button class="filter-btn" data-filter="fibre">5. Fibre backbone</button>
+    <button class="filter-btn" data-filter="control">6. Control room</button>
   </div>
 
-  <!-- Main layout -->
   <div class="products-layout">
-
-    <!-- Sidebar -->
     <aside class="sidebar">
-      <p class="sidebar-label">Product families</p>
-
-      <a href="#ic-swa" class="sidebar-link">I&amp;C — Armoured SWA</a>
-      <a href="#ic-screened" class="sidebar-link">I&amp;C — Screened IND+OAS</a>
-      <a href="#ic-triad" class="sidebar-link">I&amp;C — Multi-Triad</a>
-      <a href="#ic-aw" class="sidebar-link">I&amp;C — Heavy Industrial</a>
-      <div class="sidebar-divider"></div>
-      <a href="#data-multicore" class="sidebar-link">Data — Multicore Screened</a>
-      <a href="#data-multipair" class="sidebar-link">Data — Multipair Screened</a>
-      <div class="sidebar-divider"></div>
-      <a href="#shotfire" class="sidebar-link">Specialty — Shotfire</a>
-
+      <p class="sidebar-group"><b>1</b>Blasting</p>
+      <a href="#blasting" class="sidebar-link">Blast wire</a>
+      <p class="sidebar-group"><b>2</b>Power</p>
+      <a href="#power" class="sidebar-link">Armoured power</a>
+      <p class="sidebar-group"><b>3</b>Instrumentation and control</p>
+      <a href="#ic-swa" class="sidebar-link">Armoured (SWA)</a>
+      <a href="#ic-screened" class="sidebar-link">Screened (IND+OAS)</a>
+      <a href="#ic-triad" class="sidebar-link">Multi-triad</a>
+      <a href="#ic-aw" class="sidebar-link">Heavy industrial (AW)</a>
+      <a href="#ic-icon" class="sidebar-link">ICON range</a>
+      <p class="sidebar-group"><b>4</b>Data and networks</p>
+      <a href="#data-multicore" class="sidebar-link">Multicore screened</a>
+      <a href="#data-multipair" class="sidebar-link">Multipair screened</a>
+      <a href="#data-cat6a" class="sidebar-link">Fire-rated Cat6A</a>
+      <p class="sidebar-group"><b>5</b>Fibre backbone</p>
+      <a href="#fibre" class="sidebar-link">Armoured fibre</a>
+      <a href="#fibre-fire" class="sidebar-link">Fire-rated fibre</a>
+      <p class="sidebar-group"><b>6</b>Control room</p>
+      <a href="#control-room" class="sidebar-link">Racks and closures</a>
       <div class="sidebar-enquiry">
-        <p style="margin-top:1.5rem;">Don't see what you need?<br>
-        <a href="mailto:sales@meridianindustrialco.com">Contact us</a> — we can source to specification.</p>
+        <p>Don't see what you need?<br><a href="mailto:sales@meridianindustrialco.com">Contact us.</a> Garland builds to order.</p>
       </div>
     </aside>
 
-    <!-- Product families -->
     <div class="families">
-
-      <!-- I&C — Armoured SWA -->
-      <div class="family-block" id="ic-swa" data-sectors="Mining,Renewables,Infrastructure / EPC">
+      <div class="family-block" id="blasting" data-app="blasting">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mining</span>
-            <span class="sector-tag">Renewables</span>
-            <span class="sector-tag">Infrastructure / EPC</span>
-          </div>
-          <h2 class="family-name">Instrumentation &amp; Control — Armoured (SWA)</h2>
-          <p class="family-desc">Steel-wire armoured multipair cable for outdoor runs, buried installations, and exposed mining environments. Combines individual and overall aluminium screen with SWA mechanical protection.</p>
+          <div class="family-tags"><span class="app-tag"><b>1</b>Blasting</span></div>
+          <h2 class="family-name">Blast wire</h2>
+          <p class="family-desc">Twisted-pair connecting wire for detonators and firing equipment, for open-pit and underground blasting. Every shot uses it, so you reorder it regularly. Send us your blast forecast and we plan supply around it.</p>
         </div>
         <table class="product-table">
-          <thead>
-            <tr>
-              <th>Part No.</th>
-              <th>Description</th>
-              <th>Enquire</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">SF16RW100</td><td class="td-name">Shot Fire Cable, 0.6mm, 1 Pair, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF16RW100" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">SF16RW500</td><td class="td-name">Shot Fire Cable, 0.6mm, 1 Pair, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF16RW500" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">SF17WHRD100</td><td class="td-name">Shot Fire Cable, 0.7mm, 1 Pair, Figure-8, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF17WHRD100" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="power" data-app="power">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>2</b>Power</span><span class="prop-tag">Steel-wire armour</span></div>
+          <h2 class="family-name">Armoured power cable</h2>
+          <p class="family-desc">LV and MV armoured power cable for mine and plant distribution, single and multicore, from Garland&#x27;s partner Elegar-Kerpen. Built to your voltage, size and armour. Send us your specification.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">LV armoured power cable, single and multicore</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: LV armoured power cable, single and multicore" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">MV armoured power cable</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MV armoured power cable" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="ic-swa" data-app="ic">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation and control</span><span class="prop-tag">Steel-wire armour</span></div>
+          <h2 class="family-name">Instrumentation and control: armoured (SWA)</h2>
+          <p class="family-desc">Steel-wire armoured multipair cable for outdoor runs, burial and exposed mine areas. Individual and overall aluminium screen with SWA protection.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
           <tbody>
             <tr><td class="td-part">MCP7052SSWA1000</td><td class="td-name">Multi-Pair, 7/0.50mm, 2 Pair, Screened, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7052SSWA1000" class="enquire-link">Enquire</a></td></tr>
             <tr><td class="td-part">MCP7054SSWA1000</td><td class="td-name">Multi-Pair, 7/0.50mm, 4 Pair, Screened, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MCP7054SSWA1000" class="enquire-link">Enquire</a></td></tr>
@@ -506,17 +298,11 @@
           </tbody>
         </table>
       </div>
-
-      <!-- I&C — Screened -->
-      <div class="family-block" id="ic-screened" data-sectors="Mining,Renewables,Infrastructure / EPC">
+      <div class="family-block" id="ic-screened" data-app="ic">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mining</span>
-            <span class="sector-tag">Renewables</span>
-            <span class="sector-tag">Infrastructure / EPC</span>
-          </div>
-          <h2 class="family-name">Instrumentation &amp; Control — Screened (IND+OAS)</h2>
-          <p class="family-desc">Individually and overall screened multipair cable for process control and measurement inside plant buildings and control rooms. High signal integrity in EMI-dense environments.</p>
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation and control</span></div>
+          <h2 class="family-name">Instrumentation and control: screened (IND+OAS)</h2>
+          <p class="family-desc">Individually and overall screened multipair cable for process control and measurement in plant buildings and control rooms. Keeps signals clean where there is a lot of electrical noise.</p>
         </div>
         <table class="product-table">
           <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
@@ -528,16 +314,11 @@
           </tbody>
         </table>
       </div>
-
-      <!-- I&C — Multi-Triad -->
-      <div class="family-block" id="ic-triad" data-sectors="Mining,Renewables">
+      <div class="family-block" id="ic-triad" data-app="ic">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mining</span>
-            <span class="sector-tag">Renewables</span>
-          </div>
-          <h2 class="family-name">Instrumentation &amp; Control — Multi-Triad</h2>
-          <p class="family-desc">Twisted triad construction for thermocouple, RTD, and 4–20mA signal loops. Individual and collective screening eliminates inter-circuit interference across long instrumentation runs in chemical and process plant environments.</p>
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation and control</span></div>
+          <h2 class="family-name">Instrumentation and control: multi-triad</h2>
+          <p class="family-desc">Twisted triad cable for thermocouple, RTD and 4-20 mA signal loops. Individual and collective screens stop circuits interfering on long runs in process plants.</p>
         </div>
         <table class="product-table">
           <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
@@ -548,15 +329,11 @@
           </tbody>
         </table>
       </div>
-
-      <!-- I&C — AW Series -->
-      <div class="family-block" id="ic-aw" data-sectors="Mining">
+      <div class="family-block" id="ic-aw" data-app="ic">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mining</span>
-          </div>
-          <h2 class="family-name">Instrumentation &amp; Control — Heavy Industrial (AW Series)</h2>
-          <p class="family-desc">High-specification armoured instrumentation cable combining individual screen, overall aluminium screen, and SWA mechanical protection. Designed for the most demanding underground mining and chemical plant environments.</p>
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation and control</span><span class="prop-tag">Steel-wire armour</span></div>
+          <h2 class="family-name">Instrumentation and control: heavy industrial (AW series)</h2>
+          <p class="family-desc">Armoured instrumentation cable with individual screen, overall aluminium screen and SWA. Built for underground mines and chemical plants.</p>
         </div>
         <table class="product-table">
           <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
@@ -569,17 +346,29 @@
           </tbody>
         </table>
       </div>
-
-      <!-- Data — Multicore Screened -->
-      <div class="family-block" id="data-multicore" data-sectors="Telecoms,Digital Infrastructure,Mining">
+      <div class="family-block" id="ic-icon" data-app="ic">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Telecoms</span>
-            <span class="sector-tag">Digital Infrastructure</span>
-            <span class="sector-tag">Mining</span>
-          </div>
-          <h2 class="family-name">Data &amp; Communications — Multicore Screened</h2>
-          <p class="family-desc">Screened multicore cable for SCADA systems, site communications, and control system backbone wiring. Available from 4 to 36 cores for trunk and distribution runs across telecoms and digital infrastructure projects.</p>
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation and control</span></div>
+          <h2 class="family-name">Instrumentation and control: ICON range</h2>
+          <p class="family-desc">Standard and custom instrumentation and control cable from Elegar-Kerpen&#x27;s ICON range. Send us your specification.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">ICON Base</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: ICON Base" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">ICON Flex</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: ICON Flex" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">ICON Chem</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: ICON Chem" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">ICON Arctic</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: ICON Arctic" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">ICON Safe</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: ICON Safe" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">ICON Bus</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: ICON Bus" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="data-multicore" data-app="data">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>4</b>Data and networks</span></div>
+          <h2 class="family-name">Data and networks: multicore screened</h2>
+          <p class="family-desc">Screened multicore cable for SCADA, site communications and control system wiring. 4 to 36 cores.</p>
         </div>
         <table class="product-table">
           <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
@@ -592,16 +381,11 @@
           </tbody>
         </table>
       </div>
-
-      <!-- Data — Multipair Screened -->
-      <div class="family-block" id="data-multipair" data-sectors="Telecoms,Digital Infrastructure">
+      <div class="family-block" id="data-multipair" data-app="data">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Telecoms</span>
-            <span class="sector-tag">Digital Infrastructure</span>
-          </div>
-          <h2 class="family-name">Data &amp; Communications — Multipair Screened</h2>
-          <p class="family-desc">Multipair screened cable for telecommunications infrastructure, data centre structured cabling, and site network distribution. Individual and collective screening variants for high-interference environments.</p>
+          <div class="family-tags"><span class="app-tag"><b>4</b>Data and networks</span></div>
+          <h2 class="family-name">Data and networks: multipair screened</h2>
+          <p class="family-desc">Screened multipair cable for site networks and communications. Individual and collective screen versions for noisy areas.</p>
         </div>
         <table class="product-table">
           <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
@@ -614,77 +398,105 @@
           </tbody>
         </table>
       </div>
-
-      <!-- Shotfire -->
-      <div class="family-block" id="shotfire" data-sectors="Mining">
+      <div class="family-block" id="data-cat6a" data-app="data">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mining</span>
-          </div>
-          <h2 class="family-name">Specialty — Shotfire Cable</h2>
-          <p class="family-desc">Purpose-built blasting cable for open-cut and underground mining operations. Resistant to abrasion, moisture, and chemical exposure. Not manufactured locally in Morocco — available on order direct from the Meridian range.</p>
+          <div class="family-tags"><span class="app-tag"><b>4</b>Data and networks</span><span class="prop-tag">Fire rating</span><span class="prop-tag">Low smoke, zero halogen</span></div>
+          <h2 class="family-name">Data and networks: fire-rated Cat6A</h2>
+          <p class="family-desc">Cat6A data cable that keeps working in a fire. Tested for circuit integrity to IEC 60331-23 for 120 minutes.</p>
         </div>
         <table class="product-table">
           <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
           <tbody>
-            <tr><td class="td-part">SF16RW100</td><td class="td-name">Shot Fire Cable, 0.6mm, 1 Pair, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF16RW100" class="enquire-link">Enquire</a></td></tr>
-            <tr><td class="td-part">SF16RW500</td><td class="td-name">Shot Fire Cable, 0.6mm, 1 Pair, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF16RW500" class="enquire-link">Enquire</a></td></tr>
-            <tr><td class="td-part">SF17WHRD100</td><td class="td-name">Shot Fire Cable, 0.7mm, 1 Pair, Figure-8, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SF17WHRD100" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">SFTPL6AFIRERD100</td><td class="td-name">Cat6A S/FTP, 23 AWG, LSZH, red, IEC 60331-23 (120 min), 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SFTPL6AFIRERD100" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">SFTPL6AFIRERD305</td><td class="td-name">Cat6A S/FTP, 23 AWG, LSZH, red, IEC 60331-23 (120 min), 305m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: SFTPL6AFIRERD305" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="fibre" data-app="fibre">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>5</b>Fibre backbone</span><span class="prop-tag">Steel-tape armour</span><span class="prop-tag">Rodent and termite protection</span></div>
+          <h2 class="family-name">Fibre backbone: armoured fibre</h2>
+          <p class="family-desc">Armoured fibre for site-wide backbones, in duct or direct burial. Single mode shown. OM3 and OM4 multimode, and up to 144 fibres in non-metallic versions, on request.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">GLTSM1AH006BK</td><td class="td-name">Armoured fibre, OS2 single mode, 6 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTSM1AH006BK" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH012BK</td><td class="td-name">Armoured fibre, OS2 single mode, 12 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTSM1AH012BK" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH024BK</td><td class="td-name">Armoured fibre, OS2 single mode, 24 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTSM1AH024BK" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH048BK</td><td class="td-name">Armoured fibre, OS2 single mode, 48 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTSM1AH048BK" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH072BK</td><td class="td-name">Armoured fibre, OS2 single mode, 72 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTSM1AH072BK" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="fibre-fire" data-app="fibre">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>5</b>Fibre backbone</span><span class="prop-tag">Fire rating</span><span class="prop-tag">Low smoke, zero halogen</span></div>
+          <h2 class="family-name">Fibre backbone: fire-rated fibre</h2>
+          <p class="family-desc">Fibre that keeps a communication path open in a fire. Fire rated to IEC 60331-25 for 120 minutes.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">GLTSM1RC006RD</td><td class="td-name">Fire-rated fibre, OS2 single mode, 6 fibres, LSZH, IEC 60331-25 (120 min)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTSM1RC006RD" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">GLTSM1RC012RD</td><td class="td-name">Fire-rated fibre, OS2 single mode, 12 fibres, LSZH, IEC 60331-25 (120 min)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTSM1RC012RD" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">GLTOM3RC012RD</td><td class="td-name">Fire-rated fibre, OM3 multimode, 12 fibres, LSZH, IEC 60331-25 (120 min)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTOM3RC012RD" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">GLTOM4RC012RD</td><td class="td-name">Fire-rated fibre, OM4 multimode, 12 fibres, LSZH, IEC 60331-25 (120 min)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: GLTOM4RC012RD" class="enquire-link">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="control-room" data-app="control">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>6</b>Control room</span></div>
+          <h2 class="family-name">Control room: racks, enclosures and splice closures</h2>
+          <p class="family-desc">Hardware to terminate and protect the network, from the fibre panel to the field enclosure.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Part No.</th><th>Description</th><th>Enquire</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MT30903B</td><td class="td-name">1RU sliding fibre panel (FOBOT), 24/48 fibres, black</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MT30903B" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part">MT309AK</td><td class="td-name">Rodent-proof rear plates for MT30903B, set of 2</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: MT309AK" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">Fibre splice closures, 24 to 1,152 fibres</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: Fibre splice closures, 24 to 1,152 fibres" class="enquire-link">Enquire</a></td></tr>
+            <tr><td class="td-part td-req">On request</td><td class="td-name">Server racks and IP65 enclosures, rack mount or DIN rail, sized to order</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Enquiry: Server racks and IP65 enclosures, rack mount or DIN rail, sized to order" class="enquire-link">Enquire</a></td></tr>
           </tbody>
         </table>
       </div>
 
-    </div><!-- /families -->
-  </div><!-- /products-layout -->
+    </div>
+  </div>
 
-  <!-- CTA band -->
   <div class="cta-band">
-    <h2>Need a specification outside this range?<br><em>We can source it.</em></h2>
-    <p>Tell us your project requirements and we will respond within 24 hours.</p>
+    <h2>Need a specification outside this range?<br><em>Garland builds to order.</em></h2>
+    <p>Tell us what your site needs. We respond within 24 hours.</p>
     <a href="mailto:sales@meridianindustrialco.com" class="cta-button">Make an Enquiry</a>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <span><a href="/">Meridian Industrial Co.</a></span>
+    <a href="/">Meridian Industrial Co.</a>
     <span>© 2026 Meridian Industrial Co. All rights reserved.</span>
   </footer>
 
   <script>
-    // Sector filter
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const familyBlocks = document.querySelectorAll('.family-block');
+    const blocks = document.querySelectorAll('.family-block');
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      blocks.forEach(b => { b.style.display = (f === 'all' || b.dataset.app === f) ? '' : 'none'; });
+    }));
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = btn.dataset.filter;
-        familyBlocks.forEach(block => {
-          if (filter === 'all') {
-            block.style.display = '';
-          } else {
-            const sectors = block.dataset.sectors || '';
-            block.style.display = sectors.includes(filter) ? '' : 'none';
-          }
-        });
-      });
-    });
-
-    // Sidebar active state on scroll
-    const sidebarLinks = document.querySelectorAll('.sidebar-link');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          sidebarLinks.forEach(l => l.classList.remove('active'));
-          const active = document.querySelector(`.sidebar-link[href="#${entry.target.id}"]`);
-          if (active) active.classList.add('active');
+    const links = document.querySelectorAll('.sidebar-link');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.sidebar-link[href="#${e.target.id}"]`);
+          if (a) a.classList.add('active');
         }
       });
     }, { rootMargin: '-30% 0px -60% 0px' });
-
-    document.querySelectorAll('.family-block').forEach(b => observer.observe(b));
+    blocks.forEach(b => obs.observe(b));
   </script>
 
 </body>
