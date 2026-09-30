@@ -453,6 +453,14 @@
         }
         .form-row input:focus, .form-row textarea:focus, .form-row select:focus { border-color: var(--indigo); }
         .form-row textarea { min-height: 95px; resize: vertical; }
+        .form-row select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231F497D' stroke-width='1.6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.9rem center;
+            padding-right: 2.2rem;
+            cursor: pointer;
+        }
+        .form-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
         .form-submit { width: 100%; margin-top: 0.4rem; }
         .form-success { display: none; text-align: center; padding: 2rem 0 1rem; }
         .form-success .check { font-size: 2rem; color: var(--indigo); margin-bottom: 1rem; }
@@ -481,6 +489,8 @@
             .stats-row { grid-template-columns: 1fr; }
             .stat, .stat + .stat { padding: 1.6rem 0 0; border-left: none; }
             .modal { padding: 2.2rem 1.4rem; }
+            .form-pair { grid-template-columns: 1fr; gap: 0; }
+            .form-pair > div + div { margin-top: 1.2rem; }
             .contact-section { padding: 5rem 16px; }
             footer { flex-direction: column; align-items: flex-start; padding: 1.8rem 16px; }
         }
@@ -708,6 +718,24 @@
                 <label for="f-email">Email</label>
                 <input id="f-email" type="email" name="email" required placeholder="your@email.com">
             </div>
+            <div class="form-row form-pair">
+                <div>
+                    <label for="f-region">Region</label>
+                    <select id="f-region" name="region" required>
+                        <option value="">Select region</option>
+                        <option>Africa</option>
+                        <option>Middle East</option>
+                        <option>Europe</option>
+                        <option>Asia</option>
+                        <option>Australia and NZ</option>
+                        <option>Americas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="f-country">Country</label>
+                    <input id="f-country" type="text" name="country" placeholder="Country">
+                </div>
+            </div>
             <div class="form-row">
                 <label for="f-sector">Sector</label>
                 <select id="f-sector" name="sector">
@@ -750,8 +778,9 @@
             // No form service set up yet: open the visitor's email instead
             e.preventDefault();
             const v = id => document.getElementById(id).value;
-            const body = `Name: ${v('f-name')}\nCompany: ${v('f-company')}\nSector: ${v('f-sector')}\n\n${v('f-message')}`;
-            window.location.href = `mailto:sales@meridianindustrialco.com?subject=Enquiry from ${encodeURIComponent(v('f-name'))}&body=${encodeURIComponent(body)}`;
+            const body = `Name: ${v('f-name')}\nCompany: ${v('f-company')}\nRegion: ${v('f-region')}\nCountry: ${v('f-country')}\nSector: ${v('f-sector')}\n\n${v('f-message')}`;
+            const subject = `Enquiry from ${v('f-name')} (${v('f-region')})`;
+            window.location.href = `mailto:sales@meridianindustrialco.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             return;
         }
         e.preventDefault();
