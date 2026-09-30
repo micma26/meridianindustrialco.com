@@ -3,688 +3,644 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gamme de produits — Meridian Industrial Co.</title>
-  <meta name="description" content="Câbles industriels certifiés IEC pour les mines, les télécoms, les énergies renouvelables et les infrastructures. Câbles d'instrumentation, de données, de puissance armés et LSZH fournis au Maroc et en Afrique." />
+  <title>Gamme de produits | Meridian Industrial Co.</title>
+  <meta name="description" content="Câbles industriels Garland pour les mines, le transport, les communications et la sécurité : câbles de tir, énergie, instrumentation, données, fibre, trafic, ferroviaire, alarme incendie et vidéosurveillance." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ── Tokens ─────────────────────────────────────────────── */
     :root {
-      --navy:        #09111F;
-      --navy-card:   #0F1A2E;
-      --navy-mid:    #152036;
-      --cream:       #EDE8DF;
-      --cream-dim:   #A8A09A;
-      --gold:        #C4A35A;
-      --gold-dim:    rgba(196,163,90,0.18);
-      --radius:      2px;
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-body:    'DM Sans', system-ui, sans-serif;
+      --ink:     #0B1D33;
+      --navy:    #1F497D;
+      --indigo:  #2C318E;
+      --steel:   #5B7FA8;
+      --sky:     #9DB9DC;
+      --ice:     #DCE6F2;
+      --mist:    #F1F5FA;
+      --slate:   #5A6573;
+      --white:   #FFFFFF;
+      --display: 'Cormorant Garamond', Georgia, serif;
+      --body:    'DM Sans', system-ui, sans-serif;
     }
-
-    /* ── Reset ──────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      background: var(--navy);
-      color: var(--cream);
-      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--body);
       font-size: 15px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* ── Nav ────────────────────────────────────────────────── */
+    /* Nav */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 3rem;
-      height: 64px;
-      background: rgba(9,17,31,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(196,163,90,0.12);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 64px;
+      background: rgba(11,29,51,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(157,185,220,0.18);
     }
-
     .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--cream);
-      text-decoration: none;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--white); text-decoration: none;
     }
-
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-link {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--sky); text-decoration: none;
+    }
+    .nav-link:hover { color: var(--white); }
     .nav-cta {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-decoration: none;
-      border: 1px solid rgba(196,163,90,0.4);
-      padding: 0.45rem 1.1rem;
-      transition: border-color 0.2s, background 0.2s;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--white); background: var(--indigo); text-decoration: none;
+      padding: 0.6rem 1.4rem; transition: background 0.2s;
     }
-    .nav-cta:hover {
-      border-color: var(--gold);
-      background: var(--gold-dim);
-    }
+    .nav-cta:hover { background: var(--navy); }
 
-    /* ── Page header ─────────────────────────────────────────── */
-    .page-header {
-      padding: 120px 3rem 56px;
-      max-width: 860px;
-    }
-
+    /* Header */
+    .page-header { background: var(--ink); color: var(--white); padding: 128px 5vw 64px; }
+    .page-header-inner { max-width: 1200px; margin: 0 auto; }
     .page-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 1rem;
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--sky); margin-bottom: 1.4rem;
     }
-
+    .page-eyebrow::before { content: ''; width: 36px; height: 1px; background: var(--sky); }
     .page-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--cream);
-      margin-bottom: 1.4rem;
+      font-family: var(--display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 500; line-height: 1.08;
+      margin-bottom: 1.4rem; max-width: 820px;
     }
-    .page-title em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .page-title em { font-style: italic; color: var(--sky); }
+    .page-intro { font-size: 1rem; font-weight: 300; color: var(--ice); max-width: 620px; line-height: 1.75; }
 
-    .page-intro {
-      font-size: 0.95rem;
-      color: var(--cream-dim);
-      max-width: 580px;
-      line-height: 1.75;
-    }
-
-    /* ── Filter bar ──────────────────────────────────────────── */
+    /* Filters */
     .filter-bar {
-      padding: 0 3rem 2.5rem;
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      background: var(--mist); border-bottom: 1px solid var(--ice);
+      padding: 1.4rem 5vw; display: flex; gap: 0.5rem; flex-wrap: wrap;
     }
-
     .filter-btn {
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      background: transparent;
-      border: 1px solid rgba(237,232,223,0.15);
-      padding: 0.4rem 0.9rem;
-      cursor: pointer;
-      transition: all 0.18s;
-      border-radius: var(--radius);
+      font-family: var(--body); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
+      color: var(--navy); background: var(--white); border: 1px solid var(--ice);
+      padding: 0.45rem 0.95rem; cursor: pointer; transition: all 0.18s;
     }
-    .filter-btn:hover,
-    .filter-btn.active {
-      color: var(--cream);
-      border-color: var(--gold);
-      background: var(--gold-dim);
-    }
+    .filter-btn:hover { border-color: var(--indigo); color: var(--indigo); }
+    .filter-btn.active { background: var(--indigo); border-color: var(--indigo); color: var(--white); }
 
-    /* ── Main layout ─────────────────────────────────────────── */
+    /* Layout */
     .products-layout {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 0;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 3rem 6rem;
+      display: grid; grid-template-columns: 230px 1fr;
+      max-width: 1200px; margin: 0 auto; padding: 3.5rem 5vw 6rem;
     }
-
-    /* ── Sidebar nav ─────────────────────────────────────────── */
     .sidebar {
-      position: sticky;
-      top: 80px;
-      height: fit-content;
-      padding-right: 2.5rem;
-      border-right: 1px solid rgba(237,232,223,0.08);
+      position: sticky; top: 88px; height: fit-content;
+      padding-right: 2rem; border-right: 1px solid var(--ice);
     }
-
-    .sidebar-label {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      margin-bottom: 1rem;
+    .sidebar-group {
+      display: flex; align-items: center; gap: 0.55rem;
+      font-size: 0.66rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink); margin: 1.2rem 0 0.35rem;
     }
-
+    .sidebar-group:first-child { margin-top: 0; }
+    .sidebar-group b, .app-tag b {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 1.35rem; height: 1.35rem; border-radius: 50%;
+      background: var(--indigo); color: var(--white); font-size: 0.66rem; letter-spacing: 0;
+    }
     .sidebar-link {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--cream-dim);
-      text-decoration: none;
-      padding: 0.45rem 0;
-      border-left: 2px solid transparent;
-      padding-left: 0.75rem;
-      margin-left: -0.75rem;
-      transition: color 0.18s, border-color 0.18s;
-      line-height: 1.4;
+      display: block; font-size: 0.82rem; color: var(--slate); text-decoration: none;
+      padding: 0.28rem 0 0.28rem 0.75rem; margin-left: 0.6rem;
+      border-left: 2px solid var(--ice); transition: color 0.18s, border-color 0.18s;
     }
-    .sidebar-link:hover {
-      color: var(--cream);
-      border-left-color: var(--gold);
-    }
-    .sidebar-link.active {
-      color: var(--gold);
-      border-left-color: var(--gold);
-    }
+    .sidebar-link:hover { color: var(--ink); border-left-color: var(--steel); }
+    .sidebar-link.active { color: var(--indigo); border-left-color: var(--indigo); font-weight: 500; }
+    .sidebar-enquiry { font-size: 0.8rem; color: var(--slate); line-height: 1.6; margin-top: 2rem; }
+    .sidebar-enquiry a { color: var(--indigo); font-weight: 500; text-decoration: none; }
 
-    .sidebar-divider {
-      height: 1px;
-      background: rgba(237,232,223,0.08);
-      margin: 1rem 0;
+    /* Families */
+    .families { padding-left: 3rem; min-width: 0; }
+    .family-block { margin-bottom: 3.8rem; scroll-margin-top: 88px; }
+    .family-header { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--ink); }
+    .family-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.8rem; align-items: center; }
+    .app-tag {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--indigo); margin-right: 0.4rem;
     }
+    .prop-tag { font-size: 0.78rem; color: var(--slate); }
+    .prop-tag::before { content: '\00B7'; color: var(--steel); margin: 0 0.5rem 0 0.1rem; }
+    .family-name { font-family: var(--display); font-size: 1.75rem; font-weight: 600; line-height: 1.15; margin-bottom: 0.5rem; }
+    .family-desc { font-size: 0.9rem; color: var(--slate); line-height: 1.7; max-width: 680px; }
 
-    .sidebar-enquiry {
-      font-size: 0.75rem;
-      color: var(--cream-dim);
-      line-height: 1.6;
-      margin-top: 1.5rem;
-    }
-    .sidebar-enquiry a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-    .sidebar-enquiry a:hover { text-decoration: underline; }
-
-    /* ── Product families ────────────────────────────────────── */
-    .families {
-      padding-left: 3rem;
-    }
-
-    .family-block {
-      margin-bottom: 4rem;
-      scroll-margin-top: 80px;
-    }
-
-    .family-header {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(196,163,90,0.2);
-    }
-
-    .family-name {
-      font-family: var(--font-display);
-      font-size: 1.55rem;
-      font-weight: 500;
-      color: var(--cream);
-      line-height: 1.2;
-      margin-bottom: 0.6rem;
-    }
-
-    .family-sectors {
-      display: flex;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.75rem;
-    }
-
-    .sector-tag {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      background: var(--gold-dim);
-      border: 1px solid rgba(196,163,90,0.25);
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius);
-    }
-
-    .family-desc {
-      font-size: 0.85rem;
-      color: var(--cream-dim);
-      line-height: 1.7;
-      max-width: 620px;
-    }
-
-    /* ── Product table ───────────────────────────────────────── */
-    .product-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .product-table thead tr {
-      border-bottom: 1px solid rgba(237,232,223,0.1);
-    }
-
+    /* Tables */
+    .product-table { width: 100%; border-collapse: collapse; }
     .product-table th {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      text-align: left;
-      padding: 0.5rem 0.75rem 0.5rem 0;
+      font-size: 0.64rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--steel); text-align: left; padding: 0.5rem 0.75rem 0.5rem 0;
+      border-bottom: 1px solid var(--ice);
     }
     .product-table th:last-child { text-align: right; }
-
-    .product-table tbody tr {
-      border-bottom: 1px solid rgba(237,232,223,0.05);
-      transition: background 0.15s;
-    }
-    .product-table tbody tr:hover {
-      background: rgba(255,255,255,0.025);
-    }
-
-    .product-table td {
-      padding: 0.75rem 0.75rem 0.75rem 0;
-      vertical-align: middle;
-    }
-
+    .product-table tbody tr { border-bottom: 1px solid var(--ice); transition: background 0.15s; }
+    .product-table tbody tr:hover { background: var(--mist); }
+    .product-table td { padding: 0.7rem 0.75rem 0.7rem 0; vertical-align: middle; }
     .td-part {
-      font-family: 'DM Mono', 'Courier New', monospace;
-      font-size: 0.78rem;
-      color: var(--gold);
-      white-space: nowrap;
-      width: 180px;
+      font-family: 'DM Mono', 'Courier New', monospace; font-size: 0.8rem;
+      color: var(--indigo); white-space: nowrap; width: 190px;
     }
-
-    .td-name {
-      font-size: 0.85rem;
-      color: var(--cream);
-    }
-
-    .td-action {
-      text-align: right;
-      white-space: nowrap;
-    }
-
+    .td-req { font-family: var(--body); font-style: italic; color: var(--steel); }
+    .td-name { font-size: 0.88rem; color: var(--ink); }
+    .td-action { text-align: right; white-space: nowrap; }
     .enquire-link {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--cream-dim);
-      text-decoration: none;
-      border: 1px solid rgba(237,232,223,0.15);
-      padding: 0.3rem 0.7rem;
-      border-radius: var(--radius);
-      transition: all 0.18s;
-      display: inline-block;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--indigo); text-decoration: none; border: 1px solid var(--ice);
+      padding: 0.3rem 0.7rem; display: inline-block; transition: all 0.18s;
     }
-    .enquire-link:hover {
-      color: var(--gold);
-      border-color: var(--gold);
-      background: var(--gold-dim);
-    }
+    .enquire-link:hover { background: var(--indigo); border-color: var(--indigo); color: var(--white); }
 
-    /* ── CTA band ────────────────────────────────────────────── */
-    .cta-band {
-      background: var(--navy-card);
-      border-top: 1px solid rgba(196,163,90,0.15);
-      padding: 4rem 3rem;
-      text-align: center;
-    }
-
-    .cta-band h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-      font-weight: 400;
-      color: var(--cream);
-      margin-bottom: 0.8rem;
-    }
-    .cta-band h2 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    .cta-band p {
-      font-size: 0.9rem;
-      color: var(--cream-dim);
-      margin-bottom: 2rem;
-    }
-
+    /* CTA */
+    .cta-band { background: var(--ink); color: var(--white); padding: 5rem 5vw; text-align: center; }
+    .cta-band h2 { font-family: var(--display); font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 500; line-height: 1.15; margin-bottom: 0.9rem; }
+    .cta-band h2 em { font-style: italic; color: var(--sky); }
+    .cta-band p { font-size: 1rem; font-weight: 300; color: var(--ice); margin-bottom: 2.2rem; }
     .cta-button {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--navy);
-      background: var(--gold);
-      padding: 0.85rem 2.2rem;
-      text-decoration: none;
-      border-radius: var(--radius);
-      transition: opacity 0.18s;
+      display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink); background: var(--white); padding: 1rem 2.4rem; text-decoration: none; transition: background 0.2s;
     }
-    .cta-button:hover { opacity: 0.88; }
+    .cta-button:hover { background: var(--ice); }
 
-    /* ── Footer ──────────────────────────────────────────────── */
     footer {
-      padding: 2rem 3rem;
-      border-top: 1px solid rgba(237,232,223,0.07);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      color: var(--cream-dim);
+      background: var(--ink); padding: 2rem 5vw; border-top: 1px solid rgba(157,185,220,0.18);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+      font-size: 0.72rem; color: var(--steel);
     }
+    footer a { color: var(--ice); text-decoration: none; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.68rem; }
 
-    footer a {
-      color: var(--cream-dim);
-      text-decoration: none;
-    }
-    footer a:hover { color: var(--cream); }
+    .lang-switch { display: flex; align-items: center; gap: 0.5rem; font-size: 0.66rem; font-weight: 500; letter-spacing: 0.14em; }
+    .lang-opt { color: var(--sky); text-decoration: none; }
+    .lang-opt:hover { color: var(--white); }
+    .lang-opt.active { color: var(--white); font-weight: 600; }
+    .lang-sep { color: var(--steel); }
 
-    /* ── Responsive ──────────────────────────────────────────── */
     @media (max-width: 860px) {
-      nav { padding: 0 1.5rem; }
-      .page-header { padding: 100px 1.5rem 40px; }
-      .filter-bar { padding: 0 1.5rem 2rem; }
-      .products-layout {
-        grid-template-columns: 1fr;
-        padding: 0 1.5rem 4rem;
-      }
-      .sidebar {
-        position: static;
-        border-right: none;
-        border-bottom: 1px solid rgba(237,232,223,0.08);
-        padding-right: 0;
-        padding-bottom: 1.5rem;
-        margin-bottom: 2rem;
-        display: none;
-      }
+      .products-layout { grid-template-columns: 1fr; padding: 2.5rem 16px 4rem; }
+      .sidebar { display: none; }
       .families { padding-left: 0; }
-      .product-table th:first-child,
-      .product-table td:first-child { display: none; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-      .cta-band { padding: 3rem 1.5rem; }
+      .product-table th:first-child, .product-table td:first-child { display: none; }
+      .page-header { padding: 104px 16px 48px; }
+      .filter-bar { padding: 1.2rem 16px; }
+      nav { padding: 0 16px; }
+      .nav-link { display: none; }
+      .nav-logo { font-size: 0.66rem; letter-spacing: 0.14em; white-space: nowrap; }
+      .nav-cta { display: none; }
+      .nav-right { gap: 1rem; }
+      .cta-band { padding: 4rem 16px; }
+      footer { flex-direction: column; align-items: flex-start; padding: 1.8rem 16px; }
     }
-
-    .nav-right { display:flex; align-items:center; gap:1.5rem; }
-
-        /* ─── LANG SWITCH ─────────────────────────────────────────────── */
-        .lang-switch { display:flex; align-items:center; gap:.5rem; font-size:.65rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; }
-        .lang-switch .lang-opt { color:var(--cream-dim); text-decoration:none; transition:color .2s; }
-        .lang-switch .lang-opt:hover { color:var(--cream); }
-        .lang-switch .lang-opt.active { color:var(--gold); }
-        .lang-switch .lang-sep { color:rgba(237,232,223,0.25); }
-    </style>
+  </style>
+  <!-- Umami analytics: no cookies -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="94bee893-eeed-4368-afdb-194bfc29fc61"></script>
 </head>
 <body>
 
-  <!-- Nav -->
   <nav>
     <a href="/fr/" class="nav-logo">Meridian Industrial Co.</a>
     <div class="nav-right">
+      <a href="/fr/" class="nav-link">Accueil</a>
       <div class="lang-switch"><a href="/products.html" class="lang-opt">EN</a><span class="lang-sep">|</span><a href="/fr/products.html" class="lang-opt active">FR</a></div>
-      <a href="mailto:sales@meridianindustrialco.com" class="nav-cta">Demander un devis</a>
+      <a href="mailto:sales@meridianindustrialco.com" class="nav-cta">Faire une demande</a>
     </div>
   </nav>
 
-  <!-- Page header -->
   <header class="page-header">
-    <p class="page-eyebrow">Gamme de produits</p>
-    <h1 class="page-title">Des câbles conçus pour<br><em>les environnements exigeants.</em></h1>
-    <p class="page-intro">Câbles industriels certifiés IEC, sourcés directement auprès de fabricants de premier rang. Chaque produit ci-dessous est disponible à la livraison au Maroc et sur l'ensemble du continent africain. Pour les spécifications, les fiches techniques ou les prix, utilisez le lien de demande sur chaque ligne.</p>
+    <div class="page-header-inner">
+      <p class="page-eyebrow">Gamme de produits</p>
+      <h1 class="page-title">Tous les câbles dont dépend votre exploitation, <em>chez un seul fournisseur.</em></h1>
+      <p class="page-intro">Une sélection de la gamme Garland, classée par application. Demandez-nous d'autres sections, longueurs et couleurs. Pour les fiches techniques ou les prix, utilisez le lien de demande sur chaque ligne.</p>
+    </div>
   </header>
 
-  <!-- Filter bar -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">Tous les produits</button>
-    <button class="filter-btn" data-filter="Mining">Mines</button>
-    <button class="filter-btn" data-filter="Telecoms">Télécoms</button>
-    <button class="filter-btn" data-filter="Renewables">Énergies renouvelables</button>
-    <button class="filter-btn" data-filter="Digital Infrastructure">Infrastructure numérique</button>
-    <button class="filter-btn" data-filter="Infrastructure / EPC">Infrastructure / EPC</button>
+    <button class="filter-btn" data-filter="blasting">1. Minage</button>
+    <button class="filter-btn" data-filter="power">2. Énergie</button>
+    <button class="filter-btn" data-filter="ic">3. Instrumentation et contrôle</button>
+    <button class="filter-btn" data-filter="data">4. Données et réseaux</button>
+    <button class="filter-btn" data-filter="fibre">5. Dorsale fibre</button>
+    <button class="filter-btn" data-filter="control">6. Salle de contrôle</button>
+    <button class="filter-btn" data-filter="transport">7. Trafic et ferroviaire</button>
+    <button class="filter-btn" data-filter="security">8. Alarme incendie et sécurité</button>
   </div>
 
-  <!-- Main layout -->
   <div class="products-layout">
-
-    <!-- Sidebar -->
     <aside class="sidebar">
-      <p class="sidebar-label">Familles de produits</p>
-
-      <a href="#ic-swa" class="sidebar-link">I&amp;C — Armé SWA</a>
-      <a href="#ic-screened" class="sidebar-link">I&amp;C — Blindé IND+OAS</a>
-      <a href="#ic-triad" class="sidebar-link">I&amp;C — Multi-triades</a>
-      <a href="#ic-aw" class="sidebar-link">I&amp;C — Industriel lourd</a>
-      <div class="sidebar-divider"></div>
-      <a href="#data-multicore" class="sidebar-link">Données — Multiconducteur blindé</a>
-      <a href="#data-multipair" class="sidebar-link">Données — Multipaire blindé</a>
-      <div class="sidebar-divider"></div>
-      <a href="#shotfire" class="sidebar-link">Spécialité — Tir de mine</a>
-
+      <p class="sidebar-group"><b>1</b>Minage</p>
+      <a href="#blasting" class="sidebar-link">Fil de tir</a>
+      <p class="sidebar-group"><b>2</b>Énergie</p>
+      <a href="#power" class="sidebar-link">Câbles armés</a>
+      <p class="sidebar-group"><b>3</b>Instrumentation et contrôle</p>
+      <a href="#ic-swa" class="sidebar-link">Armé (SWA)</a>
+      <a href="#ic-screened" class="sidebar-link">Blindé (IND+OAS)</a>
+      <a href="#ic-triad" class="sidebar-link">Multitriade</a>
+      <a href="#ic-aw" class="sidebar-link">Industrie lourde (AW)</a>
+      <a href="#ic-icon" class="sidebar-link">Gamme ICON</a>
+      <p class="sidebar-group"><b>4</b>Données et réseaux</p>
+      <a href="#data-multicore" class="sidebar-link">Multiconducteur blindé</a>
+      <a href="#data-multipair" class="sidebar-link">Multipaire blindé</a>
+      <a href="#data-cat6a" class="sidebar-link">Cat6A résistant au feu</a>
+      <a href="#data-lan" class="sidebar-link">Cat6 et Cat6A LSZH</a>
+      <a href="#data-external" class="sidebar-link">Extérieur, rempli de gel</a>
+      <p class="sidebar-group"><b>5</b>Dorsale fibre</p>
+      <a href="#fibre" class="sidebar-link">Fibre armée</a>
+      <a href="#fibre-fire" class="sidebar-link">Fibre résistante au feu</a>
+      <p class="sidebar-group"><b>6</b>Salle de contrôle</p>
+      <a href="#control-room" class="sidebar-link">Baies et boîtiers</a>
+      <p class="sidebar-group"><b>7</b>Trafic et ferroviaire</p>
+      <a href="#traffic" class="sidebar-link">Boucles de détection</a>
+      <a href="#rail" class="sidebar-link">Signalisation ferroviaire</a>
+      <p class="sidebar-group"><b>8</b>Alarme incendie et sécurité</p>
+      <a href="#fire-alarm" class="sidebar-link">Alarme incendie</a>
+      <a href="#cctv" class="sidebar-link">Vidéosurveillance et coaxial</a>
+      <a href="#security-multicore" class="sidebar-link">Contrôle d&#x27;accès</a>
       <div class="sidebar-enquiry">
-        <p style="margin-top:1.5rem;">Vous ne trouvez pas ?<br>
-        <a href="mailto:sales@meridianindustrialco.com">Contactez-nous</a>, nous sourçons sur spécification.</p>
+        <p>Vous ne trouvez pas ce qu'il vous faut ?<br><a href="mailto:sales@meridianindustrialco.com">Contactez-nous.</a> Garland fabrique sur mesure.</p>
       </div>
     </aside>
 
-    <!-- Product families -->
     <div class="families">
-
-      <!-- I&C — Armoured SWA -->
-      <div class="family-block" id="ic-swa" data-sectors="Mining,Renewables,Infrastructure / EPC">
+      <div class="family-block" id="blasting" data-app="blasting">
         <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mines</span>
-            <span class="sector-tag">Énergies renouvelables</span>
-            <span class="sector-tag">Infrastructure / EPC</span>
-          </div>
-          <h2 class="family-name">Instrumentation et commande — Armé (SWA)</h2>
-          <p class="family-desc">Câble multipaire armé à fils d'acier pour les parcours extérieurs, les installations enterrées et les environnements miniers exposés. Associe un écran individuel et un écran global en aluminium à une protection mécanique SWA.</p>
+          <div class="family-tags"><span class="app-tag"><b>1</b>Minage</span></div>
+          <h2 class="family-name">Fil de tir</h2>
+          <p class="family-desc">Fil à paire torsadée pour relier les détonateurs et le matériel de tir, en mine à ciel ouvert et souterraine. Chaque tir en consomme, vous en recommandez donc régulièrement. Envoyez-nous vos prévisions de tir et nous planifions l&#x27;approvisionnement.</p>
         </div>
         <table class="product-table">
-          <thead>
-            <tr>
-              <th>Réf.</th>
-              <th>Description</th>
-              <th>Demande</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
           <tbody>
-            <tr><td class="td-part">MCP7052SSWA1000</td><td class="td-name">Multipaire, 7/0.50mm, 2 paires, blindé, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7052SSWA1000" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP7054SSWA1000</td><td class="td-name">Multipaire, 7/0.50mm, 4 paires, blindé, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7054SSWA1000" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP7056SSWA1000</td><td class="td-name">Multipaire, 7/0.50mm, 6 paires, blindé, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7056SSWA1000" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP70512SSWA500</td><td class="td-name">Multipaire, 7/0.50mm, 12 paires, blindé, PVC/SWA/PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP70512SSWA500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP7036SSWA500</td><td class="td-name">Multipaire, 7/0.30mm, 6 paires, blindé, PVC/SWA/PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7036SSWA500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP7034SSWA1000</td><td class="td-name">Multipaire, 7/0.30mm, 4 paires, blindé, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7034SSWA1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">SF16RW100</td><td class="td-name">Câble de tir, 0,6 mm, 1 paire, PVC, 100 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF16RW100" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">SF16RW200</td><td class="td-name">Câble de tir, 0,6 mm, 1 paire, PVC, 200 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF16RW200" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">SF16RW250</td><td class="td-name">Câble de tir, 0,6 mm, 1 paire, PVC, 250 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF16RW250" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">SF16RW500</td><td class="td-name">Câble de tir, 0,6 mm, 1 paire, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF16RW500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">SF17WHRD100</td><td class="td-name">Câble de tir, 0,7 mm, 1 paire, en 8, PVC, 100 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF17WHRD100" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="power" data-app="power">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>2</b>Énergie</span><span class="prop-tag">Armure en fils d&#x27;acier</span></div>
+          <h2 class="family-name">Câbles d&#x27;énergie armés</h2>
+          <p class="family-desc">Câbles d&#x27;énergie armés BT et MT pour la distribution sur la mine et l&#x27;usine, unipolaires et multipolaires, de Elegar-Kerpen, partenaire de Garland. Fabriqués selon votre tension, section et armure. Envoyez-nous votre cahier des charges.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">Câble d&#x27;énergie armé BT, unipolaire et multipolaire</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : Câble d&#x27;énergie armé BT, unipolaire et multipolaire" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">Câble d&#x27;énergie armé MT</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : Câble d&#x27;énergie armé MT" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="ic-swa" data-app="ic">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation et contrôle</span><span class="prop-tag">Armure en fils d&#x27;acier</span></div>
+          <h2 class="family-name">Instrumentation et contrôle : armé (SWA)</h2>
+          <p class="family-desc">Câble multipaire armé en fils d&#x27;acier pour les parcours extérieurs, l&#x27;enfouissement et les zones exposées de la mine. Écran aluminium individuel et général avec protection SWA.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCP7052SSWA1000</td><td class="td-name">Multipaire, 7/0,50 mm, 2 paires, blindé, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7052SSWA1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP7054SSWA1000</td><td class="td-name">Multipaire, 7/0,50 mm, 4 paires, blindé, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7054SSWA1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP7056SSWA1000</td><td class="td-name">Multipaire, 7/0,50 mm, 6 paires, blindé, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7056SSWA1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP70512SSWA500</td><td class="td-name">Multipaire, 7/0,50 mm, 12 paires, blindé, PVC/SWA/PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP70512SSWA500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP7036SSWA500</td><td class="td-name">Multipaire, 7/0,30 mm, 6 paires, blindé, PVC/SWA/PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7036SSWA500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP7034SSWA1000</td><td class="td-name">Multipaire, 7/0,30 mm, 4 paires, blindé, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7034SSWA1000" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="ic-screened" data-app="ic">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation et contrôle</span></div>
+          <h2 class="family-name">Instrumentation et contrôle : blindé (IND+OAS)</h2>
+          <p class="family-desc">Câble multipaire à écran individuel et général pour le contrôle de procédé et la mesure dans les bâtiments et salles de contrôle. Garde des signaux propres dans les environnements à fort bruit électrique.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCP7052ISCS1000</td><td class="td-name">Multipaire, 7/0,50 mm, 2 paires, écran individuel + général, PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7052ISCS1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP70512ISCS1000</td><td class="td-name">Multipaire, 7/0,50 mm, 12 paires, écran individuel + général, PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP70512ISCS1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP7034ISCS1000</td><td class="td-name">Multipaire, 7/0,30 mm, 4 paires, écran individuel + général, PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7034ISCS1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP70312ISCS1000</td><td class="td-name">Multipaire, 7/0,30 mm, 12 paires, écran individuel + général, PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP70312ISCS1000" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="ic-triad" data-app="ic">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation et contrôle</span></div>
+          <h2 class="family-name">Instrumentation et contrôle : multitriade</h2>
+          <p class="family-desc">Câble à triades torsadées pour thermocouples, sondes RTD et boucles 4-20 mA. Les écrans individuels et général évitent les interférences sur les longs parcours en usine de procédé.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCT7031S500</td><td class="td-name">Multitriade, 7/0,3 mm, 1 triade, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7031S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCT7036ISCS1000</td><td class="td-name">Multitriade, 7/0,3 mm, 6 triades, écran individuel + général, PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7036ISCS1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCT70312ISCS1000</td><td class="td-name">Multitriade, 7/0,3 mm, 12 triades, écran individuel + général, PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT70312ISCS1000" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="ic-aw" data-app="ic">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation et contrôle</span><span class="prop-tag">Armure en fils d&#x27;acier</span></div>
+          <h2 class="family-name">Instrumentation et contrôle : industrie lourde (série AW)</h2>
+          <p class="family-desc">Câble d&#x27;instrumentation armé avec écran individuel, écran aluminium général et SWA. Conçu pour les mines souterraines et les usines chimiques.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCT7052S1000-AW</td><td class="td-name">Câble 2P 0,5 mm² IND+OAS+SWA, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7052S1000-AW" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCT7056S1000-AW</td><td class="td-name">Câble 12P 0,5 mm² IND+OAS+SWA, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7056S1000-AW" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCT7053S1000-AW</td><td class="td-name">Câble 20P 0,5 mm² IND+OAS+SWA, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7053S1000-AW" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP7031S1000-AW</td><td class="td-name">Câble 4T 1,5 mm² IND+OAS+SWA, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7031S1000-AW" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP7033S1000-AW</td><td class="td-name">Câble 20T 1,5 mm² IND+OAS+SWA, PVC/SWA/PVC, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7033S1000-AW" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="ic-icon" data-app="ic">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>3</b>Instrumentation et contrôle</span></div>
+          <h2 class="family-name">Instrumentation et contrôle : gamme ICON</h2>
+          <p class="family-desc">Câbles d&#x27;instrumentation et de contrôle standard et sur mesure de la gamme ICON d&#x27;Elegar-Kerpen. Envoyez-nous votre cahier des charges.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">ICON Base</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ICON Base" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">ICON Flex</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ICON Flex" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">ICON Chem</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ICON Chem" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">ICON Arctic</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ICON Arctic" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">ICON Safe</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ICON Safe" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">ICON Bus</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ICON Bus" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="data-multicore" data-app="data">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>4</b>Données et réseaux</span></div>
+          <h2 class="family-name">Données et réseaux : multiconducteur blindé</h2>
+          <p class="family-desc">Câble multiconducteur blindé pour le SCADA, les communications du site et le câblage des systèmes de contrôle. De 4 à 36 conducteurs.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MC74S500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 4 conducteurs, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC74S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC76S500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 6 conducteurs, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC76S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC78S500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 8 conducteurs, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC78S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC725S500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 25 conducteurs, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC725S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC736S500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 36 conducteurs, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC736S500" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="data-multipair" data-app="data">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>4</b>Données et réseaux</span></div>
+          <h2 class="family-name">Données et réseaux : multipaire blindé</h2>
+          <p class="family-desc">Câble multipaire blindé pour les réseaux et communications du site. Versions à écran individuel et général pour les zones perturbées.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MCP2S500</td><td class="td-name">Multipaire, 7/0,20 mm, 2 paires, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP2S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP4S500</td><td class="td-name">Multipaire, 7/0,20 mm, 4 paires, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP4S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP6S500</td><td class="td-name">Multipaire, 7/0,20 mm, 6 paires, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP6S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP8S500</td><td class="td-name">Multipaire, 7/0,20 mm, 8 paires, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP8S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP4ISCS500</td><td class="td-name">Multipaire, 7/0,20 mm, 4 paires, écran individuel + général, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP4ISCS500" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="data-cat6a" data-app="data">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>4</b>Données et réseaux</span><span class="prop-tag">Résistance au feu</span><span class="prop-tag">Faible fumée, sans halogène</span></div>
+          <h2 class="family-name">Données et réseaux : Cat6A résistant au feu</h2>
+          <p class="family-desc">Câble de données Cat6A qui continue de fonctionner dans un incendie. Testé pour l&#x27;intégrité du circuit selon IEC 60331-23 pendant 120 minutes.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">SFTPL6AFIRERD100</td><td class="td-name">Cat6A S/FTP, 23 AWG, LSZH, rouge, IEC 60331-23 (120 minutes), 100 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SFTPL6AFIRERD100" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">SFTPL6AFIRERD305</td><td class="td-name">Cat6A S/FTP, 23 AWG, LSZH, rouge, IEC 60331-23 (120 minutes), 305 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SFTPL6AFIRERD305" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="data-lan" data-app="data">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>4</b>Données et réseaux</span><span class="prop-tag">Faible fumée, sans halogène</span></div>
+          <h2 class="family-name">Données et réseaux : Cat6 et Cat6A, faible fumée</h2>
+          <p class="family-desc">Câble réseau pour salles de contrôle, bâtiments d&#x27;usine et bureaux, avec gaine à faible dégagement de fumée et sans halogène.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">FTPL6AHFBK305</td><td class="td-name">Cat6A, 4 paires, écran feuillard, LSZH, noir, 305 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : FTPL6AHFBK305" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">FTPL6AHFGY500</td><td class="td-name">Cat6A, 4 paires, écran feuillard, LSZH, gris, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : FTPL6AHFGY500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">FTPL6AHFBL305</td><td class="td-name">Cat6A, 4 paires, écran feuillard, LSZH, bleu, 305 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : FTPL6AHFBL305" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">UTPL6HFGY305RBA</td><td class="td-name">Cat6, 4 paires, UTP, LSZH, gris, 305 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : UTPL6HFGY305RBA" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="data-external" data-app="data">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>4</b>Données et réseaux</span><span class="prop-tag">Étanchéité à l&#x27;eau</span></div>
+          <h2 class="family-name">Données et réseaux : extérieur, rempli de gel</h2>
+          <p class="family-desc">Câble de données et de communication extérieur rempli de gel pour bloquer l&#x27;eau, pour fourreaux enterrés et longs parcours extérieurs.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">UTPL6JFBK305</td><td class="td-name">Cat6, 4 paires, UTP, rempli de gel, PE, 305 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : UTPL6JFBK305" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">UTPL6PP500</td><td class="td-name">Cat6, 4 paires, UTP, Poly/Poly, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : UTPL6PP500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP2SJFP500</td><td class="td-name">Multipaire, 7/0,20 mm, 2 paires, blindé, rempli de gel, Poly, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP2SJFP500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP2ISJFP500</td><td class="td-name">Multipaire, 7/0,20 mm, 2 paires, écran individuel, rempli de gel, Poly, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP2ISJFP500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCP3SJFP500</td><td class="td-name">Multipaire, 7/0,20 mm, 3 paires, blindé, rempli de gel, Poly, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP3SJFP500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC146JFPP500</td><td class="td-name">Multiconducteur, 14/0,20 mm, 6 conducteurs, rempli de gel, Poly/Poly, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC146JFPP500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">ETC2064JF1000</td><td class="td-name">Câble téléphonique enterré, 10 paires 0,64 mm, rempli de gel, Poly, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ETC2064JF1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">ETC10064JF1000</td><td class="td-name">Câble téléphonique enterré, 50 paires 0,64 mm, rempli de gel, Poly, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ETC10064JF1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">ETC20064JF500</td><td class="td-name">Câble téléphonique enterré, 100 paires 0,64 mm, rempli de gel, Poly, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ETC20064JF500" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="fibre" data-app="fibre">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>5</b>Dorsale fibre</span><span class="prop-tag">Armure en feuillard d&#x27;acier</span><span class="prop-tag">Protection rongeurs et termites</span></div>
+          <h2 class="family-name">Dorsale fibre : fibre armée</h2>
+          <p class="family-desc">Fibre armée pour les dorsales de site, en fourreau ou en pose directe enterrée. Versions monomodes présentées. Multimode OM3 et OM4, et jusqu&#x27;à 144 fibres en versions non métalliques, sur demande.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">GLTSM1AH006BK</td><td class="td-name">Fibre armée, monomode OS2, 6 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTSM1AH006BK" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH012BK</td><td class="td-name">Fibre armée, monomode OS2, 12 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTSM1AH012BK" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH024BK</td><td class="td-name">Fibre armée, monomode OS2, 24 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTSM1AH024BK" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH048BK</td><td class="td-name">Fibre armée, monomode OS2, 48 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTSM1AH048BK" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GLTSM1AH072BK</td><td class="td-name">Fibre armée, monomode OS2, 72 fibres, PE/NY/CSTA/PE</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTSM1AH072BK" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="fibre-fire" data-app="fibre">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>5</b>Dorsale fibre</span><span class="prop-tag">Résistance au feu</span><span class="prop-tag">Faible fumée, sans halogène</span></div>
+          <h2 class="family-name">Dorsale fibre : fibre résistante au feu</h2>
+          <p class="family-desc">Fibre qui maintient une liaison de communication en cas d&#x27;incendie. Résistance au feu selon IEC 60331-25 pendant 120 minutes.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">GLTSM1RC006RD</td><td class="td-name">Fibre résistante au feu, monomode OS2, 6 fibres, LSZH, IEC 60331-25 (120 minutes)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTSM1RC006RD" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GLTSM1RC012RD</td><td class="td-name">Fibre résistante au feu, monomode OS2, 12 fibres, LSZH, IEC 60331-25 (120 minutes)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTSM1RC012RD" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GLTOM3RC012RD</td><td class="td-name">Fibre résistante au feu, multimode OM3, 12 fibres, LSZH, IEC 60331-25 (120 minutes)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTOM3RC012RD" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GLTOM4RC012RD</td><td class="td-name">Fibre résistante au feu, multimode OM4, 12 fibres, LSZH, IEC 60331-25 (120 minutes)</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GLTOM4RC012RD" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="control-room" data-app="control">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>6</b>Salle de contrôle</span></div>
+          <h2 class="family-name">Salle de contrôle : baies, coffrets et boîtiers d&#x27;épissure</h2>
+          <p class="family-desc">Matériel pour raccorder et protéger le réseau, du tiroir optique au coffret de terrain.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MT30903B</td><td class="td-name">Tiroir optique coulissant 1U (FOBOT), 24/48 fibres, noir</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MT30903B" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MT309AK</td><td class="td-name">Plaques arrière anti-rongeurs pour MT30903B, lot de 2</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MT309AK" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MT30905</td><td class="td-name">Tiroir optique coulissant en baie (FOBOT), 48 ports</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MT30905" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">Boîtiers d&#x27;épissure fibre, de 24 à 1 152 fibres</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : Boîtiers d&#x27;épissure fibre, de 24 à 1 152 fibres" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GDR6U600X600WGD</td><td class="td-name">Coffret mural 6U, profondeur 600 mm, porte vitrée</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GDR6U600X600WGD" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GDR27U600X600FGD</td><td class="td-name">Baie au sol 27U, 600 x 600 mm, façade vitrée, arrière métal, complète</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GDR27U600X600FGD" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GDR45U600X800FGD</td><td class="td-name">Baie au sol 45U, 600 x 800 mm, façade vitrée, arrière métal, complète</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GDR45U600X800FGD" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">GDR45U800X1000FMD</td><td class="td-name">Baie serveur 45U, 800 x 1000 mm, portes perforées avant et arrière, complète</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : GDR45U800X1000FMD" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part td-req">Sur demande</td><td class="td-name">Coffrets IP65, montage en baie ou sur rail DIN, dimensionnés sur mesure</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : Coffrets IP65, montage en baie ou sur rail DIN, dimensionnés sur mesure" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="traffic" data-app="transport">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>7</b>Trafic et ferroviaire</span><span class="prop-tag">Étanchéité à l&#x27;eau</span></div>
+          <h2 class="family-name">Trafic et ferroviaire : câbles de boucle de détection</h2>
+          <p class="family-desc">Câbles pour les boucles de détection de véhicules et les feux de signalisation sur routes, pistes de roulage, barrières et accès de tunnels.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MC7051XLPE500</td><td class="td-name">Câble de boucle de détection, 1,5 mm², 1 conducteur, XLPE, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7051XLPE500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC7051XLPE1000</td><td class="td-name">Câble de boucle de détection, 1,5 mm², 1 conducteur, XLPE, 1000 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7051XLPE1000" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC7052JFSTD500</td><td class="td-name">Câble d&#x27;alimentation de boucle, 1,5 mm², 1 paire, rempli de gel, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7052JFSTD500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC7056JFSTD500</td><td class="td-name">Câble d&#x27;alimentation de boucle, 1,5 mm², 3 paires, rempli de gel, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7056JFSTD500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC7058JFSTD500</td><td class="td-name">Câble d&#x27;alimentation de boucle, 1,5 mm², 4 paires, rempli de gel, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7058JFSTD500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MCC6QTRAFFICUV500</td><td class="td-name">Câble de signalisation routière, 6 conducteurs, PVC/PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCC6QTRAFFICUV500" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="rail" data-app="transport">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>7</b>Trafic et ferroviaire</span></div>
+          <h2 class="family-name">Trafic et ferroviaire : câbles de signalisation ferroviaire</h2>
+          <p class="family-desc">Câbles de signalisation et de communication ferroviaires. Garland conçoit aussi des câbles ferroviaires selon les spécifications de votre projet.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MC70510RAIL400</td><td class="td-name">Câble ferroviaire, 1,5 mm², 10 conducteurs, PVC/PVC, 400 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC70510RAIL400" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC70520RAIL400</td><td class="td-name">Câble ferroviaire, 1,5 mm², 20 conducteurs, PVC/PVC, 400 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC70520RAIL400" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC70550RAIL400</td><td class="td-name">Câble ferroviaire, 1,5 mm², 50 conducteurs, PVC/PVC, 400 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC70550RAIL400" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">PTC09010SRAILGY500</td><td class="td-name">Câble ferroviaire, 0,9 mm, 10 paires, écran général, PE/PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : PTC09010SRAILGY500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">ETC409JFSPEN500</td><td class="td-name">Câble ferroviaire, 0,9 mm, 4 conducteurs, écran général, PE/PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : ETC409JFSPEN500" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="fire-alarm" data-app="security">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>8</b>Alarme incendie et sécurité</span><span class="prop-tag">Résistance au feu</span><span class="prop-tag">Faible fumée, sans halogène</span></div>
+          <h2 class="family-name">Alarme incendie et sécurité : câbles d&#x27;alarme incendie</h2>
+          <p class="family-desc">Câble d&#x27;alarme incendie rouge, résistant au feu pendant 120 minutes, pour les circuits d&#x27;alarme, de détection et de sonorisation.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MC7032FRHFRD500</td><td class="td-name">Câble d&#x27;alarme incendie, 2 conducteurs 0,5 mm², LSZH, rouge, résistance au feu 120 minutes, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7032FRHFRD500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC7042FRHFRD500</td><td class="td-name">Câble d&#x27;alarme incendie, 2 conducteurs 1,0 mm², LSZH, rouge, résistance au feu 120 minutes, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7042FRHFRD500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC7032FRSHFRD500</td><td class="td-name">Câble d&#x27;alarme incendie, 2 conducteurs 0,5 mm², écran général, LSZH, rouge, résistance au feu 120 minutes, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7032FRSHFRD500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC7042FRSHFRD500</td><td class="td-name">Câble d&#x27;alarme incendie, 2 conducteurs 1,0 mm², écran général, LSZH, rouge, résistance au feu 120 minutes, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC7042FRSHFRD500" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="cctv" data-app="security">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>8</b>Alarme incendie et sécurité</span></div>
+          <h2 class="family-name">Alarme incendie et sécurité : vidéosurveillance et coaxial</h2>
+          <p class="family-desc">Câbles coaxiaux et composites pour caméras de vidéosurveillance, transportant vidéo et alimentation dans un seul câble.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">CCTVCOM24250</td><td class="td-name">Câble composite vidéosurveillance, coaxial RG59 + alimentation 2 conducteurs 24/0,20 mm, 250 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : CCTVCOM24250" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">CCTVCOM24BK250</td><td class="td-name">Câble composite vidéosurveillance, coaxial RG59 + alimentation 2 conducteurs 24/0,20 mm, noir, 250 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : CCTVCOM24BK250" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">CC59300B</td><td class="td-name">Câble coaxial, RG59B/U, 75 ohm, tresse 84 %, 300 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : CC59300B" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">CC6QS305RBW</td><td class="td-name">Câble coaxial, RG6, 75 ohm, quadruple écran, 305 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : CC6QS305RBW" class="enquire-link">Demander</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="family-block" id="security-multicore" data-app="security">
+        <div class="family-header">
+          <div class="family-tags"><span class="app-tag"><b>8</b>Alarme incendie et sécurité</span></div>
+          <h2 class="family-name">Alarme incendie et sécurité : contrôle d&#x27;accès et alarme</h2>
+          <p class="family-desc">Câble multiconducteur blindé pour le contrôle d&#x27;accès, les équipements de porte, les centrales d&#x27;alarme et les interphones.</p>
+        </div>
+        <table class="product-table">
+          <thead><tr><th>Référence</th><th>Description</th><th>Demande</th></tr></thead>
+          <tbody>
+            <tr><td class="td-part">MC76S500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 6 conducteurs, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC76S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC78S500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 8 conducteurs, blindé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC78S500" class="enquire-link">Demander</a></td></tr>
+            <tr><td class="td-part">MC78BS500</td><td class="td-name">Multiconducteur, 7/0,20 mm, 8 conducteurs, écran tressé, PVC, 500 m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC78BS500" class="enquire-link">Demander</a></td></tr>
           </tbody>
         </table>
       </div>
 
-      <!-- I&C — Screened -->
-      <div class="family-block" id="ic-screened" data-sectors="Mining,Renewables,Infrastructure / EPC">
-        <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mines</span>
-            <span class="sector-tag">Énergies renouvelables</span>
-            <span class="sector-tag">Infrastructure / EPC</span>
-          </div>
-          <h2 class="family-name">Instrumentation et commande — Blindé (IND+OAS)</h2>
-          <p class="family-desc">Câble multipaire à écran individuel et global pour le contrôle de procédés et la mesure dans les bâtiments d'usine et les salles de contrôle. Haute intégrité du signal dans les environnements à forte interférence électromagnétique.</p>
-        </div>
-        <table class="product-table">
-          <thead><tr><th>Réf.</th><th>Description</th><th>Demande</th></tr></thead>
-          <tbody>
-            <tr><td class="td-part">MCP7052ISCS1000</td><td class="td-name">Multipaire, 7/0.50mm, 2 paires, écran individuel + collectif, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7052ISCS1000" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP70512ISCS1000</td><td class="td-name">Multipaire, 7/0.50mm, 12 paires, écran individuel + collectif, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP70512ISCS1000" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP7034ISCS1000</td><td class="td-name">Multipaire, 7/0.30mm, 4 paires, écran individuel + collectif, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7034ISCS1000" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP70312ISCS1000</td><td class="td-name">Multipaire, 7/0.30mm, 12 paires, écran individuel + collectif, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP70312ISCS1000" class="enquire-link">Demander</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- I&C — Multi-Triad -->
-      <div class="family-block" id="ic-triad" data-sectors="Mining,Renewables">
-        <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mines</span>
-            <span class="sector-tag">Énergies renouvelables</span>
-          </div>
-          <h2 class="family-name">Instrumentation et commande — Multi-triades</h2>
-          <p class="family-desc">Construction en triades torsadées pour les boucles de signal thermocouple, RTD et 4–20mA. L'écran individuel et collectif élimine les interférences inter-circuits sur les longs parcours d'instrumentation dans les usines chimiques et de procédés.</p>
-        </div>
-        <table class="product-table">
-          <thead><tr><th>Réf.</th><th>Description</th><th>Demande</th></tr></thead>
-          <tbody>
-            <tr><td class="td-part">MCT7031S500</td><td class="td-name">Multi-triades, 7/0.3mm, 1 triade, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7031S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCT7036ISCS1000</td><td class="td-name">Multi-triades, 7/0.3mm, 6 triades, écran individuel + collectif, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7036ISCS1000" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCT70312ISCS1000</td><td class="td-name">Multi-triades, 7/0.3mm, 12 triades, écran individuel + collectif, PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT70312ISCS1000" class="enquire-link">Demander</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- I&C — AW Series -->
-      <div class="family-block" id="ic-aw" data-sectors="Mining">
-        <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mines</span>
-          </div>
-          <h2 class="family-name">Instrumentation et commande — Industriel lourd (série AW)</h2>
-          <p class="family-desc">Câble d'instrumentation armé de haute spécification, associant écran individuel, écran global en aluminium et protection mécanique SWA. Conçu pour les environnements miniers souterrains et les usines chimiques les plus exigeants.</p>
-        </div>
-        <table class="product-table">
-          <thead><tr><th>Réf.</th><th>Description</th><th>Demande</th></tr></thead>
-          <tbody>
-            <tr><td class="td-part">MCT7052S1000-AW</td><td class="td-name">Câble 2P 0.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7052S1000-AW" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCT7056S1000-AW</td><td class="td-name">Câble 12P 0.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7056S1000-AW" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCT7053S1000-AW</td><td class="td-name">Câble 20P 0.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCT7053S1000-AW" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP7031S1000-AW</td><td class="td-name">Câble 4T 1.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7031S1000-AW" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP7033S1000-AW</td><td class="td-name">Câble 20T 1.5mm² IND+OAS+SWA, PVC/SWA/PVC, 1000m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP7033S1000-AW" class="enquire-link">Demander</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Data — Multicore Screened -->
-      <div class="family-block" id="data-multicore" data-sectors="Telecoms,Digital Infrastructure,Mining">
-        <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Télécoms</span>
-            <span class="sector-tag">Infrastructure numérique</span>
-            <span class="sector-tag">Mines</span>
-          </div>
-          <h2 class="family-name">Données et communications — Multiconducteur blindé</h2>
-          <p class="family-desc">Câble multiconducteur blindé pour les systèmes SCADA, les communications de site et le câblage dorsal des systèmes de contrôle. Disponible de 4 à 36 conducteurs pour les parcours de transport et de distribution dans les projets télécoms et d'infrastructure numérique.</p>
-        </div>
-        <table class="product-table">
-          <thead><tr><th>Réf.</th><th>Description</th><th>Demande</th></tr></thead>
-          <tbody>
-            <tr><td class="td-part">MC74S500</td><td class="td-name">Multiconducteur, 7/0.20mm, 4 conducteurs, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC74S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MC76S500</td><td class="td-name">Multiconducteur, 7/0.20mm, 6 conducteurs, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC76S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MC78S500</td><td class="td-name">Multiconducteur, 7/0.20mm, 8 conducteurs, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC78S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MC725S500</td><td class="td-name">Multiconducteur, 7/0.20mm, 25 conducteurs, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC725S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MC736S500</td><td class="td-name">Multiconducteur, 7/0.20mm, 36 conducteurs, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MC736S500" class="enquire-link">Demander</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Data — Multipair Screened -->
-      <div class="family-block" id="data-multipair" data-sectors="Telecoms,Digital Infrastructure">
-        <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Télécoms</span>
-            <span class="sector-tag">Infrastructure numérique</span>
-          </div>
-          <h2 class="family-name">Données et communications — Multipaire blindé</h2>
-          <p class="family-desc">Câble multipaire blindé pour les infrastructures de télécommunications, le câblage structuré de centres de données et la distribution de réseaux de site. Variantes à écran individuel et collectif pour les environnements à forte interférence.</p>
-        </div>
-        <table class="product-table">
-          <thead><tr><th>Réf.</th><th>Description</th><th>Demande</th></tr></thead>
-          <tbody>
-            <tr><td class="td-part">MCP2S500</td><td class="td-name">Multipaire, 7/0.20mm, 2 paires, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP2S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP4S500</td><td class="td-name">Multipaire, 7/0.20mm, 4 paires, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP4S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP6S500</td><td class="td-name">Multipaire, 7/0.20mm, 6 paires, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP6S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP8S500</td><td class="td-name">Multipaire, 7/0.20mm, 8 paires, blindé, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP8S500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">MCP4ISCS500</td><td class="td-name">Multipaire, 7/0.20mm, 4 paires, écran individuel + collectif, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : MCP4ISCS500" class="enquire-link">Demander</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Shotfire -->
-      <div class="family-block" id="shotfire" data-sectors="Mining">
-        <div class="family-header">
-          <div class="family-sectors">
-            <span class="sector-tag">Mines</span>
-          </div>
-          <h2 class="family-name">Spécialité — Câble de tir de mine</h2>
-          <p class="family-desc">Câble de tir conçu spécifiquement pour les exploitations minières à ciel ouvert et souterraines. Résistant à l'abrasion, à l'humidité et à l'exposition chimique. Non fabriqué localement au Maroc : disponible sur commande directement dans la gamme Meridian.</p>
-        </div>
-        <table class="product-table">
-          <thead><tr><th>Réf.</th><th>Description</th><th>Demande</th></tr></thead>
-          <tbody>
-            <tr><td class="td-part">SF16RW100</td><td class="td-name">Câble de tir de mine, 0.6mm, 1 paire, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF16RW100" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">SF16RW500</td><td class="td-name">Câble de tir de mine, 0.6mm, 1 paire, PVC, 500m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF16RW500" class="enquire-link">Demander</a></td></tr>
-            <tr><td class="td-part">SF17WHRD100</td><td class="td-name">Câble de tir de mine, 0.7mm, 1 paire, Figure-8, PVC, 100m</td><td class="td-action"><a href="mailto:sales@meridianindustrialco.com?subject=Demande : SF17WHRD100" class="enquire-link">Demander</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-    </div><!-- /families -->
-  </div><!-- /products-layout -->
-
-  <!-- CTA band -->
-  <div class="cta-band">
-    <h2>Besoin d'une spécification hors de cette gamme ?<br><em>Nous pouvons la sourcer.</em></h2>
-    <p>Communiquez-nous les besoins de votre projet et nous vous répondrons sous 24 heures.</p>
-    <a href="mailto:sales@meridianindustrialco.com" class="cta-button">Demander un devis</a>
+    </div>
   </div>
 
-  <!-- Footer -->
+  <div class="cta-band">
+    <h2>Besoin d'une spécification hors de cette gamme ?<br><em>Garland fabrique sur mesure.</em></h2>
+    <p>Cette page présente une sélection. Dites-nous ce dont votre site a besoin et nous le trouverons dans la gamme complète, ou le fabriquerons. Nous répondons sous 24 heures.</p>
+    <a href="mailto:sales@meridianindustrialco.com" class="cta-button">Faire une demande</a>
+  </div>
+
   <footer>
-    <span><a href="/fr/">Meridian Industrial Co.</a></span>
+    <a href="/fr/">Meridian Industrial Co.</a>
     <span>© 2026 Meridian Industrial Co. Tous droits réservés.</span>
   </footer>
 
   <script>
-    // Sector filter
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const familyBlocks = document.querySelectorAll('.family-block');
+    const blocks = document.querySelectorAll('.family-block');
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      blocks.forEach(b => { b.style.display = (f === 'all' || b.dataset.app === f) ? '' : 'none'; });
+    }));
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = btn.dataset.filter;
-        familyBlocks.forEach(block => {
-          if (filter === 'all') {
-            block.style.display = '';
-          } else {
-            const sectors = block.dataset.sectors || '';
-            block.style.display = sectors.includes(filter) ? '' : 'none';
-          }
-        });
-      });
-    });
-
-    // Sidebar active state on scroll
-    const sidebarLinks = document.querySelectorAll('.sidebar-link');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          sidebarLinks.forEach(l => l.classList.remove('active'));
-          const active = document.querySelector(`.sidebar-link[href="#${entry.target.id}"]`);
-          if (active) active.classList.add('active');
+    const links = document.querySelectorAll('.sidebar-link');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const a = document.querySelector(`.sidebar-link[href="#${e.target.id}"]`);
+          if (a) a.classList.add('active');
         }
       });
     }, { rootMargin: '-30% 0px -60% 0px' });
-
-    document.querySelectorAll('.family-block').forEach(b => observer.observe(b));
+    blocks.forEach(b => obs.observe(b));
   </script>
 
 </body>

@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meridian Industrial Co. — Câbles industriels pour l'Afrique</title>
-    <meta name="description" content="Distribution spécialisée de câbles industriels pour les secteurs de l'énergie, des mines et des télécoms en Afrique. Câbles certifiés IEC sourcés directement auprès de fabricants de premier rang.">
+    <title>Meridian Industrial Co. | Câbles industriels Garland</title>
+    <meta name="description" content="Câbles industriels Garland pour les projets miniers, de transport, de communication et de sécurité, fournis par Meridian Industrial Co.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+        /* Palette matches the Garland mining deck and one-pager */
         :root {
-            --navy:       #09111F;
-            --navy-card:  #0F1A2E;
-            --navy-mid:   #152036;
-            --cream:      #EDE8DF;
-            --cream-dim:  #A8A09A;
-            --gold:       #C4A35A;
-            --gold-dim:   rgba(196,163,90,0.15);
-            --border:     rgba(237,232,223,0.08);
-            --border-gold:rgba(196,163,90,0.25);
+            --ink:     #0B1D33;
+            --navy:    #1F497D;
+            --indigo:  #2C318E;
+            --steel:   #5B7FA8;
+            --sky:     #9DB9DC;
+            --ice:     #DCE6F2;
+            --mist:    #F1F5FA;
+            --slate:   #5A6573;
+            --white:   #FFFFFF;
+            --line:    #DCE6F2;
+            --display: 'Cormorant Garamond', Georgia, serif;
+            --body:    'DM Sans', system-ui, sans-serif;
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            background: var(--navy);
-            color: var(--cream);
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 300;
+            background: var(--white);
+            color: var(--ink);
+            font-family: var(--body);
+            font-weight: 400;
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ─── NAV ────────────────────────────────────────────────────── */
+        /* NAV */
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -44,432 +48,353 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1.4rem 5vw;
-            background: rgba(9,17,31,0.90);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-gold);
+            padding: 1.1rem 5vw;
+            background: rgba(11,29,51,0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(157,185,220,0.18);
         }
-
         .nav-logo {
-            font-family: 'DM Sans', sans-serif;
             font-size: 0.75rem;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: var(--cream);
+            color: var(--white);
             text-decoration: none;
         }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-        }
-
+        .nav-links { display: flex; align-items: center; gap: 2.2rem; }
         .nav-link {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.65rem;
+            font-size: 0.68rem;
             font-weight: 500;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--cream-dim);
+            color: var(--sky);
             text-decoration: none;
             transition: color 0.2s;
         }
-        .nav-link:hover { color: var(--cream); }
-
+        .nav-link:hover { color: var(--white); }
         .nav-btn {
-            font-family: 'DM Sans', sans-serif;
+            font-family: var(--body);
             font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
+            font-weight: 600;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
-            color: var(--navy);
-            background: var(--cream);
-            padding: 0.6rem 1.6rem;
+            color: var(--white);
+            background: var(--indigo);
+            padding: 0.65rem 1.5rem;
             border: none;
             cursor: pointer;
             transition: background 0.2s ease;
         }
-        .nav-btn:hover { background: var(--gold); }
+        .nav-btn:hover { background: var(--navy); }
 
-        /* ─── HERO ───────────────────────────────────────────────────── */
+        /* HERO */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 9rem 5vw 5rem;
+            background: var(--ink);
+            color: var(--white);
+            padding: 10rem 5vw 5.5rem;
             position: relative;
             overflow: hidden;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background-image: radial-gradient(circle, rgba(237,232,223,0.06) 1px, transparent 1px);
-            background-size: 36px 36px;
-            pointer-events: none;
-        }
-
         .hero::after {
             content: '';
             position: absolute; inset: 0;
-            background:
-                radial-gradient(ellipse 55% 60% at 72% 38%, rgba(30,70,140,0.14) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 50% at 15% 75%, rgba(196,163,90,0.05) 0%, transparent 60%);
+            background: radial-gradient(ellipse 50% 70% at 85% 30%, rgba(44,49,142,0.45) 0%, transparent 70%);
             pointer-events: none;
         }
-
-        .hero-inner {
-            position: relative; z-index: 1;
-            max-width: 1100px; width: 100%;
-        }
-
-        .hero-eyebrow {
+        .hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+        .eyebrow {
             display: flex;
             align-items: center;
             gap: 1rem;
-            font-size: 0.68rem;
+            font-size: 0.7rem;
             font-weight: 500;
-            letter-spacing: 0.28em;
+            letter-spacing: 0.26em;
             text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 2.2rem;
-            opacity: 0;
-            animation: fadeUp 0.7s ease 0.1s forwards;
+            color: var(--sky);
+            margin-bottom: 2rem;
         }
-        .hero-eyebrow::before {
+        .eyebrow::before {
             content: '';
-            display: inline-block;
             width: 36px; height: 1px;
-            background: var(--gold);
+            background: var(--sky);
             flex-shrink: 0;
         }
-
         .hero-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(3.4rem, 6.5vw, 6.8rem);
-            font-weight: 300;
-            line-height: 1.06;
+            font-family: var(--display);
+            font-size: clamp(3rem, 6.2vw, 6.2rem);
+            font-weight: 500;
+            line-height: 1.04;
             letter-spacing: -0.01em;
-            color: var(--cream);
-            margin-bottom: 2.2rem;
-            max-width: 820px;
-            opacity: 0;
-            animation: fadeUp 0.8s ease 0.25s forwards;
+            margin-bottom: 2rem;
+            max-width: 900px;
         }
-        .hero-title em {
-            font-style: italic;
-            color: var(--gold);
-        }
-
+        .hero-title em { font-style: italic; color: var(--sky); }
         .hero-sub {
-            font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+            font-size: clamp(1rem, 1.4vw, 1.15rem);
             font-weight: 300;
-            color: var(--cream-dim);
-            max-width: 500px;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: fadeUp 0.8s ease 0.4s forwards;
+            color: var(--ice);
+            max-width: 560px;
+            line-height: 1.75;
+            margin-bottom: 2.6rem;
         }
-
-        .hero-pills {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin-bottom: 3.5rem;
-            opacity: 0;
-            animation: fadeUp 0.7s ease 0.52s forwards;
-        }
+        .hero-pills { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 3rem; }
         .pill {
-            font-size: 0.68rem;
+            font-size: 0.66rem;
             font-weight: 500;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--cream);
-            border: 1px solid rgba(237,232,223,0.28);
-            padding: 0.45rem 1.1rem;
+            color: var(--ice);
+            text-decoration: none;
+            border: 1px solid rgba(157,185,220,0.4);
+            padding: 0.45rem 1.05rem;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
-
-        .hero-cta {
+        .pill::after { content: ' \2193'; opacity: 0.6; }
+        .pill:hover { background: rgba(157,185,220,0.15); border-color: var(--sky); color: var(--white); }
+        .btn {
             display: inline-block;
-            font-family: 'DM Sans', sans-serif;
+            font-family: var(--body);
             font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
+            font-weight: 600;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--navy);
-            background: var(--cream);
+            color: var(--white);
+            background: var(--indigo);
             padding: 1rem 2.4rem;
             border: none;
             cursor: pointer;
+            text-decoration: none;
             transition: background 0.2s ease;
-            opacity: 0;
-            animation: fadeUp 0.7s ease 0.64s forwards;
         }
-        .hero-cta:hover { background: var(--gold); }
+        .btn:hover { background: var(--navy); }
+        .btn-light { background: var(--white); color: var(--ink); }
+        .btn-light:hover { background: var(--ice); }
 
-        .scroll-hint {
-            position: absolute;
-            bottom: 2.5rem; left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            opacity: 0;
-            animation: fadeIn 1s ease 1.2s forwards;
-        }
-        .scroll-hint span {
-            font-size: 0.62rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: rgba(168,160,154,0.5);
-        }
-        .scroll-hint::after {
-            content: '';
-            width: 1px; height: 36px;
-            background: linear-gradient(to bottom, rgba(196,163,90,0.5), transparent);
-            animation: scrollPulse 2s ease infinite;
+        /* BANNER */
+        .banner {
+            display: block;
+            width: 100%;
+            aspect-ratio: 960 / 250;
+            max-height: 360px;
+            object-fit: cover;
+            background: var(--ink);
         }
 
-        /* ─── SECTION SHELL ──────────────────────────────────────────── */
-        .section {
-            padding: 8rem 5vw;
-        }
-        .section-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .section-label {
+        /* SECTIONS */
+        .section { padding: 7rem 5vw; }
+        .section-mist { background: var(--mist); }
+        .section-inner { max-width: 1100px; margin: 0 auto; }
+        .label {
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.28em;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.26em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--indigo);
+            margin-bottom: 1.4rem;
+        }
+        .label::after { content: ''; width: 48px; height: 1px; background: var(--indigo); }
+        .lead {
+            font-family: var(--display);
+            font-size: clamp(2rem, 3.4vw, 3.1rem);
+            font-weight: 500;
+            line-height: 1.15;
+            color: var(--ink);
+            max-width: 820px;
             margin-bottom: 3.5rem;
         }
-        .section-label::after {
-            content: '';
-            display: inline-block;
-            width: 48px; height: 1px;
-            background: var(--gold);
-        }
 
-        /* ─── ABOUT ──────────────────────────────────────────────────── */
+        /* ABOUT */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 7vw;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 6vw;
             align-items: start;
         }
-        .about-heading {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.9rem, 3vw, 2.9rem);
-            font-weight: 300;
-            line-height: 1.22;
-            color: var(--cream);
-        }
-        .about-body {
-            font-size: 0.98rem;
-            font-weight: 300;
-            color: var(--cream-dim);
-            line-height: 1.88;
-        }
-        .about-body p + p { margin-top: 1.4rem; }
+        .about-grid .lead { margin-bottom: 0; }
+        .about-body { font-size: 1rem; font-weight: 400; color: var(--slate); line-height: 1.85; }
+        .about-body p + p { margin-top: 1.3rem; }
+        .about-body strong { font-weight: 500; color: var(--ink); }
 
         .stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-            margin-top: 5rem;
-            border-top: 1px solid var(--border-gold);
+            margin-top: 4.5rem;
+            border-top: 1px solid var(--line);
         }
-        .stat {
-            padding: 2.5rem 0 0;
-        }
+        .stat { padding: 2.2rem 1.5rem 0 0; }
+        .stat + .stat { padding-left: 1.5rem; border-left: 1px solid var(--line); }
         .stat-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8rem;
-            font-weight: 300;
-            color: var(--cream);
+            font-family: var(--display);
+            font-size: 3.2rem;
+            font-weight: 500;
+            color: var(--indigo);
             line-height: 1;
             margin-bottom: 0.5rem;
         }
-        .stat-label {
-            font-size: 0.75rem;
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            color: var(--cream-dim);
-        }
+        .stat-label { font-size: 0.8rem; color: var(--slate); }
 
-        /* ─── PRODUCTS ───────────────────────────────────────────────── */
-        .products-section {
-            background: var(--navy-card);
-            border-top: 1px solid var(--border-gold);
-            border-bottom: 1px solid var(--border-gold);
-        }
-
-        .product-grid {
+        /* APPLICATIONS */
+        .app-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
         }
-
-        .product-card {
-            background: var(--navy);
-            padding: 2.8rem 2rem;
-            border: 1px solid var(--border);
-            position: relative;
-            transition: border-color 0.3s ease, background 0.3s ease;
-            cursor: default;
+        .app-card {
+            background: var(--white);
+            padding: 2.4rem 2rem 2.2rem;
             display: flex;
             flex-direction: column;
-        }
-        .product-card:hover {
-            border-color: var(--border-gold);
-            background: var(--navy-mid);
-        }
-
-        .product-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 300;
-            color: var(--gold-dim);
-            line-height: 1;
-            margin-bottom: 1.6rem;
-        }
-        .product-name {
-            font-size: 0.82rem;
-            font-weight: 500;
-            letter-spacing: 0.03em;
-            color: var(--cream);
-            margin-bottom: 0.8rem;
-            line-height: 1.3;
-        }
-        .product-desc {
-            font-size: 0.78rem;
-            font-weight: 300;
-            color: var(--cream-dim);
-            line-height: 1.65;
-            flex: 1;
-        }
-        .card-link {
-            display: inline-block;
-            margin-top: 1.8rem;
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--gold);
             text-decoration: none;
-            opacity: 0;
-            transition: opacity 0.3s;
+            color: inherit;
+            transition: background 0.25s ease;
         }
-        .product-card:hover .card-link { opacity: 1; }
+        .app-card:hover { background: var(--mist); }
+        .app-num {
+            width: 2.4rem; height: 2.4rem;
+            border-radius: 50%;
+            background: var(--indigo);
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .app-name {
+            font-family: var(--display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--ink);
+            line-height: 1.15;
+            margin-bottom: 0.7rem;
+        }
+        .app-desc { font-size: 0.88rem; font-weight: 400; color: var(--slate); line-height: 1.7; flex: 1; }
+        .app-link {
+            margin-top: 1.5rem;
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--indigo);
+        }
 
-        /* ─── EDGE ───────────────────────────────────────────────────── */
-        .edge-grid {
+        .props {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem 0.8rem;
+            flex-wrap: wrap;
+            background: var(--ink);
+            padding: 1.3rem 1.6rem;
+        }
+        .props-label {
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--sky);
+            margin-right: 0.6rem;
+        }
+        .prop { font-size: 0.85rem; color: var(--white); }
+        .prop + .prop::before { content: '\00B7'; color: var(--steel); margin: 0 0.9rem 0 0.1rem; }
+
+        /* INDUSTRIES */
+        .ind-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+        .ind-card { background: var(--mist); padding: 2rem 1.6rem; scroll-margin-top: 90px; }
+        .ind-card.lead-ind { background: var(--indigo); color: var(--white); }
+        .ind-name { font-family: var(--display); font-size: 1.55rem; font-weight: 600; line-height: 1.15; margin-bottom: 1rem; }
+        .ind-list { list-style: none; }
+        .ind-list li { font-size: 0.88rem; color: var(--slate); line-height: 1.5; padding: 0.45rem 0; border-top: 1px solid var(--ice); }
+        .lead-ind .ind-list li { color: var(--ice); border-top-color: rgba(220,230,242,0.25); }
+        .ind-card { display: flex; flex-direction: column; }
+        .ind-list { flex: 1; }
+        .ind-link {
+            margin-top: 1.4rem; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em;
+            text-transform: uppercase; color: var(--indigo); text-decoration: none;
+        }
+        .ind-link:hover { text-decoration: underline; }
+        .lead-ind .ind-link { color: var(--white); }
+        .ind-note { margin-top: 2rem; font-size: 0.95rem; color: var(--slate); max-width: 760px; }
+        .ind-note strong { color: var(--indigo); font-weight: 600; }
+
+        /* WHY */
+        .why-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 4vw;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
         }
-        .edge-item {}
-        .edge-icon {
-            width: 40px; height: 1px;
-            background: var(--gold);
-            margin-bottom: 1.8rem;
+        .why-item { border-top: 3px solid var(--indigo); padding-top: 1.5rem; }
+        .why-item.price { border-top-color: var(--sky); }
+        .why-title {
+            font-family: var(--display);
+            font-size: 1.55rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.7rem;
+            line-height: 1.15;
         }
-        .edge-title {
-            font-size: 0.82rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            color: var(--cream);
-            margin-bottom: 0.8rem;
-        }
-        .edge-body {
-            font-size: 0.82rem;
-            font-weight: 300;
-            color: var(--cream-dim);
-            line-height: 1.75;
-        }
+        .why-body { font-size: 0.9rem; font-weight: 400; color: var(--slate); line-height: 1.7; }
 
-        /* ─── CONTACT ────────────────────────────────────────────────── */
+        /* CONTACT */
         .contact-section {
+            background: var(--ink);
+            color: var(--white);
             text-align: center;
-            padding: 8rem 5vw;
+            padding: 7rem 5vw;
             position: relative;
             overflow: hidden;
         }
         .contact-section::before {
             content: '';
             position: absolute; inset: 0;
-            background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(30,70,140,0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(44,49,142,0.4) 0%, transparent 70%);
             pointer-events: none;
         }
         .contact-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
         .contact-heading {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.4rem, 4vw, 4rem);
-            font-weight: 300;
-            line-height: 1.15;
-            color: var(--cream);
-            margin-bottom: 1.2rem;
+            font-family: var(--display);
+            font-size: clamp(2.4rem, 4vw, 3.8rem);
+            font-weight: 500;
+            line-height: 1.12;
+            margin-bottom: 1.1rem;
         }
-        .contact-sub {
-            font-size: 0.95rem;
-            font-weight: 300;
-            color: var(--cream-dim);
-            margin-bottom: 2.8rem;
-            line-height: 1.7;
-        }
+        .contact-sub { font-size: 1rem; font-weight: 300; color: var(--ice); margin-bottom: 2.6rem; line-height: 1.7; }
         .contact-email {
             display: block;
-            font-size: 0.75rem;
-            font-weight: 400;
-            letter-spacing: 0.1em;
-            color: var(--cream-dim);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            color: var(--sky);
             text-decoration: none;
             margin-top: 2rem;
-            transition: color 0.2s;
         }
-        .contact-email:hover { color: var(--gold); }
+        .contact-email:hover { color: var(--white); }
 
-        /* ─── FOOTER ─────────────────────────────────────────────────── */
+        /* FOOTER */
         footer {
-            padding: 2.2rem 5vw;
-            border-top: 1px solid var(--border-gold);
+            background: var(--ink);
+            padding: 2rem 5vw;
+            border-top: 1px solid rgba(157,185,220,0.18);
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
             flex-wrap: wrap;
         }
-        .footer-name {
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--cream-dim);
-        }
-        .footer-copy {
-            font-size: 0.65rem;
-            color: rgba(168,160,154,0.45);
-            letter-spacing: 0.04em;
-        }
+        .footer-name { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ice); }
+        .footer-copy { font-size: 0.72rem; color: var(--steel); }
 
-        /* ─── MODAL ──────────────────────────────────────────────────── */
+        /* MODAL */
         .overlay {
             position: fixed; inset: 0;
             z-index: 300;
-            background: rgba(5,10,20,0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(11,29,51,0.75);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -478,167 +403,105 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
-        .overlay.open {
-            opacity: 1;
-            pointer-events: all;
-        }
-
+        .overlay.open { opacity: 1; pointer-events: all; }
         .modal {
-            background: var(--navy-card);
-            border: 1px solid var(--border-gold);
+            background: var(--white);
+            border-top: 4px solid var(--indigo);
             width: 100%; max-width: 500px;
-            padding: 3rem;
+            max-height: 92vh;
+            overflow-y: auto;
+            padding: 2.8rem;
             position: relative;
             transform: translateY(18px);
             transition: transform 0.3s ease;
         }
         .overlay.open .modal { transform: translateY(0); }
-
         .modal-close {
             position: absolute;
-            top: 1.3rem; right: 1.3rem;
+            top: 1.2rem; right: 1.2rem;
             background: none; border: none;
-            color: var(--cream-dim);
+            color: var(--slate);
             font-size: 1rem;
             cursor: pointer;
-            line-height: 1;
             padding: 0.3rem;
-            transition: color 0.2s;
         }
-        .modal-close:hover { color: var(--cream); }
-
-        .modal-heading {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.9rem;
-            font-weight: 300;
-            color: var(--cream);
-            margin-bottom: 0.3rem;
-        }
-        .modal-sub {
-            font-size: 0.8rem;
-            color: var(--cream-dim);
-            margin-bottom: 2.2rem;
-        }
-
-        .form-row { margin-bottom: 1.3rem; }
+        .modal-close:hover { color: var(--ink); }
+        .modal-heading { font-family: var(--display); font-size: 2rem; font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; }
+        .modal-sub { font-size: 0.85rem; color: var(--slate); margin-bottom: 2rem; }
+        .form-row { margin-bottom: 1.2rem; }
         .form-row label {
             display: block;
-            font-size: 0.62rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
+            font-size: 0.64rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--cream-dim);
+            color: var(--navy);
             margin-bottom: 0.4rem;
         }
-        .form-row input,
-        .form-row textarea,
-        .form-row select {
+        .form-row input, .form-row textarea, .form-row select {
             width: 100%;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(237,232,223,0.1);
-            color: var(--cream);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.88rem;
-            font-weight: 300;
+            background: var(--mist);
+            border: 1px solid var(--ice);
+            color: var(--ink);
+            font-family: var(--body);
+            font-size: 0.92rem;
             padding: 0.8rem 0.95rem;
             outline: none;
-            transition: border-color 0.2s;
-            -webkit-appearance: none;
             border-radius: 0;
+            -webkit-appearance: none;
+            transition: border-color 0.2s;
         }
-        .form-row input::placeholder,
-        .form-row textarea::placeholder { color: rgba(168,160,154,0.45); }
-        .form-row input:focus,
-        .form-row textarea:focus,
-        .form-row select:focus { border-color: var(--border-gold); }
+        .form-row input:focus, .form-row textarea:focus, .form-row select:focus { border-color: var(--indigo); }
         .form-row textarea { min-height: 95px; resize: vertical; }
-        .form-row select option { background: var(--navy-card); }
-
-        .form-submit {
-            width: 100%;
-            background: var(--cream);
-            color: var(--navy);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            padding: 1rem;
-            border: none;
+        .form-row select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231F497D' stroke-width='1.6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.9rem center;
+            padding-right: 2.2rem;
             cursor: pointer;
-            transition: background 0.2s;
-            margin-top: 0.4rem;
         }
-        .form-submit:hover { background: var(--gold); }
+        .form-submit { width: 100%; margin-top: 0.4rem; }
+        .form-success { display: none; text-align: center; padding: 2rem 0 1rem; }
+        .form-success .check { font-size: 2rem; color: var(--indigo); margin-bottom: 1rem; }
+        .form-success p { font-size: 0.95rem; color: var(--slate); line-height: 1.7; }
 
-        .form-success {
-            display: none;
-            text-align: center;
-            padding: 2rem 0 1rem;
-        }
-        .form-success .check {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 1rem;
-        }
-        .form-success p {
-            font-size: 0.9rem;
-            color: var(--cream-dim);
-            line-height: 1.7;
-        }
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: none; }
+        .d1 { transition-delay: 0.08s; } .d2 { transition-delay: 0.16s; } .d3 { transition-delay: 0.24s; }
 
-        /* ─── ANIMATIONS ─────────────────────────────────────────────── */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(22px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-        @keyframes scrollPulse {
-            0%   { opacity: 0.3; transform: scaleY(0.8); }
-            50%  { opacity: 1; }
-            100% { opacity: 0.3; transform: scaleY(1.1); }
-        }
+        /* LANGUAGE SWITCH */
+        .lang-switch { display: flex; align-items: center; gap: 0.5rem; font-size: 0.66rem; font-weight: 500; letter-spacing: 0.14em; }
+        .lang-opt { color: var(--sky); text-decoration: none; }
+        .lang-opt:hover { color: var(--white); }
+        .lang-opt.active { color: var(--white); font-weight: 600; }
+        .lang-sep { color: var(--steel); }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+        /* RESPONSIVE */
+        @media (max-width: 960px) {
+            .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .app-grid { grid-template-columns: 1fr 1fr; }
+            .why-grid { grid-template-columns: 1fr 1fr; }
+            .ind-grid { grid-template-columns: 1fr 1fr; }
         }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal-d1 { transition-delay: 0.1s; }
-        .reveal-d2 { transition-delay: 0.2s; }
-        .reveal-d3 { transition-delay: 0.3s; }
-        .reveal-d4 { transition-delay: 0.4s; }
-
-        /* ─── RESPONSIVE ─────────────────────────────────────────────── */
-        @media (max-width: 900px) {
-            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .product-grid { grid-template-columns: 1fr 1fr; }
-            .edge-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-            .stats-row { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 600px) {
-            .section { padding: 5rem 5vw; }
-            .product-grid { grid-template-columns: 1fr; }
-            .stats-row { grid-template-columns: 1fr; }
-            .modal { padding: 2rem 1.5rem; }
-            footer { flex-direction: column; align-items: flex-start; }
+        @media (max-width: 620px) {
+            nav { padding: 1rem 16px; }
             .nav-link { display: none; }
+            .nav-logo { font-size: 0.66rem; letter-spacing: 0.14em; white-space: nowrap; }
+            .nav-btn { display: none; }
+            .nav-links { gap: 1rem; }
+            .hero { padding: 8rem 16px 4rem; }
+            .section { padding: 4.5rem 16px; }
+            .app-grid, .why-grid, .ind-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: 1fr; }
+            .stat, .stat + .stat { padding: 1.6rem 0 0; border-left: none; }
+            .modal { padding: 2.2rem 1.4rem; }
+            .contact-section { padding: 5rem 16px; }
+            footer { flex-direction: column; align-items: flex-start; padding: 1.8rem 16px; }
         }
-
-        /* ─── LANG SWITCH ─────────────────────────────────────────────── */
-        .lang-switch { display:flex; align-items:center; gap:.5rem; font-size:.65rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; }
-        .lang-switch .lang-opt { color:var(--cream-dim); text-decoration:none; transition:color .2s; }
-        .lang-switch .lang-opt:hover { color:var(--cream); }
-        .lang-switch .lang-opt.active { color:var(--gold); }
-        .lang-switch .lang-sep { color:rgba(237,232,223,0.25); }
     </style>
+    <!-- Umami analytics: no cookies -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="94bee893-eeed-4368-afdb-194bfc29fc61"></script>
 </head>
 <body>
 
@@ -646,114 +509,182 @@
 <nav>
     <a class="nav-logo" href="/fr/">Meridian Industrial Co.</a>
     <div class="nav-links">
-        <a class="nav-link" href="/fr/fr/products.html">Gamme de produits</a>
-        <div class="lang-switch"><a href="/fr/" class="lang-opt">EN</a><span class="lang-sep">|</span><a href="/fr/" class="lang-opt active">FR</a></div>
-        <button class="nav-btn" onclick="openModal()">Demander un devis</button>
+        <a class="nav-link" href="/fr/products.html">Gamme de produits</a>
+        <div class="lang-switch"><a href="/" class="lang-opt">EN</a><span class="lang-sep">|</span><a href="/fr/" class="lang-opt active">FR</a></div>
+        <button class="nav-btn" onclick="openModal()">Faire une demande</button>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-inner">
-        <div class="hero-eyebrow">Distribution de câbles industriels — Maroc &amp; Afrique</div>
-        <h1 class="hero-title">
-            Fournir des câbles industriels<br>
-            pour les projets les plus<br>
-            <em>exigeants d'Afrique.</em>
-        </h1>
-        <p class="hero-sub">Câbles certifiés IEC, sourcés directement auprès de fabricants de premier rang. Fournis aux entreprises EPC, aux installateurs électriques et aux développeurs de projets au Maroc et sur l'ensemble du continent.</p>
+        <div class="eyebrow">Câbles industriels Garland, fournis par Meridian Industrial Co.</div>
+        <h1 class="hero-title">Des câbles pour les systèmes<br><em>qui ne peuvent pas s'arrêter.</em></h1>
+        <p class="hero-sub">Câbles Garland pour les projets miniers, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.</p>
         <div class="hero-pills">
-            <span class="pill">Mines</span>
-            <span class="pill">Énergies renouvelables</span>
-            <span class="pill">Télécoms</span>
+            <a class="pill" href="#mining">Mines et industrie</a>
+            <a class="pill" href="#transport">Transport</a>
+            <a class="pill" href="#communications">Communications</a>
+            <a class="pill" href="#security">Sécurité et intégration</a>
         </div>
-        <button class="hero-cta" onclick="openModal()">Demander un devis</button>
+        <button class="btn" onclick="openModal()">Faire une demande</button>
     </div>
-    <div class="scroll-hint"><span>Défiler</span></div>
 </section>
+
+<img class="banner" src="/img/mining-banner.webp" alt="Engins miniers sur une piste de mine à ciel ouvert">
 
 <!-- ABOUT -->
 <section class="section">
     <div class="section-inner">
-        <div class="section-label reveal">À propos</div>
+        <div class="label reveal">À propos</div>
         <div class="about-grid">
-            <div class="reveal reveal-d1">
-                <h2 class="about-heading">Rapprocher les fabricants mondiaux de câbles et les bâtisseurs d'infrastructures d'Afrique.</h2>
-            </div>
-            <div class="about-body reveal reveal-d2">
-                <p>Meridian Industrial Co. est un distributeur spécialisé de câbles au service des secteurs de l'énergie, des mines et des infrastructures en Afrique. Nous sourçons des câbles industriels certifiés IEC directement auprès de fabricants de premier rang, et les fournissons aux entreprises EPC, aux installateurs électriques et aux développeurs de projets au Maroc et sur l'ensemble du continent.</p>
-                <p>Notre base opérationnelle à Casablanca et notre accès direct à l'usine permettent des délais nettement plus courts et des prix plus compétitifs que l'importation européenne, sans compromis sur la spécification, la certification ou le support technique.</p>
+            <h2 class="lead reveal d1">Un seul fournisseur pour tous les câbles dont dépend votre exploitation.</h2>
+            <div class="about-body reveal d2">
+                <p>Meridian Industrial Co. fournit les <strong>câbles Garland</strong>, une marque du groupe Madison. Garland conçoit des câbles industriels depuis 1972.</p>
+                <p>Chaque site est différent. Vous traitez avec une seule équipe pour les câbles de tir, d'énergie, d'instrumentation, de données et la fibre. Nous gérons tout ce qui dépend du câble, pour que vous puissiez vous concentrer sur l'exploitation.</p>
+                <p>Lorsque votre site a besoin d'un câble hors standard, Garland le fabrique sur mesure.</p>
             </div>
         </div>
         <div class="stats-row">
-            <div class="stat reveal reveal-d1">
+            <div class="stat reveal d1">
                 <div class="stat-number">4</div>
-                <div class="stat-label">Familles de produits principales</div>
+                <div class="stat-label">Secteurs desservis</div>
             </div>
-            <div class="stat reveal reveal-d2">
-                <div class="stat-number">IEC</div>
-                <div class="stat-label">Certifié aux normes internationales</div>
+            <div class="stat reveal d2">
+                <div class="stat-number">1972</div>
+                <div class="stat-label">Garland conçoit des câbles industriels depuis</div>
             </div>
-            <div class="stat reveal reveal-d3">
-                <div class="stat-number">24h</div>
-                <div class="stat-label">Engagement de réponse aux demandes</div>
+            <div class="stat reveal d3">
+                <div class="stat-number">24 h</div>
+                <div class="stat-label">Réponse à votre demande</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PRODUCTS -->
-<section class="section products-section">
+<!-- INDUSTRIES -->
+<section class="section" id="industries" style="padding-top:0">
     <div class="section-inner">
-        <div class="section-label reveal">Ce que nous fournissons</div>
-        <div class="product-grid">
-            <div class="product-card reveal reveal-d1">
-                <div class="product-num">01</div>
-                <div class="product-name">Câble de puissance armé</div>
-                <div class="product-desc">Câble armé à fils d'acier BT et MT pour la distribution d'énergie dans les environnements miniers, industriels et d'infrastructure. Disponible en configurations unipolaire et multiconducteur.</div>
-                <a href="/fr/products.html" class="card-link">Voir la gamme →</a>
+        <div class="label reveal">Secteurs</div>
+        <h2 class="lead reveal d1">Les câbles Garland font fonctionner des systèmes critiques dans quatre secteurs.</h2>
+        <div class="ind-grid">
+            <div class="ind-card lead-ind reveal" id="mining">
+                <div class="ind-name">Mines et industrie</div>
+                <ul class="ind-list">
+                    <li>Minage et tir</li>
+                    <li>Alimentation des concasseurs, convoyeurs et pompes</li>
+                    <li>Contrôle de procédé et instrumentation</li>
+                    <li>Fibre et données sur tout le site</li>
+                </ul>
+                <a class="ind-link" href="/fr/products.html#blasting">Voir les produits →</a>
             </div>
-            <div class="product-card reveal reveal-d2">
-                <div class="product-num">02</div>
-                <div class="product-name">Câble d'instrumentation et de commande</div>
-                <div class="product-desc">Câble d'instrumentation blindé et non blindé pour le contrôle de procédés, la mesure et les capteurs. Variantes armées disponibles pour les installations extérieures et enterrées.</div>
-                <a href="/fr/products.html#ic-swa" class="card-link">Voir la gamme →</a>
+            <div class="ind-card reveal d1" id="transport">
+                <div class="ind-name">Transport</div>
+                <ul class="ind-list">
+                    <li>Ventilation et détection incendie en tunnel</li>
+                    <li>Signalisation et communications ferroviaires</li>
+                    <li>Gestion du trafic et surveillance routière</li>
+                </ul>
+                <a class="ind-link" href="/fr/products.html#traffic">Voir les produits →</a>
             </div>
-            <div class="product-card reveal reveal-d3">
-                <div class="product-num">03</div>
-                <div class="product-name">Câble LSZH</div>
-                <div class="product-desc">Câble à faible émission de fumée et sans halogène (LSZH) pour les espaces clos, les bâtiments d'usine de procédés et les tunnels où la sécurité incendie est obligatoire.</div>
-                <a href="/fr/products.html" class="card-link">Voir la gamme →</a>
+            <div class="ind-card reveal d2" id="communications">
+                <div class="ind-name">Communications</div>
+                <ul class="ind-list">
+                    <li>Fibre de dorsale et longue distance</li>
+                    <li>Centres de données et réseaux locaux</li>
+                    <li>Assemblages fibre préconnectorisés</li>
+                </ul>
+                <a class="ind-link" href="/fr/products.html#fibre">Voir les produits →</a>
             </div>
-            <div class="product-card reveal reveal-d4">
-                <div class="product-num">04</div>
-                <div class="product-name">Câble de données et communication</div>
-                <div class="product-desc">Câble de données et de communication de qualité industrielle pour les infrastructures télécoms, les réseaux de site et les projets de déploiement de fibre au Maroc et dans la région.</div>
-                <a href="/fr/products.html#data-multicore" class="card-link">Voir la gamme →</a>
+            <div class="ind-card reveal d3" id="security">
+                <div class="ind-name">Sécurité et intégration</div>
+                <ul class="ind-list">
+                    <li>Circuits d'alarme incendie et de sonorisation</li>
+                    <li>Caméras de vidéosurveillance</li>
+                    <li>Contrôle d'accès et centrales d'alarme</li>
+                </ul>
+                <a class="ind-link" href="/fr/products.html#fire-alarm">Voir les produits →</a>
             </div>
+        </div>
+        <p class="ind-note reveal"><strong>Dans les quatre secteurs, l'exigence est la même :</strong> un câble qui continue de fonctionner là où une panne arrête l'exploitation ou met des personnes en danger.</p>
+    </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section section-mist" id="supply">
+    <div class="section-inner">
+        <div class="label reveal">Focus mines</div>
+        <h2 class="lead reveal d1">Dans une mine, six applications couvrent le site, du trou de mine à la salle de contrôle.</h2>
+        <div class="app-grid">
+            <a class="app-card reveal" href="/fr/products.html#blasting">
+                <div class="app-num">1</div>
+                <div class="app-name">Minage</div>
+                <div class="app-desc">Fil à paire torsadée qui relie les détonateurs et le matériel de tir. Chaque tir en consomme, nous planifions donc l'approvisionnement selon votre programme de tir.</div>
+                <div class="app-link">Voir la gamme →</div>
+            </a>
+            <a class="app-card reveal d1" href="/fr/products.html#power">
+                <div class="app-num">2</div>
+                <div class="app-name">Énergie</div>
+                <div class="app-desc">Câbles d'énergie armés BT et MT pour la distribution sur la mine et l'usine, de Elegar-Kerpen, partenaire de Garland.</div>
+                <div class="app-link">Voir la gamme →</div>
+            </a>
+            <a class="app-card reveal d2" href="/fr/products.html#ic-swa">
+                <div class="app-num">3</div>
+                <div class="app-name">Instrumentation et contrôle</div>
+                <div class="app-desc">Câbles à paires et triades blindés et armés pour le contrôle de procédé et les boucles de capteurs. Comprend ICON Flex, Chem et Arctic pour les conditions difficiles.</div>
+                <div class="app-link">Voir la gamme →</div>
+            </a>
+            <a class="app-card reveal" href="/fr/products.html#data-multicore">
+                <div class="app-num">4</div>
+                <div class="app-name">Données et réseaux</div>
+                <div class="app-desc">Câbles multiconducteurs, multipaires et Cat6A blindés pour le SCADA et les communications du site.</div>
+                <div class="app-link">Voir la gamme →</div>
+            </a>
+            <a class="app-card reveal d1" href="/fr/products.html#fibre">
+                <div class="app-num">5</div>
+                <div class="app-name">Dorsale fibre</div>
+                <div class="app-desc">Fibre industrielle armée, de 6 à 144 fibres, monomode et multimode, pour les dorsales de site.</div>
+                <div class="app-link">Voir la gamme →</div>
+            </a>
+            <a class="app-card reveal d2" href="/fr/products.html#control-room">
+                <div class="app-num">6</div>
+                <div class="app-name">Salle de contrôle</div>
+                <div class="app-desc">Baies, coffrets et boîtiers d'épissure pour raccorder et protéger le réseau.</div>
+                <div class="app-link">Voir la gamme →</div>
+            </a>
+        </div>
+        <div class="props reveal">
+            <span class="props-label">Disponible avec</span>
+            <span class="prop">Armure en fils d'acier</span>
+            <span class="prop">Résistance au feu</span>
+            <span class="prop">Faible dégagement de fumée, sans halogène</span>
+            <span class="prop">Étanchéité à l'eau</span>
+            <span class="prop">Protection contre rongeurs et termites</span>
         </div>
     </div>
 </section>
 
-<!-- EDGE -->
+<!-- WHY -->
 <section class="section">
     <div class="section-inner">
-        <div class="section-label reveal">Pourquoi Meridian</div>
-        <div class="edge-grid">
-            <div class="edge-item reveal reveal-d1">
-                <div class="edge-icon"></div>
-                <div class="edge-title">Accès direct à l'usine</div>
-                <div class="edge-body">Nous sourçons directement auprès de fabricants de premier rang, en supprimant les marges des maisons de négoce et en livrant des produits certifiés IEC à un prix nettement inférieur à celui de l'importation européenne.</div>
+        <div class="label reveal">Pourquoi Meridian</div>
+        <h2 class="lead reveal d1">En achetant chez nous, vous avez un seul interlocuteur responsable, de la spécification à l'après-vente.</h2>
+        <div class="why-grid">
+            <div class="why-item reveal">
+                <div class="why-title">Votre cahier des charges</div>
+                <p class="why-body">Fabriqué selon les normes IEC, nationales ou les spécifications du projet. Fabrication sur mesure quand aucun produit standard ne convient.</p>
             </div>
-            <div class="edge-item reveal reveal-d2">
-                <div class="edge-icon"></div>
-                <div class="edge-title">Présence opérationnelle à Casablanca</div>
-                <div class="edge-body">Basés à Casablanca, nous offrons une réactivité locale que les importateurs européens ne peuvent égaler : délais plus courts, support technique en personne et gestion de compte directe.</div>
+            <div class="why-item reveal d1">
+                <div class="why-title">Un seul interlocuteur</div>
+                <p class="why-body">Un seul interlocuteur du devis à l'après-vente, en français et en anglais. Nous remontons tout problème à l'usine pour vous.</p>
             </div>
-            <div class="edge-item reveal reveal-d3">
-                <div class="edge-icon"></div>
-                <div class="edge-title">Profondeur de gamme</div>
-                <div class="edge-body">Notre gamme couvre ce que les fabricants marocains ne produisent pas : câble minier armé, LSZH aux normes IEC, et câble d'instrumentation spécialisé pour les conditions de site exigeantes.</div>
+            <div class="why-item reveal d2">
+                <div class="why-title">Approvisionnement planifié</div>
+                <p class="why-body">Envoyez-nous vos prévisions. Nous planifions la production et regroupons les expéditions en conséquence.</p>
+            </div>
+            <div class="why-item price reveal d3">
+                <div class="why-title">Prix comparable</div>
+                <p class="why-body">Chiffré sur la même spécification certifiée, avec un seul devis pour toute votre liste de câbles.</p>
             </div>
         </div>
     </div>
@@ -762,10 +693,10 @@
 <!-- CONTACT -->
 <section class="contact-section">
     <div class="contact-inner">
-        <h2 class="contact-heading reveal">Prêt à discuter de vos besoins ?</h2>
-        <p class="contact-sub reveal reveal-d1">Parlez-nous de votre projet et nous vous répondrons sous 24 heures.</p>
-        <button class="hero-cta reveal reveal-d2" onclick="openModal()">Demander un devis</button>
-        <a class="contact-email reveal reveal-d3" href="mailto:sales@meridianindustrialco.com">sales@meridianindustrialco.com</a>
+        <h2 class="contact-heading reveal">Prêt à discuter de vos besoins ?</h2>
+        <p class="contact-sub reveal d1">Parlez-nous de votre site et de vos besoins. Nous répondons sous 24 heures.</p>
+        <button class="btn btn-light reveal d2" onclick="openModal()">Faire une demande</button>
+        <a class="contact-email reveal d3" href="mailto:sales@meridianindustrialco.com">sales@meridianindustrialco.com</a>
     </div>
 </section>
 
@@ -779,9 +710,9 @@
 <div class="overlay" id="overlay" onclick="handleOverlayClick(event)">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-        <div class="modal-heading" id="modal-title">Demander un devis</div>
-        <div class="modal-sub">Nous vous répondrons sous 24 heures.</div>
-        <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="modal-heading" id="modal-title">Faire une demande</div>
+        <div class="modal-sub">Nous répondons sous 24 heures.</div>
+        <form id="enquiry-form" action="https://formspree.io/f/xyezvdpd" method="POST">
             <div class="form-row">
                 <label for="f-name">Nom</label>
                 <input id="f-name" type="text" name="name" required placeholder="Votre nom">
@@ -792,100 +723,281 @@
             </div>
             <div class="form-row">
                 <label for="f-email">E-mail</label>
-                <input id="f-email" type="email" name="email" required placeholder="your@email.com">
+                <input id="f-email" type="email" name="email" required placeholder="vous@exemple.com">
+            </div>
+            <div class="form-row">
+                <label for="f-country">Pays</label>
+                <select id="f-country" name="country" required>
+                    <option value="">Choisir un pays</option>
+                    <optgroup label="Marchés principaux">
+                        <option value="Morocco">Maroc</option>
+                        <option value="Mauritania">Mauritanie</option>
+                        <option value="South Africa">Afrique du Sud</option>
+                        <option value="Saudi Arabia">Arabie saoudite</option>
+                        <option value="United Arab Emirates">Émirats arabes unis</option>
+                    </optgroup>
+                    <optgroup label="Tous les pays">
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="South Africa">Afrique du Sud</option>
+                        <option value="Albania">Albanie</option>
+                        <option value="Algeria">Algérie</option>
+                        <option value="Germany">Allemagne</option>
+                        <option value="Andorra">Andorre</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Antigua and Barbuda">Antigua-et-Barbuda</option>
+                        <option value="Saudi Arabia">Arabie saoudite</option>
+                        <option value="Argentina">Argentine</option>
+                        <option value="Armenia">Arménie</option>
+                        <option value="Australia">Australie</option>
+                        <option value="Austria">Autriche</option>
+                        <option value="Azerbaijan">Azerbaïdjan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahreïn</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbade</option>
+                        <option value="Belgium">Belgique</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Bhutan">Bhoutan</option>
+                        <option value="Belarus">Biélorussie</option>
+                        <option value="Bolivia">Bolivie</option>
+                        <option value="Bosnia and Herzegovina">Bosnie-Herzégovine</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Brunei">Brunei</option>
+                        <option value="Brazil">Brésil</option>
+                        <option value="Bulgaria">Bulgarie</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Benin">Bénin</option>
+                        <option value="Cambodia">Cambodge</option>
+                        <option value="Cameroon">Cameroun</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cabo Verde">Cap-Vert</option>
+                        <option value="Chile">Chili</option>
+                        <option value="China">Chine</option>
+                        <option value="Cyprus">Chypre</option>
+                        <option value="Colombia">Colombie</option>
+                        <option value="Comoros">Comores</option>
+                        <option value="Congo">Congo</option>
+                        <option value="North Korea">Corée du Nord</option>
+                        <option value="South Korea">Corée du Sud</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Croatia">Croatie</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Côte d&#39;Ivoire">Côte d’Ivoire</option>
+                        <option value="Denmark">Danemark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominique</option>
+                        <option value="Egypt">Égypte</option>
+                        <option value="United Arab Emirates">Émirats arabes unis</option>
+                        <option value="Ecuador">Équateur</option>
+                        <option value="Eritrea">Érythrée</option>
+                        <option value="Spain">Espagne</option>
+                        <option value="Estonia">Estonie</option>
+                        <option value="Eswatini">Eswatini</option>
+                        <option value="United States">États-Unis</option>
+                        <option value="Ethiopia">Éthiopie</option>
+                        <option value="Fiji">Fidji</option>
+                        <option value="Finland">Finlande</option>
+                        <option value="France">France</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambie</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Grenada">Grenade</option>
+                        <option value="Greece">Grèce</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guinea">Guinée</option>
+                        <option value="Equatorial Guinea">Guinée équatoriale</option>
+                        <option value="Guinea-Bissau">Guinée-Bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Georgia">Géorgie</option>
+                        <option value="Haiti">Haïti</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hungary">Hongrie</option>
+                        <option value="Marshall Islands">Îles Marshall</option>
+                        <option value="Solomon Islands">Îles Salomon</option>
+                        <option value="India">Inde</option>
+                        <option value="Indonesia">Indonésie</option>
+                        <option value="Iraq">Irak</option>
+                        <option value="Iran">Iran</option>
+                        <option value="Ireland">Irlande</option>
+                        <option value="Iceland">Islande</option>
+                        <option value="Israel">Israël</option>
+                        <option value="Italy">Italie</option>
+                        <option value="Jamaica">Jamaïque</option>
+                        <option value="Japan">Japon</option>
+                        <option value="Jordan">Jordanie</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kyrgyzstan">Kirghizstan</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Kuwait">Koweït</option>
+                        <option value="Laos">Laos</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Latvia">Lettonie</option>
+                        <option value="Lebanon">Liban</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libya">Libye</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lituanie</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="North Macedonia">Macédoine du Nord</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malaysia">Malaisie</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malte</option>
+                        <option value="Morocco">Maroc</option>
+                        <option value="Mauritius">Maurice</option>
+                        <option value="Mauritania">Mauritanie</option>
+                        <option value="Mexico">Mexique</option>
+                        <option value="Micronesia">Micronésie</option>
+                        <option value="Moldova">Moldavie</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolie</option>
+                        <option value="Montenegro">Monténégro</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibie</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Norway">Norvège</option>
+                        <option value="New Zealand">Nouvelle-Zélande</option>
+                        <option value="Nepal">Népal</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Uganda">Ouganda</option>
+                        <option value="Uzbekistan">Ouzbékistan</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palaos</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papouasie-Nouvelle-Guinée</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Netherlands">Pays-Bas</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Poland">Pologne</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Peru">Pérou</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Romania">Roumanie</option>
+                        <option value="United Kingdom">Royaume-Uni</option>
+                        <option value="Russia">Russie</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Central African Republic">République centrafricaine</option>
+                        <option value="Dominican Republic">République dominicaine</option>
+                        <option value="Democratic Republic of the Congo">République démocratique du Congo</option>
+                        <option value="Saint Kitts and Nevis">Saint-Christophe-et-Niévès</option>
+                        <option value="San Marino">Saint-Marin</option>
+                        <option value="Saint Vincent and the Grenadines">Saint-Vincent-et-les Grenadines</option>
+                        <option value="Saint Lucia">Sainte-Lucie</option>
+                        <option value="El Salvador">Salvador</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="São Tomé and Príncipe">Sao Tomé-et-Principe</option>
+                        <option value="Serbia">Serbie</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapour</option>
+                        <option value="Slovakia">Slovaquie</option>
+                        <option value="Slovenia">Slovénie</option>
+                        <option value="Somalia">Somalie</option>
+                        <option value="Sudan">Soudan</option>
+                        <option value="South Sudan">Soudan du Sud</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Switzerland">Suisse</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Sweden">Suède</option>
+                        <option value="Syria">Syrie</option>
+                        <option value="Senegal">Sénégal</option>
+                        <option value="Tajikistan">Tadjikistan</option>
+                        <option value="Tanzania">Tanzanie</option>
+                        <option value="Chad">Tchad</option>
+                        <option value="Czechia">Tchéquie</option>
+                        <option value="Thailand">Thaïlande</option>
+                        <option value="Timor-Leste">Timor oriental</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinité-et-Tobago</option>
+                        <option value="Tunisia">Tunisie</option>
+                        <option value="Turkmenistan">Turkménistan</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Türkiye">Türkiye</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Vietnam">Viêt Nam</option>
+                        <option value="Yemen">Yémen</option>
+                        <option value="Zambia">Zambie</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                        <option value="Other">Autre</option>
+                    </optgroup>
+                </select>
             </div>
             <div class="form-row">
                 <label for="f-sector">Secteur</label>
                 <select id="f-sector" name="sector">
-                    <option value="">Sélectionnez un secteur</option>
-                    <option>Mines</option>
-                    <option>Énergies renouvelables</option>
-                    <option>Télécoms</option>
-                    <option>Infrastructure / EPC</option>
-                    <option>Distribution</option>
-                    <option>Autre</option>
+                    <option value="">Choisir un secteur</option>
+                    <option value="Mining and industrial">Mines et industrie</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Communications">Communications</option>
+                    <option value="Security and integration">Sécurité et intégration</option>
+                    <option value="EPC or installer">EPC ou installateur</option>
+                    <option value="Other">Autre</option>
                 </select>
             </div>
             <div class="form-row">
                 <label for="f-message">Besoin</label>
-                <textarea id="f-message" name="message" required placeholder="Décrivez brièvement votre besoin en câble ou votre projet…"></textarea>
+                <textarea id="f-message" name="message" required placeholder="Quel câble vous faut-il, et pour quel site ?"></textarea>
             </div>
-            <input type="hidden" name="_subject" value="Nouvelle demande — Meridian Industrial Co.">
+            <input type="hidden" name="_subject" value="New enquiry: Meridian Industrial Co.">
             <input type="text" name="_gotcha" style="display:none">
-            <button type="submit" class="form-submit">Envoyer la demande →</button>
+            <button type="submit" class="btn form-submit">Envoyer la demande →</button>
         </form>
         <div class="form-success" id="form-success">
             <div class="check">✓</div>
             <p>Merci. Nous avons bien reçu votre demande et vous répondrons sous 24 heures.<br><br>
-            <a href="mailto:sales@meridianindustrialco.com" style="color:var(--gold);text-decoration:none;font-size:0.8rem;">sales@meridianindustrialco.com</a></p>
+            <a href="mailto:sales@meridianindustrialco.com" style="color:var(--indigo);text-decoration:none;font-size:0.85rem;">sales@meridianindustrialco.com</a></p>
         </div>
     </div>
 </div>
 
 <script>
     const overlay = document.getElementById('overlay');
-
-    function openModal() {
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-    function handleOverlayClick(e) {
-        if (e.target === overlay) closeModal();
-    }
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeModal();
-    });
+    function openModal() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    function handleOverlayClick(e) { if (e.target === overlay) closeModal(); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
     const form = document.getElementById('enquiry-form');
     const success = document.getElementById('form-success');
-
     form.addEventListener('submit', async function(e) {
-        const action = form.action;
-        if (action.includes('YOUR_FORM_ID')) {
+        if (form.action.includes('YOUR_FORM_ID')) {
+            // No form service set up yet: open the visitor's email instead
             e.preventDefault();
-            const name    = document.getElementById('f-name').value;
-            const email   = document.getElementById('f-email').value;
-            const company = document.getElementById('f-company').value;
-            const sector  = document.getElementById('f-sector').value;
-            const message = document.getElementById('f-message').value;
-            const body    = `Nom : ${name}\nSociété : ${company}\nSecteur : ${sector}\n\n${message}`;
-            window.location.href = `mailto:sales@meridianindustrialco.com?subject=Demande de ${encodeURIComponent(name)}&body=${encodeURIComponent(body)}`;
+            const v = id => document.getElementById(id).value;
+            const body = `Name: ${v('f-name')}\nCompany: ${v('f-company')}\nCountry: ${v('f-country')}\nSector: ${v('f-sector')}\n\n${v('f-message')}`;
+            const subject = `Enquiry from ${v('f-name')} (${v('f-country')})`;
+            window.location.href = `mailto:sales@meridianindustrialco.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             return;
         }
         e.preventDefault();
-        const data = new FormData(form);
+        // Country in the email subject, so Australian and NZ leads stand out
+        const country = document.getElementById('f-country').value;
+        form.querySelector('input[name="_subject"]').value = `New enquiry (FR site): ${document.getElementById('f-name').value} (${country})`;
         try {
-            const res = await fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
-                form.style.display = 'none';
-                success.style.display = 'block';
-            } else {
-                form.submit();
-            }
-        } catch {
-            form.submit();
-        }
+            const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+            if (res.ok) { form.style.display = 'none'; success.style.display = 'block'; }
+            else { form.submit(); }
+        } catch { form.submit(); }
     });
 
-    const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
         });
     }, { threshold: 0.12 });
-
-    reveals.forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
