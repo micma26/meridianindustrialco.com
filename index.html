@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meridian Industrial Co. | Garland industrial cable</title>
-    <meta name="description" content="Garland industrial cable for mining and heavy industry, supplied outside Australia and New Zealand by Meridian Industrial Co.">
+    <meta name="description" content="Garland industrial cable for mining, transport, communications and security projects, supplied by Meridian Industrial Co.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -145,9 +145,13 @@
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--ice);
+            text-decoration: none;
             border: 1px solid rgba(157,185,220,0.4);
             padding: 0.45rem 1.05rem;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
+        .pill::after { content: ' \2193'; opacity: 0.6; }
+        .pill:hover { background: rgba(157,185,220,0.15); border-color: var(--sky); color: var(--white); }
         .btn {
             display: inline-block;
             font-family: var(--body);
@@ -296,12 +300,19 @@
             color: var(--sky);
             margin-right: 0.6rem;
         }
-        .prop {
-            font-size: 0.8rem;
-            color: var(--white);
-            border: 1px solid rgba(157,185,220,0.35);
-            padding: 0.3rem 0.8rem;
-        }
+        .prop { font-size: 0.85rem; color: var(--white); }
+        .prop + .prop::before { content: '\00B7'; color: var(--steel); margin: 0 0.9rem 0 0.1rem; }
+
+        /* INDUSTRIES */
+        .ind-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+        .ind-card { background: var(--mist); padding: 2rem 1.6rem; scroll-margin-top: 90px; }
+        .ind-card.lead-ind { background: var(--indigo); color: var(--white); }
+        .ind-name { font-family: var(--display); font-size: 1.55rem; font-weight: 600; line-height: 1.15; margin-bottom: 1rem; }
+        .ind-list { list-style: none; }
+        .ind-list li { font-size: 0.88rem; color: var(--slate); line-height: 1.5; padding: 0.45rem 0; border-top: 1px solid var(--ice); }
+        .lead-ind .ind-list li { color: var(--ice); border-top-color: rgba(220,230,242,0.25); }
+        .ind-note { margin-top: 2rem; font-size: 0.95rem; color: var(--slate); max-width: 760px; }
+        .ind-note strong { color: var(--indigo); font-weight: 600; }
 
         /* WHY */
         .why-grid {
@@ -449,6 +460,7 @@
             .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .app-grid { grid-template-columns: 1fr 1fr; }
             .why-grid { grid-template-columns: 1fr 1fr; }
+            .ind-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 620px) {
             nav { padding: 1rem 16px; }
@@ -457,7 +469,7 @@
             .nav-btn { padding: 0.55rem 0.9rem; font-size: 0.6rem; letter-spacing: 0.1em; white-space: nowrap; }
             .hero { padding: 8rem 16px 4rem; }
             .section { padding: 4.5rem 16px; }
-            .app-grid, .why-grid { grid-template-columns: 1fr; }
+            .app-grid, .why-grid, .ind-grid { grid-template-columns: 1fr; }
             .stats-row { grid-template-columns: 1fr; }
             .stat, .stat + .stat { padding: 1.6rem 0 0; border-left: none; }
             .modal { padding: 2.2rem 1.4rem; }
@@ -481,13 +493,14 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-inner">
-        <div class="eyebrow">Garland industrial cable. Supplied outside Australia and New Zealand.</div>
-        <h1 class="hero-title">Every shot. Every shift.<br><em>Every circuit.</em></h1>
-        <p class="hero-sub">Garland cable for mines, mining contractors, EPCs and installers, wherever they operate outside Australia and New Zealand.</p>
+        <div class="eyebrow">Garland industrial cable, supplied by Meridian Industrial Co.</div>
+        <h1 class="hero-title">Cable for the systems<br><em>that can't stop.</em></h1>
+        <p class="hero-sub">Garland cable for mining, transport, communications and security projects. Built to your specification and supplied wherever you operate.</p>
         <div class="hero-pills">
-            <span class="pill">Mining</span>
-            <span class="pill">Industrial</span>
-            <span class="pill">Infrastructure</span>
+            <a class="pill" href="#mining">Mining and industrial</a>
+            <a class="pill" href="#transport">Transport</a>
+            <a class="pill" href="#communications">Communications</a>
+            <a class="pill" href="#security">Security and integration</a>
         </div>
         <button class="btn" onclick="openModal()">Make an Enquiry</button>
     </div>
@@ -500,17 +513,17 @@
     <div class="section-inner">
         <div class="label reveal">About</div>
         <div class="about-grid">
-            <h2 class="lead reveal d1">One supplier for every cable the mine depends on.</h2>
+            <h2 class="lead reveal d1">One supplier for every cable your operation depends on.</h2>
             <div class="about-body reveal d2">
-                <p>Meridian Industrial Co. supplies <strong>Garland cable</strong>, a Madison Group brand, outside Australia and New Zealand. Garland has engineered industrial cable since 1972.</p>
-                <p>Every mine is different. You deal with one team for blast wire, power, instrumentation, data and fibre. We handle everything that depends on the cable, so you can focus on the mine.</p>
+                <p>Meridian Industrial Co. supplies <strong>Garland cable</strong>, a Madison Group brand. Garland has engineered industrial cable since 1972.</p>
+                <p>Every site is different. You deal with one team for blast wire, power, instrumentation, data and fibre. We handle everything that depends on the cable, so you can focus on running the operation.</p>
                 <p>Where your site needs something non-standard, Garland builds it to order.</p>
             </div>
         </div>
         <div class="stats-row">
             <div class="stat reveal d1">
-                <div class="stat-number">6</div>
-                <div class="stat-label">Applications covered across the mine</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label">Industries served</div>
             </div>
             <div class="stat reveal d2">
                 <div class="stat-number">1972</div>
@@ -524,11 +537,55 @@
     </div>
 </section>
 
+<!-- INDUSTRIES -->
+<section class="section" id="industries" style="padding-top:0">
+    <div class="section-inner">
+        <div class="label reveal">Industries</div>
+        <h2 class="lead reveal d1">Garland cable runs critical systems in four industries.</h2>
+        <div class="ind-grid">
+            <div class="ind-card lead-ind reveal" id="mining">
+                <div class="ind-name">Mining and industrial</div>
+                <ul class="ind-list">
+                    <li>Blasting and shot firing</li>
+                    <li>Power to crushers, conveyors and pumps</li>
+                    <li>Process control and instrumentation</li>
+                    <li>Site-wide fibre and data</li>
+                </ul>
+            </div>
+            <div class="ind-card reveal d1" id="transport">
+                <div class="ind-name">Transport</div>
+                <ul class="ind-list">
+                    <li>Tunnel ventilation and fire detection</li>
+                    <li>Rail signalling and communications</li>
+                    <li>Traffic control and road monitoring</li>
+                </ul>
+            </div>
+            <div class="ind-card reveal d2" id="communications">
+                <div class="ind-name">Communications</div>
+                <ul class="ind-list">
+                    <li>Backbone and long-haul fibre</li>
+                    <li>Data centres and local networks</li>
+                    <li>Pre-terminated fibre assemblies</li>
+                </ul>
+            </div>
+            <div class="ind-card reveal d3" id="security">
+                <div class="ind-name">Security and integration</div>
+                <ul class="ind-list">
+                    <li>Fire alarm and public address circuits</li>
+                    <li>CCTV and access control</li>
+                    <li>Building automation</li>
+                </ul>
+            </div>
+        </div>
+        <p class="ind-note reveal"><strong>Across all four, the brief is the same:</strong> cable that keeps working where a failure stops the operation or puts people at risk.</p>
+    </div>
+</section>
+
 <!-- APPLICATIONS -->
 <section class="section section-mist" id="supply">
     <div class="section-inner">
-        <div class="label reveal">What We Supply</div>
-        <h2 class="lead reveal d1">Six applications cover the mine, from the blast hole to the control room.</h2>
+        <div class="label reveal">Mining in focus</div>
+        <h2 class="lead reveal d1">In mining, six applications cover the site, from the blast hole to the control room.</h2>
         <div class="app-grid">
             <a class="app-card reveal" href="/products.html#blasting">
                 <div class="app-num">1</div>
@@ -582,23 +639,23 @@
 <section class="section">
     <div class="section-inner">
         <div class="label reveal">Why Meridian</div>
-        <h2 class="lead reveal d1">You get the cable your site needs, from one team, when you need it.</h2>
+        <h2 class="lead reveal d1">Buying through us gives you one accountable contact, from specification to after-sales.</h2>
         <div class="why-grid">
             <div class="why-item reveal">
-                <div class="why-title">Your standard</div>
-                <p class="why-body">Garland builds to your specification. Where standard cable doesn't fit, it builds to order.</p>
+                <div class="why-title">Your specification</div>
+                <p class="why-body">Built to IEC, national or project specification. Custom builds when no standard product fits.</p>
             </div>
             <div class="why-item reveal d1">
-                <div class="why-title">One call</div>
-                <p class="why-body">One team for every cable on site, from enquiry to delivery.</p>
+                <div class="why-title">One contact</div>
+                <p class="why-body">One contact from quote to after-sales, in English and French. We take any issue back to the factory for you.</p>
             </div>
             <div class="why-item reveal d2">
                 <div class="why-title">Planned supply</div>
-                <p class="why-body">Send us your forecast. We plan production and shipping around it.</p>
+                <p class="why-body">Send us your forecast. We plan production and consolidate shipments around it.</p>
             </div>
             <div class="why-item price reveal d3">
-                <div class="why-title">Fair price</div>
-                <p class="why-body">Competitive on the same spec.</p>
+                <div class="why-title">Like-for-like price</div>
+                <p class="why-body">Quoted against the same certified specification, with one quote for your full cable schedule.</p>
             </div>
         </div>
     </div>
@@ -643,11 +700,11 @@
                 <label for="f-sector">Sector</label>
                 <select id="f-sector" name="sector">
                     <option value="">Select sector</option>
-                    <option>Mining</option>
-                    <option>Mining contractor</option>
-                    <option>Explosives and blasting</option>
+                    <option>Mining and industrial</option>
+                    <option>Transport</option>
+                    <option>Communications</option>
+                    <option>Security and integration</option>
                     <option>EPC or installer</option>
-                    <option>Industrial</option>
                     <option>Other</option>
                 </select>
             </div>
