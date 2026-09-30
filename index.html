@@ -705,7 +705,7 @@
         <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
         <div class="modal-heading" id="modal-title">Make an Enquiry</div>
         <div class="modal-sub">We respond within 24 hours.</div>
-        <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="enquiry-form" action="https://formspree.io/f/xyezvdpd" method="POST">
             <div class="form-row">
                 <label for="f-name">Name</label>
                 <input id="f-name" type="text" name="name" required placeholder="Your name">
@@ -784,6 +784,9 @@
             return;
         }
         e.preventDefault();
+        // Region in the email subject, so Australian and NZ leads stand out
+        const region = document.getElementById('f-region').value;
+        form.querySelector('input[name="_subject"]').value = `New enquiry: ${document.getElementById('f-name').value} (${region})`;
         try {
             const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
             if (res.ok) { form.style.display = 'none'; success.style.display = 'block'; }
