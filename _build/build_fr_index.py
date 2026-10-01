@@ -109,6 +109,8 @@ T = {
     "Tell us about your site and what you need. We respond within 24 hours.":
         "Parlez-nous de votre site et de vos besoins. Nous répondons sous 24 heures.",
     "© 2026 Meridian Industrial Co. All rights reserved.": "© 2026 Meridian Industrial Co. Tous droits réservés.",
+    "Privacy Notice": "Politique de confidentialité",
+    "We'll use your details to respond to your enquiry. See our": "Nous utiliserons vos coordonnées pour répondre à votre demande. Voir notre",
     # form
     "We respond within 24 hours.": "Nous répondons sous 24 heures.",
     "Name": "Nom",
@@ -140,6 +142,7 @@ SWAPS = [
     ('<a href="/" class="lang-opt active">EN</a><span class="lang-sep">|</span><a href="/fr/" class="lang-opt">FR</a>',
      '<a href="/" class="lang-opt">EN</a><span class="lang-sep">|</span><a href="/fr/" class="lang-opt active">FR</a>', 1),
     ('href="/products.html', 'href="/fr/products.html', None),
+    ('href="/privacy.html"', 'href="/fr/privacy.html"', None),
     ('<a class="nav-logo" href="/">', '<a class="nav-logo" href="/fr/">', 1),
     ('`New enquiry: ${document.getElementById(\'f-name\').value} (${country})`',
      '`New enquiry (FR site): ${document.getElementById(\'f-name\').value} (${country})`', 1),

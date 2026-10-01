@@ -164,6 +164,7 @@ def build():
      ('class="cta-button">Make an Enquiry</a>', 'class="cta-button">Faire une demande</a>'),
      ('<a href="/">Meridian Industrial Co.</a>', '<a href="/fr/">Meridian Industrial Co.</a>'),
      ('All rights reserved.', 'Tous droits réservés.'),
+     ('href="/privacy.html">Privacy Notice</a>', 'href="/fr/privacy.html">Politique de confidentialité</a>'),
     ]
     for old, new in swaps:
         assert old in page, old[:70]
