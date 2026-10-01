@@ -11,8 +11,8 @@ T = {
     "Product Range": "Gamme de produits",
     "Make an Enquiry": "Faire une demande",
     "Garland industrial cable, supplied by Meridian Industrial Co.": "Câbles industriels Garland, fournis par Meridian Industrial Co.",
-    "Cable for the systems": "Des câbles pour les systèmes",
-    "that can't stop.": "qui ne peuvent pas s'arrêter.",
+    "Cable for the systems": "Des câbles pour vos",
+    "that can't stop.": "systèmes critiques.",
     "Garland cable for mining, transport, communications and security projects. Built to your specification and supplied wherever you operate.":
         "Câbles Garland pour les projets miniers, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.",
     "Mining and industrial": "Mines et industrie",
@@ -26,8 +26,8 @@ T = {
     "Garland cable": "câbles Garland",
     ", a Madison Group brand. Garland has engineered industrial cable since 1972.":
         ", une marque du groupe Madison. Garland conçoit des câbles industriels depuis 1972.",
-    "Every site is different. You deal with one team for blast wire, power, instrumentation, data and fibre. We handle everything that depends on the cable, so you can focus on running the operation.":
-        "Chaque site est différent. Vous traitez avec une seule équipe pour les câbles de tir, d'énergie, d'instrumentation, de données et la fibre. Nous gérons tout ce qui dépend du câble, pour que vous puissiez vous concentrer sur l'exploitation.",
+    "Every site is different. You deal with one team for blast wire, power, instrumentation, data and fibre. We take care of the cable, so you can focus on running the operation.":
+        "Chaque site est différent. Vous traitez avec une seule équipe pour les câbles de tir, d'énergie, d'instrumentation, de données et la fibre. Nous nous occupons du câble, pour que vous puissiez vous concentrer sur l'exploitation.",
     "Where your site needs something non-standard, Garland builds it to order.":
         "Lorsque votre site a besoin d'un câble hors standard, Garland le fabrique sur mesure.",
     "Industries served": "Secteurs desservis",
@@ -36,7 +36,7 @@ T = {
     "Enquiry response": "Réponse à votre demande",
     # industries
     "Industries": "Secteurs",
-    "Garland cable runs critical systems in four industries.": "Les câbles Garland font fonctionner des systèmes critiques dans quatre secteurs.",
+    "Garland cable runs critical systems in four industries.": "Les câbles Garland sont au cœur de quatre secteurs.",
     "Blasting and shot firing": "Minage et tir",
     "Power to crushers, conveyors and pumps": "Alimentation des concasseurs, convoyeurs et pompes",
     "Process control and instrumentation": "Contrôle de procédé et instrumentation",
