@@ -36,7 +36,7 @@ T = {
     "Enquiry response": "Réponse à votre demande",
     # industries
     "Industries": "Secteurs",
-    "Garland cable runs critical systems in four industries.": "Les câbles Garland sont au cœur de quatre secteurs.",
+    "Garland cable is at the heart of four industries.": "Les câbles Garland sont au cœur de quatre secteurs.",
     "Blasting and shot firing": "Minage et tir",
     "Power to crushers, conveyors and pumps": "Alimentation des concasseurs, convoyeurs et pompes",
     "Process control and instrumentation": "Contrôle de procédé et instrumentation",
