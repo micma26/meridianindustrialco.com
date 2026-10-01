@@ -23,7 +23,7 @@ FAM_FR = {
    "Fil à paire torsadée pour relier les détonateurs et le matériel de tir, en mine à ciel ouvert et souterraine. "
    "Chaque tir en consomme, vous en recommandez donc régulièrement. Envoyez-nous vos prévisions de tir et nous planifions l'approvisionnement."),
  "power": ("Câbles armés", "Câbles d'énergie armés",
-   "Câbles d'énergie armés BT et MT pour la distribution sur la mine et l'usine, unipolaires et multipolaires, "
+   "Câbles d'énergie armés pour les mines, les usines et les réseaux électriques, unipolaires et multipolaires, cuivre ou aluminium, "
    "de Elegar-Kerpen, partenaire de Garland. Fabriqués selon votre tension, section et armure. Envoyez-nous votre cahier des charges."),
  "ic-swa": ("Armé (SWA)", "Instrumentation et contrôle : armé (SWA)",
    "Câble multipaire armé en fils d'acier pour les parcours extérieurs, l'enfouissement et les zones exposées de la mine. "
@@ -72,6 +72,7 @@ FAM_FR = {
 ROW_FR = {
  "LV armoured power cable, single and multicore": "Câble d'énergie armé BT, unipolaire et multipolaire",
  "MV armoured power cable": "Câble d'énergie armé MT",
+ "Power cable for grid and distribution networks, copper or aluminium, built to your voltage": "Câble d'énergie pour réseaux électriques et de distribution, cuivre ou aluminium, selon votre tension",
  "Fibre splice closures, 24 to 1,152 fibres": "Boîtiers d'épissure fibre, de 24 à 1 152 fibres",
  "IP65 enclosures, rack mount or DIN rail, sized to order": "Coffrets IP65, montage en baie ou sur rail DIN, dimensionnés sur mesure",
  "1RU sliding fibre panel (FOBOT), 24/48 fibres, black": "Tiroir optique coulissant 1U (FOBOT), 24/48 fibres, noir",

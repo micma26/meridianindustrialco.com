@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meridian Industrial Co. | Câbles industriels Garland</title>
-    <meta name="description" content="Câbles industriels Garland pour les projets miniers, de transport, de communication et de sécurité, fournis par Meridian Industrial Co.">
+    <meta name="description" content="Câbles industriels Garland pour les projets miniers, énergétiques, de transport, de communication et de sécurité, fournis par Meridian Industrial Co.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -304,7 +304,7 @@
         .prop + .prop::before { content: '\00B7'; color: var(--steel); margin: 0 0.9rem 0 0.1rem; }
 
         /* INDUSTRIES */
-        .ind-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+        .ind-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
         .ind-card { background: var(--mist); padding: 2rem 1.6rem; scroll-margin-top: 90px; }
         .ind-card.lead-ind { background: var(--indigo); color: var(--white); }
         .ind-name { font-family: var(--display); font-size: 1.55rem; font-weight: 600; line-height: 1.15; margin-bottom: 1rem; }
@@ -520,9 +520,10 @@
     <div class="hero-inner">
         <div class="eyebrow">Câbles industriels Garland, fournis par Meridian Industrial Co.</div>
         <h1 class="hero-title">Des câbles pour vos<br><em>systèmes critiques.</em></h1>
-        <p class="hero-sub">Câbles Garland pour les projets miniers, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.</p>
+        <p class="hero-sub">Câbles Garland pour les projets miniers, énergétiques, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.</p>
         <div class="hero-pills">
             <a class="pill" href="#mining">Mines et industrie</a>
+            <a class="pill" href="#utilities">Énergie et réseaux électriques</a>
             <a class="pill" href="#transport">Transport</a>
             <a class="pill" href="#communications">Communications</a>
             <a class="pill" href="#security">Sécurité et intégration</a>
@@ -547,7 +548,7 @@
         </div>
         <div class="stats-row">
             <div class="stat reveal d1">
-                <div class="stat-number">4</div>
+                <div class="stat-number">5</div>
                 <div class="stat-label">Secteurs desservis</div>
             </div>
             <div class="stat reveal d2">
@@ -566,7 +567,7 @@
 <section class="section" id="industries" style="padding-top:0">
     <div class="section-inner">
         <div class="label reveal">Secteurs</div>
-        <h2 class="lead reveal d1">Les câbles Garland sont au cœur de quatre secteurs.</h2>
+        <h2 class="lead reveal d1">Les câbles Garland sont au cœur de cinq secteurs.</h2>
         <div class="ind-grid">
             <div class="ind-card lead-ind reveal" id="mining">
                 <div class="ind-name">Mines et industrie</div>
@@ -578,7 +579,16 @@
                 </ul>
                 <a class="ind-link" href="/fr/products.html#blasting">Voir les produits →</a>
             </div>
-            <div class="ind-card reveal d1" id="transport">
+            <div class="ind-card reveal d1" id="utilities">
+                <div class="ind-name">Énergie et réseaux électriques</div>
+                <ul class="ind-list">
+                    <li>Câbles d'énergie pour les réseaux électriques et de distribution, selon votre tension</li>
+                    <li>Contrôle, protection et instrumentation des postes électriques</li>
+                    <li>Fibre pour les télécommunications du réseau</li>
+                </ul>
+                <a class="ind-link" href="#" onclick="openModal(); return false;">Envoyez-nous votre cahier des charges →</a>
+            </div>
+            <div class="ind-card reveal d2" id="transport">
                 <div class="ind-name">Transport</div>
                 <ul class="ind-list">
                     <li>Ventilation et détection incendie en tunnel</li>
@@ -606,7 +616,7 @@
                 <a class="ind-link" href="/fr/products.html#fire-alarm">Voir les produits →</a>
             </div>
         </div>
-        <p class="ind-note reveal"><strong>Dans les quatre secteurs, l'exigence est la même :</strong> un câble qui continue de fonctionner là où une panne arrête l'exploitation ou met des personnes en danger.</p>
+        <p class="ind-note reveal"><strong>Dans les cinq secteurs, l'exigence est la même :</strong> un câble qui continue de fonctionner là où une panne arrête l'exploitation ou met des personnes en danger.</p>
     </div>
 </section>
 
@@ -939,6 +949,7 @@
                 <select id="f-sector" name="sector">
                     <option value="">Choisir un secteur</option>
                     <option value="Mining and industrial">Mines et industrie</option>
+                    <option value="Power and utilities">Énergie et réseaux électriques</option>
                     <option value="Transport">Transport</option>
                     <option value="Communications">Communications</option>
                     <option value="Security and integration">Sécurité et intégration</option>

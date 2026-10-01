@@ -29,10 +29,11 @@ FAMILIES = [
                ("SF17WHRD100", "Shot Fire Cable, 0.7mm, 1 Pair, Figure-8, PVC, 100m")]),
     dict(id="power", app="power", side="Armoured power", title="Armoured power cable",
          props=["Steel-wire armour"],
-         desc="LV and MV armoured power cable for mine and plant distribution, single and multicore, "
+         desc="Armoured power cable for mines, plants and power networks, single and multicore, copper or aluminium, "
               "from Garland's partner Elegar-Kerpen. Built to your voltage, size and armour. Send us your specification.",
          rows=[(None, "LV armoured power cable, single and multicore"),
-               (None, "MV armoured power cable")]),
+               (None, "MV armoured power cable"),
+               (None, "Power cable for grid and distribution networks, copper or aluminium, built to your voltage")]),
     dict(id="ic-swa", app="ic", side="Armoured (SWA)", title="Instrumentation and control: armoured (SWA)",
          props=["Steel-wire armour"],
          desc="Steel-wire armoured multipair cable for outdoor runs, burial and exposed mine areas. "

@@ -13,8 +13,13 @@ T = {
     "Garland industrial cable, supplied by Meridian Industrial Co.": "Câbles industriels Garland, fournis par Meridian Industrial Co.",
     "Cable for the systems": "Des câbles pour vos",
     "that can't stop.": "systèmes critiques.",
-    "Garland cable for mining, transport, communications and security projects. Built to your specification and supplied wherever you operate.":
-        "Câbles Garland pour les projets miniers, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.",
+    "Garland cable for mining, power, transport, communications and security projects. Built to your specification and supplied wherever you operate.":
+        "Câbles Garland pour les projets miniers, énergétiques, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.",
+    "Power and utilities": "Énergie et réseaux électriques",
+    "Power cable for grid and distribution networks, built to your voltage": "Câbles d'énergie pour les réseaux électriques et de distribution, selon votre tension",
+    "Substation control, protection and instrumentation": "Contrôle, protection et instrumentation des postes électriques",
+    "Fibre for grid communications": "Fibre pour les télécommunications du réseau",
+    "Send us your specification →": "Envoyez-nous votre cahier des charges →",
     "Mining and industrial": "Mines et industrie",
     "Transport": "Transport",
     "Communications": "Communications",
@@ -36,7 +41,7 @@ T = {
     "Enquiry response": "Réponse à votre demande",
     # industries
     "Industries": "Secteurs",
-    "Garland cable is at the heart of four industries.": "Les câbles Garland sont au cœur de quatre secteurs.",
+    "Garland cable is at the heart of five industries.": "Les câbles Garland sont au cœur de cinq secteurs.",
     "Blasting and shot firing": "Minage et tir",
     "Power to crushers, conveyors and pumps": "Alimentation des concasseurs, convoyeurs et pompes",
     "Process control and instrumentation": "Contrôle de procédé et instrumentation",
@@ -51,7 +56,7 @@ T = {
     "Fire alarm and public address circuits": "Circuits d'alarme incendie et de sonorisation",
     "CCTV cameras": "Caméras de vidéosurveillance",
     "Access control and alarm panels": "Contrôle d'accès et centrales d'alarme",
-    "Across all four, the brief is the same:": f"Dans les quatre secteurs, l'exigence est la même{NB}:",
+    "Across all five, the brief is the same:": f"Dans les cinq secteurs, l'exigence est la même{NB}:",
     "cable that keeps working where a failure stops the operation or puts people at risk.":
         "un câble qui continue de fonctionner là où une panne arrête l'exploitation ou met des personnes en danger.",
     # mining applications
@@ -125,8 +130,8 @@ SWAPS = [
     ('<html lang="en">', '<html lang="fr">', 1),
     ('<title>Meridian Industrial Co. | Garland industrial cable</title>',
      '<title>Meridian Industrial Co. | Câbles industriels Garland</title>', 1),
-    ('content="Garland industrial cable for mining, transport, communications and security projects, supplied by Meridian Industrial Co."',
-     'content="Câbles industriels Garland pour les projets miniers, de transport, de communication et de sécurité, fournis par Meridian Industrial Co."', 1),
+    ('content="Garland industrial cable for mining, power, transport, communications and security projects, supplied by Meridian Industrial Co."',
+     'content="Câbles industriels Garland pour les projets miniers, énergétiques, de transport, de communication et de sécurité, fournis par Meridian Industrial Co."', 1),
     ('alt="Mining equipment working on an open-pit haul road"', 'alt="Engins miniers sur une piste de mine à ciel ouvert"', 1),
     ('placeholder="Your name"', 'placeholder="Votre nom"', 1),
     ('placeholder="Company or organisation"', 'placeholder="Société ou organisation"', 1),
@@ -186,7 +191,7 @@ def build():
         assert c >= 1 and (n is None or c == n), (c, old[:60])
         s = s.replace(old, new)
     # sector options: French label, English value (so emails match the EN site)
-    for en in ["Mining and industrial", "Transport", "Communications", "Security and integration", "EPC or installer", "Other"]:
+    for en in ["Mining and industrial", "Power and utilities", "Transport", "Communications", "Security and integration", "EPC or installer", "Other"]:
         old = f"<option>{en}</option>"
         if old in s:
             s = s.replace(old, f'<option value="{en}">{T[en]}</option>')
