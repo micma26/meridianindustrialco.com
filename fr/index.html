@@ -387,6 +387,8 @@
         }
         .footer-name { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ice); }
         .footer-copy { font-size: 0.72rem; color: var(--steel); }
+        .footer-copy a { color: var(--ice); text-decoration: none; margin-left: 1.2rem; }
+        .footer-copy a:hover { color: var(--white); }
 
         /* MODAL */
         .overlay {
@@ -461,6 +463,8 @@
             cursor: pointer;
         }
         .form-submit { width: 100%; margin-top: 0.4rem; }
+        .form-note { font-size: 0.75rem; color: var(--slate); line-height: 1.5; margin-top: 0.9rem; }
+        .form-note a { color: var(--indigo); }
         .form-success { display: none; text-align: center; padding: 2rem 0 1rem; }
         .form-success .check { font-size: 2rem; color: var(--indigo); margin-bottom: 1rem; }
         .form-success p { font-size: 0.95rem; color: var(--slate); line-height: 1.7; }
@@ -498,6 +502,7 @@
             .modal { padding: 2.2rem 1.4rem; }
             .contact-section { padding: 5rem 16px; }
             footer { flex-direction: column; align-items: flex-start; padding: 1.8rem 16px; }
+            .footer-copy a { display: block; margin: 0.5rem 0 0; }
         }
     </style>
     <!-- Umami analytics: no cookies -->
@@ -713,7 +718,7 @@
 <!-- FOOTER -->
 <footer>
     <span class="footer-name">Meridian Industrial Co.</span>
-    <span class="footer-copy">© 2026 Meridian Industrial Co. Tous droits réservés.</span>
+    <span class="footer-copy">© 2026 Meridian Industrial Co. Tous droits réservés. <a href="/fr/privacy.html">Politique de confidentialité</a></span>
 </footer>
 
 <!-- ENQUIRY MODAL -->
@@ -964,6 +969,7 @@
             <input type="hidden" name="_subject" value="New enquiry: Meridian Industrial Co.">
             <input type="text" name="_gotcha" style="display:none">
             <button type="submit" class="btn form-submit">Envoyer la demande →</button>
+            <p class="form-note">Nous utiliserons vos coordonnées pour répondre à votre demande. Voir notre <a href="/fr/privacy.html">Politique de confidentialité</a>.</p>
         </form>
         <div class="form-success" id="form-success">
             <div class="check">✓</div>

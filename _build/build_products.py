@@ -394,6 +394,8 @@ CSS = r"""
       font-size: 0.72rem; color: var(--steel);
     }
     footer a { color: var(--ice); text-decoration: none; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.68rem; }
+    footer a.footer-privacy { font-weight: 400; letter-spacing: normal; text-transform: none; font-size: 0.72rem; margin-left: 1.2rem; }
+    footer a.footer-privacy:hover { color: var(--white); }
 
     .lang-switch { display: flex; align-items: center; gap: 0.5rem; font-size: 0.66rem; font-weight: 500; letter-spacing: 0.14em; }
     .lang-opt { color: var(--sky); text-decoration: none; }
@@ -415,6 +417,7 @@ CSS = r"""
       .nav-right { gap: 1rem; }
       .cta-band { padding: 4rem 16px; }
       footer { flex-direction: column; align-items: flex-start; padding: 1.8rem 16px; }
+      footer a.footer-privacy { display: block; margin: 0.5rem 0 0; }
     }
 """
 
@@ -499,7 +502,7 @@ PAGE = f"""<!DOCTYPE html>
 
   <footer>
     <a href="/">Meridian Industrial Co.</a>
-    <span>© 2026 Meridian Industrial Co. All rights reserved.</span>
+    <span>© 2026 Meridian Industrial Co. All rights reserved. <a class="footer-privacy" href="/privacy.html">Privacy Notice</a></span>
   </footer>
 
   <script>{JS}  </script>
