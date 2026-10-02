@@ -31,8 +31,8 @@ T = {
     "Garland cable": "câbles Garland",
     ", a Madison Group brand. Garland has engineered industrial cable since 1972.":
         ", une marque du groupe Madison. Garland conçoit des câbles industriels depuis 1972.",
-    "Every site is different. You deal with one team for blast wire, power, instrumentation, data and fibre. We take care of the cable, so you can focus on running the operation.":
-        "Chaque site est différent. Vous traitez avec une seule équipe pour les câbles de tir, d'énergie, d'instrumentation, de données et la fibre. Nous nous occupons du câble, pour que vous puissiez vous concentrer sur l'exploitation.",
+    "Every site is different. You deal with one team for blast wire, power, instrumentation, data and fibre. We make sure the right cable is there when you need it.":
+        "Chaque site est différent. Vous traitez avec une seule équipe pour les câbles de tir, d'énergie, d'instrumentation, de données et la fibre. Nous veillons à ce que le bon câble soit là quand vous en avez besoin.",
     "Where your site needs something non-standard, Garland builds it to order.":
         "Lorsque votre site a besoin d'un câble hors standard, Garland le fabrique sur mesure.",
     "Industries served": "Secteurs desservis",
@@ -92,16 +92,16 @@ T = {
     "Why Meridian": "Pourquoi Meridian",
     "Buying through us gives you one accountable contact, from specification to after-sales.":
         "En achetant chez nous, vous avez un seul interlocuteur responsable, de la spécification à l'après-vente.",
-    "Your specification": "Votre cahier des charges",
+    "Your standard": "Votre norme",
     "Built to IEC, national or project specification. Custom builds when no standard product fits.":
         "Fabriqué selon les normes IEC, nationales ou les spécifications du projet. Fabrication sur mesure quand aucun produit standard ne convient.",
-    "One contact": "Un seul interlocuteur",
+    "One call": "Un seul appel",
     "One contact from quote to after-sales, in English and French. We take any issue back to the factory for you.":
         "Un seul interlocuteur du devis à l'après-vente, en français et en anglais. Nous remontons tout problème à l'usine pour vous.",
     "Planned supply": "Approvisionnement planifié",
     "Send us your forecast. We plan production and consolidate shipments around it.":
         "Envoyez-nous vos prévisions. Nous planifions la production et regroupons les expéditions en conséquence.",
-    "Like-for-like price": "Prix comparable",
+    "Fair price": "Un prix juste",
     "Quoted against the same certified specification, with one quote for your full cable schedule.":
         "Chiffré sur la même spécification certifiée, avec un seul devis pour toute votre liste de câbles.",
     # contact + footer
