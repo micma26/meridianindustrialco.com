@@ -98,10 +98,10 @@ T = {
     "One call": "Un seul appel",
     "One contact from quote to after-sales, in English and French. We take any issue back to the factory for you.":
         "Un seul interlocuteur du devis à l'après-vente, en français et en anglais. Nous remontons tout problème à l'usine pour vous.",
-    "Planned supply": "Approvisionnement planifié",
+    "Planned supply": "Planification",
     "Send us your forecast. We plan production and consolidate shipments around it.":
         "Envoyez-nous vos prévisions. Nous planifions la production et regroupons les expéditions en conséquence.",
-    "Fair price": "Un prix juste",
+    "Fair price": "Prix juste",
     "Quoted against the same certified specification, with one quote for your full cable schedule.":
         "Chiffré sur la même spécification certifiée, avec un seul devis pour toute votre liste de câbles.",
     # contact + footer
