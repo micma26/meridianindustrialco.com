@@ -302,6 +302,9 @@
         }
         .prop { font-size: 0.85rem; color: var(--white); }
         .prop + .prop::before { content: '\00B7'; color: var(--steel); margin: 0 0.9rem 0 0.1rem; }
+        .props-also { margin-top: 2px; }
+        .props-link { margin-left: auto; font-size: 0.85rem; color: var(--sky); text-decoration: none; }
+        .props-link:hover { color: var(--white); }
 
         /* INDUSTRIES */
         .ind-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
@@ -664,7 +667,7 @@
             <a class="app-card reveal d2" href="/products.html#control-room">
                 <div class="app-num">6</div>
                 <div class="app-name">Control room</div>
-                <div class="app-desc">Racks, enclosures and splice closures to terminate and protect the network.</div>
+                <div class="app-desc">Low smoke, zero halogen data cable and patch cords where the network comes together.</div>
                 <div class="app-link">View range →</div>
             </a>
         </div>
@@ -675,6 +678,11 @@
             <span class="prop">Low smoke, zero halogen</span>
             <span class="prop">Water blocking</span>
             <span class="prop">Rodent and termite protection</span>
+        </div>
+        <div class="props props-also reveal">
+            <span class="props-label">Also supplied</span>
+            <span class="prop">Racks, enclosures and splice closures</span>
+            <a class="props-link" href="/products.html#hardware">View range →</a>
         </div>
     </div>
 </section>

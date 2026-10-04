@@ -80,8 +80,10 @@ T = {
     "Armoured industrial fibre, 6 to 144 fibres, single and multimode, for site-wide backbones.":
         "Fibre industrielle armée, de 6 à 144 fibres, monomode et multimode, pour les dorsales de site.",
     "Control room": "Salle de contrôle",
-    "Racks, enclosures and splice closures to terminate and protect the network.":
-        "Baies, coffrets et boîtiers d'épissure pour raccorder et protéger le réseau.",
+    "Low smoke, zero halogen data cable and patch cords where the network comes together.":
+        "Câbles de données et cordons de brassage sans halogène, là où le réseau se rejoint.",
+    "Also supplied": "Également fournis",
+    "Racks, enclosures and splice closures": "Baies, coffrets et boîtiers d'épissure",
     "Available with": "Disponible avec",
     "Steel-wire armour": "Armure en fils d'acier",
     "Fire rating": "Résistance au feu",

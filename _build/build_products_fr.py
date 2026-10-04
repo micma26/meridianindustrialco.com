@@ -11,7 +11,8 @@ NB = " "
 
 APPS_FR = {"blasting": "Minage", "power": "Énergie", "ic": "Instrumentation et contrôle",
            "data": "Données et réseaux", "fibre": "Dorsale fibre", "control": "Salle de contrôle",
-           "transport": "Trafic et ferroviaire", "security": "Alarme incendie et sécurité"}
+           "transport": "Trafic et ferroviaire", "security": "Alarme incendie et sécurité",
+           "hardware": "Également fournis"}
 
 PROPS_FR = {"Steel-wire armour": "Armure en fils d'acier", "Steel-tape armour": "Armure en feuillard d'acier",
             "Fire rating": "Résistance au feu", "Low smoke, zero halogen": "Faible fumée, sans halogène",
@@ -54,8 +55,11 @@ FAM_FR = {
    "Multimode OM3 et OM4, et jusqu'à 144 fibres en versions non métalliques, sur demande."),
  "fibre-fire": ("Fibre résistante au feu", "Dorsale fibre : fibre résistante au feu",
    "Fibre qui maintient une liaison de communication en cas d'incendie. Résistance au feu selon IEC 60331-25 pendant 120 minutes."),
- "control-room": ("Baies et boîtiers", "Salle de contrôle : baies, coffrets et boîtiers d'épissure",
-   "Matériel pour raccorder et protéger le réseau, du tiroir optique au coffret de terrain."),
+ "control-room": ("Câbles et cordons", "Salle de contrôle : câbles de données et cordons de brassage",
+   "Câbles de données et cordons de brassage sans halogène, là où le réseau se rejoint. "
+   "Pour le Cat6A et la fibre résistants au feu, voir Données et réseaux et Dorsale fibre."),
+ "hardware": ("Baies et boîtiers", "Également fournis : baies, coffrets et boîtiers d'épissure",
+   "Du matériel, pas du câble. Nous le fournissons avec votre commande de câbles pour raccorder et protéger le réseau, du tiroir optique au coffret de terrain."),
  "traffic": ("Boucles de détection", "Trafic et ferroviaire : câbles de boucle de détection",
    "Câbles pour les boucles de détection de véhicules et les feux de signalisation sur routes, pistes de roulage, barrières et accès de tunnels."),
  "rail": ("Signalisation ferroviaire", "Trafic et ferroviaire : câbles de signalisation ferroviaire",
@@ -70,6 +74,9 @@ FAM_FR = {
 
 # Whole-row overrides where the phrase rules would read badly
 ROW_FR = {
+ "Cat6A patch cords, LSZH, made to length": "Cordons de brassage Cat6A, sans halogène, à la longueur",
+ "Armoured patch cords, made to order": "Cordons de brassage armés, sur commande",
+ "Pre-terminated fibre assemblies, single and multimode, made to order": "Fibre préconnectorisée, monomode et multimode, sur commande",
  "LV armoured power cable, single and multicore": "Câble d'énergie armé BT, unipolaire et multipolaire",
  "MV armoured power cable": "Câble d'énergie armé MT",
  "Power cable for grid and distribution networks, copper or aluminium, built to your voltage": "Câble d'énergie pour réseaux électriques et de distribution, cuivre ou aluminium, selon votre tension",

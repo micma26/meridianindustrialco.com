@@ -13,6 +13,7 @@ APPS = [
     ("control", 6, "Control room"),
     ("transport", 7, "Traffic and rail"),
     ("security", 8, "Fire alarm and security"),
+    ("hardware", 9, "Also supplied"),
 ]
 
 # Each family: anchor id, app id, short sidebar name, title, properties, description, rows
@@ -129,9 +130,16 @@ FAMILIES = [
                ("GLTSM1RC012RD", "Fire-rated fibre, OS2 single mode, 12 fibres, LSZH, IEC 60331-25 (120 min)"),
                ("GLTOM3RC012RD", "Fire-rated fibre, OM3 multimode, 12 fibres, LSZH, IEC 60331-25 (120 min)"),
                ("GLTOM4RC012RD", "Fire-rated fibre, OM4 multimode, 12 fibres, LSZH, IEC 60331-25 (120 min)")]),
-    dict(id="control-room", app="control", side="Racks and closures", title="Control room: racks, enclosures and splice closures",
+    dict(id="control-room", app="control", side="Data cable and patch cords", title="Control room: data cable and patch cords",
+         props=["Low smoke, zero halogen"],
+         desc="Low smoke, zero halogen data cable and patch cords where the network comes together. "
+              "For fire-rated Cat6A and fibre, see Data and networks and Fibre backbone.",
+         rows=[(None, "Cat6A patch cords, LSZH, made to length"),
+               (None, "Armoured patch cords, made to order"),
+               (None, "Pre-terminated fibre assemblies, single and multimode, made to order")]),
+    dict(id="hardware", app="hardware", side="Racks and closures", title="Also supplied: racks, enclosures and splice closures",
          props=[],
-         desc="Hardware to terminate and protect the network, from the fibre panel to the field enclosure.",
+         desc="Hardware, not cable. We supply it with your cable order to terminate and protect the network, from the fibre panel to the field enclosure.",
          rows=[("MT30903B", "1RU sliding fibre panel (FOBOT), 24/48 fibres, black"),
                ("MT309AK", "Rodent-proof rear plates for MT30903B, set of 2"),
                ("MT30905", "Rack mount sliding drawer fibre panel (FOBOT), 48 ports"),
