@@ -72,10 +72,10 @@ T = {
         "Câbles d'énergie armés BT et MT pour la distribution sur la mine et l'usine, de Elegar-Kerpen, partenaire de Garland.",
     "Instrumentation and control": "Instrumentation et contrôle",
     "Screened and armoured pair and triad cable for process control and sensor loops. Includes ICON Flex, Chem and Arctic for harsh conditions.":
-        "Câbles à paires et triades blindés et armés pour le contrôle de procédé et les boucles de capteurs. Comprend ICON Flex, Chem et Arctic pour les conditions difficiles.",
+        "Câbles à paires et triades, à écran et armés, pour le contrôle de procédé et les boucles de capteurs. Comprend ICON Flex, Chem et Arctic pour les conditions difficiles.",
     "Data and networks": "Données et réseaux",
     "Screened multicore, multipair and Cat6A cable for SCADA and site communications.":
-        "Câbles multiconducteurs, multipaires et Cat6A blindés pour le SCADA et les communications du site.",
+        "Câbles multiconducteurs, multipaires et Cat6A à écran pour le SCADA et les communications du site.",
     "Fibre backbone": "Dorsale fibre",
     "Armoured industrial fibre, 6 to 144 fibres, single and multimode, for site-wide backbones.":
         "Fibre industrielle armée, de 6 à 144 fibres, monomode et multimode, pour les dorsales de site.",
@@ -87,7 +87,7 @@ T = {
     "Available with": "Disponible avec",
     "Steel-wire armour": "Armure en fils d'acier",
     "Fire rating": "Résistance au feu",
-    "Low smoke, zero halogen": "Faible dégagement de fumée, sans halogène",
+    "Low smoke, zero halogen": "Sans halogène, faible dégagement de fumées",
     "Water blocking": "Étanchéité à l'eau",
     "Rodent and termite protection": "Protection contre rongeurs et termites",
     # why

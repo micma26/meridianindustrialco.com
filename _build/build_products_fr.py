@@ -15,7 +15,7 @@ APPS_FR = {"blasting": "Minage", "power": "Énergie", "ic": "Instrumentation et 
            "hardware": "Également fournis"}
 
 PROPS_FR = {"Steel-wire armour": "Armure en fils d'acier", "Steel-tape armour": "Armure en feuillard d'acier",
-            "Fire rating": "Résistance au feu", "Low smoke, zero halogen": "Faible fumée, sans halogène",
+            "Fire rating": "Résistance au feu", "Low smoke, zero halogen": "Sans halogène, faible dégagement de fumées",
             "Water blocking": "Étanchéité à l'eau", "Rodent and termite protection": "Protection rongeurs et termites"}
 
 # id: (sidebar, title, description)
@@ -29,7 +29,7 @@ FAM_FR = {
  "ic-swa": ("Armé (SWA)", "Instrumentation et contrôle : armé (SWA)",
    "Câble multipaire armé en fils d'acier pour les parcours extérieurs, l'enfouissement et les zones exposées de la mine. "
    "Écran aluminium individuel et général avec protection SWA."),
- "ic-screened": ("Blindé (IND+OAS)", "Instrumentation et contrôle : blindé (IND+OAS)",
+ "ic-screened": ("À écran (IND+OAS)", "Instrumentation et contrôle : à écran (IND+OAS)",
    "Câble multipaire à écran individuel et général pour le contrôle de procédé et la mesure dans les bâtiments et salles de contrôle. "
    "Garde des signaux propres dans les environnements à fort bruit électrique."),
  "ic-triad": ("Multitriade", "Instrumentation et contrôle : multitriade",
@@ -40,14 +40,14 @@ FAM_FR = {
    "Conçu pour les mines souterraines et les usines chimiques."),
  "ic-icon": ("Gamme ICON", "Instrumentation et contrôle : gamme ICON",
    "Câbles d'instrumentation et de contrôle standard et sur mesure de la gamme ICON d'Elegar-Kerpen. Envoyez-nous votre cahier des charges."),
- "data-multicore": ("Multiconducteur blindé", "Données et réseaux : multiconducteur blindé",
-   "Câble multiconducteur blindé pour le SCADA, les communications du site et le câblage des systèmes de contrôle. De 4 à 36 conducteurs."),
- "data-multipair": ("Multipaire blindé", "Données et réseaux : multipaire blindé",
-   "Câble multipaire blindé pour les réseaux et communications du site. Versions à écran individuel et général pour les zones perturbées."),
+ "data-multicore": ("Multiconducteur à écran", "Données et réseaux : multiconducteur à écran",
+   "Câble multiconducteur à écran pour le SCADA, les communications du site et le câblage des systèmes de contrôle. De 4 à 36 conducteurs."),
+ "data-multipair": ("Multipaire à écran", "Données et réseaux : multipaire à écran",
+   "Câble multipaire à écran pour les réseaux et communications du site. Versions à écran individuel et général pour les zones perturbées."),
  "data-cat6a": ("Cat6A résistant au feu", "Données et réseaux : Cat6A résistant au feu",
    "Câble de données Cat6A qui continue de fonctionner dans un incendie. Testé pour l'intégrité du circuit selon IEC 60331-23 pendant 120 minutes."),
- "data-lan": ("Cat6 et Cat6A LSZH", "Données et réseaux : Cat6 et Cat6A, faible fumée",
-   "Câble réseau pour salles de contrôle, bâtiments d'usine et bureaux, avec gaine à faible dégagement de fumée et sans halogène."),
+ "data-lan": ("Cat6 et Cat6A LSZH", "Données et réseaux : Cat6 et Cat6A, peu de fumées",
+   "Câble réseau pour salles de contrôle, bâtiments d'usine et bureaux, avec gaine sans halogène à faible dégagement de fumées."),
  "data-external": ("Extérieur, rempli de gel", "Données et réseaux : extérieur, rempli de gel",
    "Câble de données et de communication extérieur rempli de gel pour bloquer l'eau, pour fourreaux enterrés et longs parcours extérieurs."),
  "fibre": ("Fibre armée", "Dorsale fibre : fibre armée",
@@ -69,7 +69,7 @@ FAM_FR = {
  "cctv": ("Vidéosurveillance et coaxial", "Alarme incendie et sécurité : vidéosurveillance et coaxial",
    "Câbles coaxiaux et composites pour caméras de vidéosurveillance, transportant vidéo et alimentation dans un seul câble."),
  "security-multicore": ("Contrôle d'accès", "Alarme incendie et sécurité : contrôle d'accès et alarme",
-   "Câble multiconducteur blindé pour le contrôle d'accès, les équipements de porte, les centrales d'alarme et les interphones."),
+   "Câble multiconducteur à écran pour le contrôle d'accès, les équipements de porte, les centrales d'alarme et les interphones."),
 }
 
 # Whole-row overrides where the phrase rules would read badly
@@ -121,7 +121,7 @@ PHRASES = [
  (r"\b1 Pair\b|\b1 pair\b", "1 paire"), (r"\b(\d+) Pair\b|\b(\d+) pair\b", lambda m: f"{m.group(1) or m.group(2)} paires"),
  (r"\b1 Triad\b", "1 triade"), (r"\b(\d+) Triad\b", r"\1 triades"),
  (r"\b1 Core\b|\b1 core\b", "1 conducteur"), (r"\b(\d+) Core\b|\b(\d+) core\b", lambda m: f"{m.group(1) or m.group(2)} conducteurs"),
- (r"\bScreened\b", "blindé"), (r"\bblack\b", "noir"), (r"\bgrey\b", "gris"), (r"\bblue\b", "bleu"), (r"\bred\b", "rouge"),
+ (r"\bScreened\b", "à écran"), (r"\bblack\b", "noir"), (r"\bgrey\b", "gris"), (r"\bblue\b", "bleu"), (r"\bred\b", "rouge"),
  (r"(\d)\.(\d)", r"\1,\2"),
  (r"(\d)(mm²|mm|m)(?![A-Za-z])", r"\1 \2"),
 ]
