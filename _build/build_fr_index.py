@@ -10,11 +10,11 @@ T = {
     # nav / hero
     "Product Range": "Gamme de produits",
     "Make an Enquiry": "Faire une demande",
-    "Garland industrial cable, supplied by Meridian Industrial Co.": "Câbles industriels Garland, fournis par Meridian Industrial Co.",
-    "Cable for the systems": "Des câbles pour vos",
+    "Garland cable, supplied by Meridian Industrial Co.": "Câbles Garland, fournis par Meridian Industrial Co.",
+    "Cable for the systems": "Les câbles qu'il vous faut pour vos",
     "that can't stop.": "systèmes critiques.",
     "Garland cable for mining, power, transport, communications and security projects. Built to your specification and supplied wherever you operate.":
-        "Câbles Garland pour les projets miniers, énergétiques, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.",
+        "Les câbles Garland pour vos projets miniers, énergétiques, de transport, de communication et de sécurité. Fabriqués selon votre cahier des charges et livrés là où vous opérez.",
     "Power and utilities": "Énergie et réseaux électriques",
     "Power cable for grid and distribution networks, built to your voltage": "Câbles d'énergie pour les réseaux électriques et de distribution, selon votre tension",
     "Substation control, protection and instrumentation": "Contrôle, protection et instrumentation des postes électriques",
@@ -29,19 +29,19 @@ T = {
     "One supplier for every cable your operation depends on.": "Un seul fournisseur pour tous les câbles dont dépend votre exploitation.",
     "Meridian Industrial Co. supplies": "Meridian Industrial Co. fournit les",
     "Garland cable": "câbles Garland",
-    ", a Madison Group brand. Garland has engineered industrial cable since 1972.":
-        ", une marque du groupe Madison. Garland conçoit des câbles industriels depuis 1972.",
-    "Every site is different. You deal with one team for blast wire, power, instrumentation, data and fibre. We make sure the right cable is there when you need it.":
-        "Chaque site est différent. Vous traitez avec une seule équipe pour les câbles de tir, d'énergie, d'instrumentation, de données et la fibre. Nous veillons à ce que le bon câble soit là quand vous en avez besoin.",
+    ", a Madison Group brand. Garland has engineered cable since 1972.":
+        ", une marque du groupe Madison. Garland conçoit des câbles depuis 1972.",
+    "Every site is different. With Meridian Industrial Co., you deal with one team for blast wire, power, instrumentation, data and fibre. We make sure the right cable is there when you need it.":
+        "Chaque site a des besoins spécifiques. Avec Meridian Industrial Co., vous traitez avec une seule équipe pour vos câbles de tir, d'énergie, d'instrumentation, de données et de fibre. Nous veillons à ce que le bon câble soit là quand vous en avez besoin.",
     "Where your site needs something non-standard, Garland builds it to order.":
         "Lorsque votre site a besoin d'un câble hors standard, Garland le fabrique sur mesure.",
-    "Industries served": "Secteurs desservis",
-    "Garland engineering industrial cable since": "Garland conçoit des câbles industriels depuis",
+    "Supplied across Europe, the Middle East and Africa": "Distribués en Europe, au Moyen-Orient et en Afrique",
+    "Garland engineering cable since": "Garland conçoit des câbles depuis",
     "24h": "24 h",
     "Enquiry response": "Réponse à votre demande",
     # industries
     "Industries": "Secteurs",
-    "Garland cable is at the heart of five industries.": "Les câbles Garland sont au cœur de cinq secteurs.",
+    "Garland cable is at the heart of critical industries.": "Les câbles Garland sont au cœur des secteurs critiques.",
     "Blasting and shot firing": "Minage et tir",
     "Power to crushers, conveyors and pumps": "Alimentation des concasseurs, convoyeurs et pompes",
     "Process control and instrumentation": "Contrôle de procédé et instrumentation",
@@ -56,13 +56,16 @@ T = {
     "Fire alarm and public address circuits": "Circuits d'alarme incendie et de sonorisation",
     "CCTV cameras": "Caméras de vidéosurveillance",
     "Access control and alarm panels": "Contrôle d'accès et centrales d'alarme",
-    "Across all five, the brief is the same:": f"Dans les cinq secteurs, l'exigence est la même{NB}:",
+    "Across every sector, the brief is the same:": f"Dans chaque secteur, l'exigence est la même{NB}:",
     "cable that keeps working where a failure stops the operation or puts people at risk.":
         "un câble qui continue de fonctionner là où une panne arrête l'exploitation ou met des personnes en danger.",
     # mining applications
     "Mining in focus": "Focus mines",
-    "In mining, six applications cover the site, from the blast hole to the control room.":
-        "Dans une mine, six applications couvrent le site, du trou de mine à la salle de contrôle.",
+    "In mining, we supply cable from the blast hole to the control room.":
+        "Dans une mine, nous fournissons les câbles du trou de mine à la salle de contrôle.",
+    "Not in the catalogue? We'll design it.": f"Pas au catalogue{NB}? Nous le concevons.",
+    "Garland designs cable to your application: conductor, armour and sheath. Tell us the site conditions and we'll build to match.":
+        f"Garland conçoit le câble selon votre application{NB}: âme, armure et gaine. Décrivez-nous les conditions du site, nous fabriquons en conséquence.",
     "Blasting": "Minage",
     "Twisted-pair wire that connects detonators and firing equipment. Every shot uses it, so we plan supply around your blast programme.":
         "Fil à paire torsadée qui relie les détonateurs et le matériel de tir. Chaque tir en consomme, nous planifions donc l'approvisionnement selon votre programme de tir.",
@@ -132,10 +135,10 @@ T = {
 # Attributes and other exact-string swaps (old, new, expected count)
 SWAPS = [
     ('<html lang="en">', '<html lang="fr">', 1),
-    ('<title>Meridian Industrial Co. | Garland industrial cable</title>',
-     '<title>Meridian Industrial Co. | Câbles industriels Garland</title>', 1),
-    ('content="Garland industrial cable for mining, power, transport, communications and security projects, supplied by Meridian Industrial Co."',
-     'content="Câbles industriels Garland pour les projets miniers, énergétiques, de transport, de communication et de sécurité, fournis par Meridian Industrial Co."', 1),
+    ('<title>Meridian Industrial Co. | Garland cable</title>',
+     '<title>Meridian Industrial Co. | Câbles Garland</title>', 1),
+    ('content="Garland cable for mining, power, transport, communications and security projects, supplied by Meridian Industrial Co."',
+     'content="Câbles Garland pour vos projets miniers, énergétiques, de transport, de communication et de sécurité, fournis par Meridian Industrial Co."', 1),
     ('alt="Mining equipment working on an open-pit haul road"', 'alt="Engins miniers sur une piste de mine à ciel ouvert"', 1),
     ('placeholder="Your name"', 'placeholder="Votre nom"', 1),
     ('placeholder="Company or organisation"', 'placeholder="Société ou organisation"', 1),

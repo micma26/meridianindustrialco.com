@@ -184,7 +184,7 @@ def build():
                   lambda m: m.group(1) + "<p>Cette page présente une sélection. Dites-nous ce dont votre site a besoin et nous le trouverons dans la gamme complète, ou le fabriquerons. Nous répondons sous 24 heures.</p>",
                   page, count=1, flags=re.S)
     page = re.sub(r'<meta name="description" content="[^"]*" />',
-                  '<meta name="description" content="Câbles industriels Garland pour les mines, le transport, les communications et la sécurité : câbles de tir, énergie, instrumentation, données, fibre, trafic, ferroviaire, alarme incendie et vidéosurveillance." />', page, count=1)
+                  '<meta name="description" content="Câbles Garland pour les mines, le transport, les communications et la sécurité : câbles de tir, énergie, instrumentation, données, fibre, trafic, ferroviaire, alarme incendie et vidéosurveillance." />', page, count=1)
     open("fr/products.html", "w", encoding="utf-8").write(page)
     print("wrote fr/products.html")
 

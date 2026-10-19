@@ -204,7 +204,7 @@ def family_html(f):
     return f'''
       <div class="family-block" id="{f["id"]}" data-app="{f["app"]}">
         <div class="family-header">
-          <div class="family-tags"><span class="app-tag"><b>{app[1]}</b>{escape(app[2])}</span>{props}</div>
+          <div class="family-tags"><span class="app-tag">{escape(app[2])}</span>{props}</div>
           <h2 class="family-name">{escape(f["title"])}</h2>
           <p class="family-desc">{escape(f["desc"])}</p>
         </div>
@@ -220,7 +220,7 @@ def family_html(f):
 def sidebar_html():
     out = []
     for app_id, num, name in APPS:
-        out.append(f'      <p class="sidebar-group"><b>{num}</b>{escape(name)}</p>')
+        out.append(f'      <p class="sidebar-group">{escape(name)}</p>')
         for f in FAMILIES:
             if f["app"] == app_id:
                 out.append(f'      <a href="#{f["id"]}" class="sidebar-link">{escape(f["side"])}</a>')
@@ -230,7 +230,7 @@ def sidebar_html():
 def filters_html():
     btns = ['    <button class="filter-btn active" data-filter="all">All products</button>']
     for app_id, num, name in APPS:
-        btns.append(f'    <button class="filter-btn" data-filter="{app_id}">{num}. {escape(name)}</button>')
+        btns.append(f'    <button class="filter-btn" data-filter="{app_id}">{escape(name)}</button>')
     return "\n".join(btns)
 
 
@@ -458,7 +458,7 @@ PAGE = f"""<!DOCTYPE html>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Range | Meridian Industrial Co.</title>
-  <meta name="description" content="Garland industrial cable for mining, transport, communications and security: blast wire, power, instrumentation, data, fibre, traffic, rail, fire alarm and CCTV cable." />
+  <meta name="description" content="Garland cable for mining, transport, communications and security: blast wire, power, instrumentation, data, fibre, traffic, rail, fire alarm and CCTV cable." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
